@@ -74,9 +74,11 @@ class RazorpayOrderCreationServiceTest extends TestCase
         $this->dbMock->expects($this->once())->method('commit');
         $this->dbMock->expects($this->never())->method('rollBack');
 
-        $this->configMock->method('get')
-            ->with('services.razorpay.key_id')
-            ->willReturn('test_key_id');
+                $this->configMock->method('get')
+            ->willReturnMap([
+                ['services.razorpay.key_id', null, 'test_key_id'],
+                ['app.saas_mode_enabled', null, false]
+            ]);
 
         $this->razorpayClientMock->expects($this->once())
             ->method('createOrder')
@@ -127,7 +129,7 @@ class RazorpayOrderCreationServiceTest extends TestCase
         $this->service->createOrder($dtoMock);
     }
 
-    private function createMockedRequestDTO(
+        private function createMockedRequestDTO(
         string $currencyCode = 'INR', 
         int $minorUnit = 50000, 
         float $floatAmount = 500.00
@@ -143,6 +145,7 @@ class RazorpayOrderCreationServiceTest extends TestCase
 
         $accountMock = $this->createMock(AccountDomainObject::class); 
         $accountMock->method('getId')->willReturn(5);
+        $accountMock->method('getActiveRazorpayAccountId')->willReturn('acc_123');
 
         return new CreateRazorpayOrderRequestDTO(
             amount: $amountMock,
@@ -151,7 +154,6 @@ class RazorpayOrderCreationServiceTest extends TestCase
             order: $orderMock
         );
     }
-
     public static function currencyDataProvider(): array
     {
         return [

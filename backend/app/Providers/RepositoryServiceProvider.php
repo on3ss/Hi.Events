@@ -154,6 +154,7 @@ class RepositoryServiceProvider extends ServiceProvider
         OrganizerSettingsRepositoryInterface::class => OrganizerSettingsRepository::class,
         EmailTemplateRepositoryInterface::class => EmailTemplateRepository::class,
         AccountStripePlatformRepositoryInterface::class => AccountStripePlatformRepository::class,
+        \HiEvents\Repository\Interfaces\AccountRazorpayPlatformRepositoryInterface::class => \HiEvents\Repository\Eloquent\AccountRazorpayPlatformRepository::class,
         AccountVatSettingRepositoryInterface::class => AccountVatSettingRepository::class,
         TicketLookupTokenRepositoryInterface::class => TicketLookupTokenRepository::class,
         AccountMessagingTierRepositoryInterface::class => AccountMessagingTierRepository::class,

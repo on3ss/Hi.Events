@@ -42,6 +42,11 @@ class Account extends BaseModel
         );
     }
 
+    public function account_razorpay_platforms(): HasMany
+    {
+        return $this->hasMany(AccountRazorpayPlatform::class);
+    }
+
     public function account_stripe_platforms(): HasMany
     {
         return $this->hasMany(AccountStripePlatform::class);
