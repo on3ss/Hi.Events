@@ -1,15 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import { IdParam, StripeConnectDetails } from '../types';
+import { IdParam, RazorpayLinkedDetails } from '../types';
 import { accountClient } from "../api/account.client";
 import { AxiosError } from "axios";
 
-export const GET_STRIPE_CONNECT_ACCOUNT_DETAILS = 'getStripeConnectAccountDetails';
+export const GET_RAZORPAY_CONNECT_ACCOUNT_DETAILS = 'getRazorpayConnectAccountDetails';
 
 export const useCreateOrGetRazorpayConnectDetails = (accountId: IdParam, enabled: boolean, platform?: string) => {
-    return useQuery<StripeConnectDetails, AxiosError>({
-        queryKey: [GET_STRIPE_CONNECT_ACCOUNT_DETAILS, accountId],
+    return useQuery<RazorpayLinkedDetails, AxiosError>({
+        queryKey: [GET_RAZORPAY_CONNECT_ACCOUNT_DETAILS, accountId],
 
-        queryFn: async (): Promise<StripeConnectDetails> => {
+        queryFn: async (): Promise<RazorpayLinkedDetails> => {
             const { data } = await accountClient.getRazorpayConnectDetails(accountId);
             return data;
         },
