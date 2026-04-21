@@ -98,7 +98,7 @@ class CreateRazorpayLinkedAccountHandler
                 return $razorpayClient->fetchLinkedAccount($accountRazorpayPlatform->getRazorpayAccountId());
             }
 
-            $razorpayAccount = $razorpayClient->createLinkedAccount([
+                        $razorpayAccount = $razorpayClient->createLinkedAccount([
                 'name' => $account->getName(),
                 'email' => $account->getEmail(),
                 'tnc_accepted' => true,
@@ -106,6 +106,32 @@ class CreateRazorpayLinkedAccountHandler
                     'business_name' => $account->getName(),
                     'business_type' => 'individual',
                 ],
+            ]);
+
+            $razorpayClient->createStakeholder($razorpayAccount->id, [
+                'name' => $account->getName(),
+                'email' => $account->getEmail(),
+                'kyc' => [
+                    'pan' => 'ABCDE1234F',
+                ],
+                'percentage_ownership' => 100,
+                'relationship' => [
+                    'executive' => true
+                ],
+                'addresses' => [
+                    'residential' => [
+                        'street1' => 'Test Street',
+                        'city' => 'Test City',
+                        'state' => 'KA',
+                        'postal_code' => '560001',
+                        'country' => 'IN'
+                    ]
+                ]
+            ]);
+
+            $razorpayClient->createProductConfiguration($razorpayAccount->id, [
+                'product_name' => 'route',
+                'tnc_accepted' => true,
             ]);
         } catch (Throwable $e) {
             $this->logger->error('Failed to create or fetch Razorpay Linked Account: ' . $e->getMessage(), [

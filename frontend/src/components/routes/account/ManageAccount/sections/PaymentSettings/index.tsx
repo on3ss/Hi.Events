@@ -3,6 +3,9 @@ import {HeadingCard} from "../../../../../common/HeadingCard";
 import {useCreateOrGetStripeConnectDetails} from "../../../../../../queries/useCreateOrGetStripeConnectDetails.ts";
 import {useGetAccount} from "../../../../../../queries/useGetAccount.ts";
 import {useGetStripeConnectAccounts} from "../../../../../../queries/useGetStripeConnectAccounts.ts";
+import {useCreateOrGetRazorpayConnectDetails} from "../../../../../../queries/useCreateOrGetRazorpayConnectDetails.ts";
+import {useGetRazorpayConnectAccounts} from "../../../../../../queries/useGetRazorpayConnectAccounts.ts";
+import {IconBrandCashapp} from '@tabler/icons-react';
 import {LoadingMask} from "../../../../../common/LoadingMask";
 import {Anchor, Button, Grid, Group, Text, ThemeIcon, Title} from "@mantine/core";
 import {Account, StripeConnectAccountsResponse} from "../../../../../../types.ts";
@@ -558,6 +561,92 @@ const HiEventsConnectStatus = ({account}: { account: Account }) => {
 };
 
 // Open-Source Simple Component (like original)
+
+const RazorpayConnectStatus = ({account}: { account: Account }) => {
+    const [fetchRazorpayDetails, setFetchRazorpayDetails] = useState(false);
+
+    const razorpayAccountsQuery = useGetRazorpayConnectAccounts(account.id);
+    const razorpayDetailsQuery = useCreateOrGetRazorpayConnectDetails(
+        account.id,
+        fetchRazorpayDetails
+    );
+
+    const razorpayData = razorpayAccountsQuery.data;
+    const razorpayDetails = razorpayDetailsQuery.data;
+    const error = razorpayDetailsQuery.error as any;
+
+    const isNewUser = razorpayData &&
+        razorpayData.razorpay_linked_accounts.length === 0;
+
+    const handleSetupRazorpay = () => {
+        if (!razorpayDetails) {
+            setFetchRazorpayDetails(true);
+            return;
+        }
+    };
+
+    // If accounts are fetched and there's a completed account
+    const hasCompletedAccount = razorpayData?.razorpay_linked_accounts.some(acc => acc.is_setup_complete);
+
+    return (
+        <Card variant="lightGray" className={paymentClasses.connectStatusCard}>
+            <div className={paymentClasses.statusHeader}>
+                <Group justify="space-between" align="center" w="100%" gap="xs">
+                    <Group gap="sm" align="center">
+                        <ThemeIcon size="lg" variant="light" radius="md" color="blue">
+                            <IconBrandCashapp size={24} />
+                        </ThemeIcon>
+                        <div>
+                            <Text fw={600}>{t`Razorpay Route`}</Text>
+                        </div>
+                    </Group>
+                    {hasCompletedAccount ? (
+                        <div className={paymentClasses.statusBadge} data-status="complete">
+                            <IconCheck size={16} />
+                            <Text size="sm" fw={500}>{t`Setup Complete`}</Text>
+                        </div>
+                    ) : (
+                        <div className={paymentClasses.statusBadge} data-status="incomplete">
+                            <IconAlertCircle size={16} />
+                            <Text size="sm" fw={500}>{t`Action Required`}</Text>
+                        </div>
+                    )}
+                </Group>
+            </div>
+
+            <div className={paymentClasses.statusContent}>
+                {hasCompletedAccount ? (
+                    <div>
+                        <Text size="sm" mb="md" c="dimmed">
+                            {t`Your Razorpay account is connected and ready to process payments. Payouts will be routed to your Razorpay Linked Account.`}
+                        </Text>
+                    </div>
+                ) : (
+                    <div>
+                        <Text size="sm" mb="md" c="dimmed">
+                            {t`Connect your Razorpay account to start accepting payments. This is required before you can sell paid tickets.`}
+                        </Text>
+
+                        <Button
+                            variant="light"
+                            fullWidth
+                            loading={razorpayDetailsQuery.isLoading}
+                            onClick={handleSetupRazorpay}
+                        >
+                            {t`Connect Razorpay Account`}
+                        </Button>
+                        {error && (
+                            <Text c="red" size="sm" mt="sm">
+                                {error.message || t`Failed to initiate connection. Please try again.`}
+                            </Text>
+                        )}
+                    </div>
+                )}
+            </div>
+        </Card>
+    );
+};
+
 const OpenSourceConnectStatus = ({account}: { account: Account }) => {
     const [fetchStripeDetails, setFetchStripeDetails] = useState(false);
     const [isReturningFromStripe, setIsReturningFromStripe] = useState(false);
@@ -703,11 +792,16 @@ const OpenSourceConnectStatus = ({account}: { account: Account }) => {
 
 // Main Component that decides which to show
 const ConnectStatus = ({account}: { account: Account }) => {
-    if (isHiEvents()) {
-        return <HiEventsConnectStatus account={account}/>;
-    } else {
-        return <OpenSourceConnectStatus account={account}/>;
-    }
+    return (
+        <Group gap="xl" grow align="flex-start" wrap="nowrap">
+            {isHiEvents() ? (
+                <HiEventsConnectStatus account={account}/>
+            ) : (
+                <OpenSourceConnectStatus account={account}/>
+            )}
+            <RazorpayConnectStatus account={account}/>
+        </Group>
+    );
 };
 
 const PaymentSettings = () => {

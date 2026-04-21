@@ -41,6 +41,21 @@ class RazorpayApiClient implements RazorpayClientInterface
         return $this->api->request->request('GET', 'v2/accounts/' . $accountId);
     }
 
+    public function createStakeholder(string $accountId, array $data): object
+    {
+        return $this->api->request->request('POST', 'v2/accounts/' . $accountId . '/stakeholders', $data);
+    }
+
+    public function fetchStakeholder(string $accountId, string $stakeholderId): object
+    {
+        return $this->api->request->request('GET', 'v2/accounts/' . $accountId . '/stakeholders/' . $stakeholderId);
+    }
+
+    public function updateStakeholder(string $accountId, string $stakeholderId, array $data): object
+    {
+        return $this->api->request->request('PATCH', 'v2/accounts/' . $accountId . '/stakeholders/' . $stakeholderId, $data);
+    }
+
     public function createProductConfiguration(string $accountId, array $data): object
     {
         return $this->api->request->request('POST', 'v2/accounts/' . $accountId . '/products', $data);

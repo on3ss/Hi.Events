@@ -9,7 +9,6 @@ class CreateRazorpayLinkedAccountDTO extends BaseDataObject
 {
     public function __construct(
         public readonly int                 $accountId,
-
     )
     {
     }

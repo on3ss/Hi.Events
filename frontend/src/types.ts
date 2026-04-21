@@ -134,6 +134,32 @@ export interface AccountConfiguration {
     is_system_default: boolean;
 }
 
+export interface RazorpayLinkedDetails {
+    account: Account;
+    razorpay_account_id: string;
+    is_connect_setup_complete: boolean;
+    connect_url: string | null;
+}
+
+export interface RazorpayLinkedAccount {
+    razorpay_account_id: string;
+    connect_url: string | null;
+    is_setup_complete: boolean;
+    platform: string | null;
+    account_type: string | null;
+    is_primary: boolean;
+    country?: string;
+}
+
+export interface RazorpayLinkedAccountsResponse {
+    account: {
+        id: IdParam;
+    };
+    razorpay_linked_accounts: RazorpayLinkedAccount[];
+    primary_razorpay_account_id: string | null;
+    has_completed_setup: boolean;
+}
+
 export interface StripeConnectDetails {
     account: Account;
     stripe_account_id: string;
