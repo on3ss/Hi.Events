@@ -99,6 +99,7 @@ class CreateRazorpayLinkedAccountHandler
             }
 
                         $razorpayAccount = $razorpayClient->createLinkedAccount([
+                'notes' => [],
                 'name' => $account->getName(),
                 'email' => $account->getEmail(),
                 'tnc_accepted' => true,
@@ -137,7 +138,7 @@ class CreateRazorpayLinkedAccountHandler
             $this->logger->error('Failed to create or fetch Razorpay Linked Account: ' . $e->getMessage(), [
                 'accountId' => $account->getId(),
                 'razorpayAccountId' => $accountRazorpayPlatform?->getRazorpayAccountId() ?? 'null',
-                'exception' => $e,
+                'exception' => $e->getMessage(),
             ]);
 
             throw new CreateRazorpayLinkedAccountFailedException(
