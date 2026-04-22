@@ -99,40 +99,30 @@ class CreateRazorpayLinkedAccountHandler
             }
 
                         $razorpayAccount = $razorpayClient->createLinkedAccount([
-                'notes' => [],
-                'name' => $account->getName(),
                 'email' => $account->getEmail(),
-                'tnc_accepted' => true,
-                'account_details' => [
-                    'business_name' => $account->getName(),
-                    'business_type' => 'individual',
-                ],
-            ]);
-
-            $razorpayClient->createStakeholder($razorpayAccount->id, [
-                'name' => $account->getName(),
-                'email' => $account->getEmail(),
-                'kyc' => [
-                    'pan' => 'ABCDE1234F',
-                ],
-                'percentage_ownership' => 100,
-                'relationship' => [
-                    'executive' => true
-                ],
-                'addresses' => [
-                    'residential' => [
-                        'street1' => 'Test Street',
-                        'city' => 'Test City',
-                        'state' => 'KA',
-                        'postal_code' => '560001',
-                        'country' => 'IN'
+                'phone' => '9000090000',        // Required – you need to store/store this
+                'type' => 'route',               // Required – 'route' or 'live'
+                'reference_id' => (string) $account->getId(), // Optional but recommended
+                'legal_business_name' => $account->getName(),
+                'business_type' => 'individual', // or 'partnership', 'proprietorship', etc.
+                'contact_name' => $account->getName(),
+                'profile' => [
+                    'category' => 'healthcare',  // Adjust as needed
+                    'subcategory' => 'clinic',
+                    'addresses' => [
+                        'registered' => [
+                            'street1' => 'Your street address',
+                            'city' => 'Your city',
+                            'state' => 'KA',
+                            'postal_code' => '560001',
+                            'country' => 'IN'
+                        ]
                     ]
+                ],
+                'legal_info' => [
+                    'pan' => 'ABCDE1234F',       // You'll need to collect this from the user
+                    'gst' => '18AABCU9603R1ZM'   // Optional
                 ]
-            ]);
-
-            $razorpayClient->createProductConfiguration($razorpayAccount->id, [
-                'product_name' => 'route',
-                'tnc_accepted' => true,
             ]);
         } catch (Throwable $e) {
             $this->logger->error('Failed to create or fetch Razorpay Linked Account: ' . $e->getMessage(), [
