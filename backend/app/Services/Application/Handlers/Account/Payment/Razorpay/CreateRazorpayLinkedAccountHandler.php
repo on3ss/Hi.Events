@@ -60,6 +60,7 @@ class CreateRazorpayLinkedAccountHandler
             account: $account,
             accountRazorpayPlatform: $accountRazorpayPlatform,
             razorpayClient: $razorpayClient,
+            command: $command
         );
 
                 $isConnectSetupComplete = true; // Assuming created accounts are immediately usable or we'll check status
@@ -90,7 +91,8 @@ class CreateRazorpayLinkedAccountHandler
     private function getOrCreateRazorpayLinkedAccount(
         AccountDomainObject                $account,
         ?AccountRazorpayPlatformDomainObject $accountRazorpayPlatform,
-        $razorpayClient
+        $razorpayClient,
+        CreateRazorpayLinkedAccountDTO $command
     ): object
     {
         try {
@@ -98,31 +100,33 @@ class CreateRazorpayLinkedAccountHandler
                 return $razorpayClient->fetchLinkedAccount($accountRazorpayPlatform->getRazorpayAccountId());
             }
 
-                        $razorpayAccount = $razorpayClient->createLinkedAccount([
+            $legalInfo = ['pan' => $command->pan];
+            if ($command->gst) {
+                $legalInfo['gst'] = $command->gst;
+            }
+
+            $razorpayAccount = $razorpayClient->createLinkedAccount([
                 'email' => $account->getEmail(),
-                'phone' => '9000090000',        // Required – you need to store/store this
-                'type' => 'route',               // Required – 'route' or 'live'
-                'reference_id' => (string) $account->getId(), // Optional but recommended
-                'legal_business_name' => $account->getName(),
-                'business_type' => 'individual', // or 'partnership', 'proprietorship', etc.
-                'contact_name' => $account->getName(),
+                'phone' => $command->phone,
+                'type' => 'route',
+                'reference_id' => (string) $account->getId(),
+                'legal_business_name' => $command->companyName,
+                'business_type' => $command->businessType,
+                'contact_name' => $command->contactName,
                 'profile' => [
-                    'category' => 'healthcare',  // Adjust as needed
-                    'subcategory' => 'clinic',
+                    'category' => $command->category,
+                    'subcategory' => $command->subcategory,
                     'addresses' => [
                         'registered' => [
-                            'street1' => 'Your street address',
-                            'city' => 'Your city',
-                            'state' => 'KA',
-                            'postal_code' => '560001',
+                            'street1' => $command->street1,
+                            'city' => $command->city,
+                            'state' => $command->state,
+                            'postal_code' => $command->postalCode,
                             'country' => 'IN'
                         ]
                     ]
                 ],
-                'legal_info' => [
-                    'pan' => 'ABCDE1234F',       // You'll need to collect this from the user
-                    'gst' => '18AABCU9603R1ZM'   // Optional
-                ]
+                'legal_info' => $legalInfo
             ]);
         } catch (Throwable $e) {
             $this->logger->error('Failed to create or fetch Razorpay Linked Account: ' . $e->getMessage(), [
