@@ -5,6 +5,7 @@ namespace HiEvents\Http\Actions\Accounts\Razorpay;
 use HiEvents\DomainObjects\AccountDomainObject;
 use HiEvents\DomainObjects\Enums\Role;
 use HiEvents\Http\Actions\BaseAction;
+use HiEvents\Http\Requests\Accounts\Razorpay\CreateRazorpayLinkedAccountRequest;
 use HiEvents\Http\Resources\Account\Razorpay\RazorpayLinkedAccountsResponseResource;
 use HiEvents\Services\Application\Handlers\Account\Payment\Razorpay\CreateRazorpayLinkedAccountHandler;
 use HiEvents\Services\Application\Handlers\Account\Payment\Razorpay\DTO\CreateRazorpayLinkedAccountDTO;
@@ -25,7 +26,7 @@ class CreateRazorpayLinkedAccountAction extends BaseAction
     /**
      * @throws Throwable
      */
-    public function __invoke(Request $request, int $accountId): JsonResponse
+    public function __invoke(CreateRazorpayLinkedAccountRequest $request, int $accountId): JsonResponse
     {
         $this->isActionAuthorized($accountId, AccountDomainObject::class, Role::ADMIN);
 
@@ -47,8 +48,8 @@ class CreateRazorpayLinkedAccountAction extends BaseAction
             legalBusinessName: $request->input('legalBusinessName'),
             businessType: $request->input('businessType', 'partnership'),
             contactName: $request->input('contactName'),
-            profileCategory: $request->input('profileCategory', 'healthcare'),
-            profileSubcategory: $request->input('profileSubcategory', 'clinic'),
+            profileCategory: config('razorpay.defaults.profile_category', 'media_and_entertainment'),
+            profileSubcategory: config('razorpay.defaults.profile_subcategory', 'ticketing'),
             registeredAddress: $this->mapRegisteredAddress($request),
             pan: $request->input('pan'),
             gst: $request->input('gst'),

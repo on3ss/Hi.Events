@@ -59,5 +59,9 @@ return [
         'webhook_secret' => env('RAZORPAY_WEBHOOK_SECRET'),
         'application_fee_enabled' => env('RAZORPAY_APPLICATION_FEE_ENABLED', true),
         'platform_account_id' => env('RAZORPAY_PLATFORM_ACCOUNT_ID'),
+        'defaults' => [
+            'profile_category'    => 'media_and_entertainment',
+            'profile_subcategory' => 'ticketing',
+        ],
     ],
 ];
