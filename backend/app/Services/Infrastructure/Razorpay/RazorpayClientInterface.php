@@ -9,4 +9,21 @@ interface RazorpayClientInterface
     public function fetchPayment(string $paymentId): object;
 
     public function refundPayment(array $params, ?string $idempotencyKey = null): object;
+
+    public function createLinkedAccount(array $data): object;
+
+    public function fetchLinkedAccount(string $accountId): object;
+
+    public function updateLinkedAccount(string $accountId, array $data): object;
+
+    public function createStakeholder(string $accountId, array $data): object;
+
+    public function updateStakeholder(string $accountId, string $stakeholderId, array $data): object;
+
+    public function requestProductConfiguration(string $accountId, array $data): object;
+
+    public function fetchProductConfiguration(string $accountId, string $productId): object;
+
+    public function updateProductConfiguration(string $accountId, string $productId, array $data): object;
+
 }
