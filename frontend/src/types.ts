@@ -1080,3 +1080,61 @@ export interface WaitlistStats {
     expired: number;
     products: WaitlistProductStats[];
 }
+
+export interface RazorpayAccount {
+    id: string;
+    is_onboarding_complete: boolean;
+    country?: string;
+    platform?: string;
+}
+
+export interface RazorpayAccountsResponse {
+    razorpay_accounts: RazorpayAccount[];
+    account: {
+        razorpay_platform?: string;
+    };
+}
+
+export interface CreateRazorpayLinkedAccountDTO {
+    accountId: number;
+    email?: string;
+    phone?: string;
+    legalBusinessName?: string;
+    businessType?: string;
+    contactName?: string;
+    profileCategory?: string;
+    profileSubcategory?: string;
+    registeredAddress?: {
+        street1?: string;
+        street2?: string;
+        city?: string;
+        state?: string;
+        postalCode?: string;
+        country?: string;
+    };
+    pan?: string;
+    gst?: string;
+    stakeholder?: {
+        name: string;
+        email: string;
+        pan?: string;
+        residentialAddress: {
+            street?: string;
+            city?: string;
+            state?: string;
+            postalCode?: string;
+            country?: string;
+        };
+    };
+    settlement?: {
+        accountNumber: string;
+        ifscCode: string;
+        beneficiaryName: string;
+    };
+}
+
+export interface CreateRazorpayLinkedAccountResponse {
+    linkedAccountId: number;
+    razorpayAccountId: string;
+    setupCompleted: boolean;
+}
