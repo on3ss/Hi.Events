@@ -618,7 +618,7 @@ const OpenSourceConnectStatus = ({account}: { account: Account }) => {
 
     return (
         <div className={paymentClasses.stripeInfo}>
-            <Title mb={10} order={3}>{t`Payment Processing`}</Title>
+            <Title mb={10} order={3}>{t`Stripe Payment Processing`}</Title>
 
             {stripeDetails?.is_connect_setup_complete ? (
                 <>
