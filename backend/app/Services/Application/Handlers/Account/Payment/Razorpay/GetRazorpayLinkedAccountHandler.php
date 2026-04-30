@@ -21,6 +21,10 @@ class GetRazorpayLinkedAccountHandler
             ->loadRelation(AccountRazorpayPlatformDomainObject::class)
             ->findById($accountId);
 
+        if (!$this->isEligible($account)) {
+            abort(403, __('Account is not eligible for Razorpay.'));
+        }
+
         $platforms = $account->getAccountRazorpayPlatforms();
 
         if (!$platforms || $platforms->isEmpty()) {
@@ -47,5 +51,12 @@ class GetRazorpayLinkedAccountHandler
             primaryRazorpayAccountId: $primaryId,
             hasCompletedSetup: $hasCompletedSetup,
         );
+    }
+
+    private function isEligible($account): bool
+    {
+        return $account->country === 'IN'
+            || optional($account->configuration)->supports_razorpay
+            || $account->is_vendor;
     }
 }

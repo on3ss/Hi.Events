@@ -42,6 +42,9 @@ class CreateRazorpayLinkedAccountHandler
         // 1. Create local placeholder record in its own transaction (prevents duplicates)
         $localAccount = $this->databaseManager->transaction(function () use ($command) {
             $existing = $this->accountRazorpayPlatformRepository->findByAccountId($command->accountId);
+            if (!$this->isEligible($existing)) {
+                abort(403, __('Account is not eligible for Razorpay onboarding.'));
+            }
             if ($existing) {
                 // If already active, just return success
                 if ($existing->getStatus() === 'active') {
@@ -218,5 +221,12 @@ class CreateRazorpayLinkedAccountHandler
     {
         $message = $e->getMessage();
         return str_contains($message, 'already exists') || str_contains($message, 'duplicate');
+    }
+
+    private function isEligible($account): bool
+    {
+        return $account->country === 'IN'
+            || optional($account->configuration)->supports_razorpay
+            || $account->is_vendor;
     }
 }
