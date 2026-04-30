@@ -165,11 +165,11 @@ export const RazorpayPanel = ({ account }: RazorpayPanelProps) => {
             </div>
 
             <RazorpayOnboardingModal
-                accountId={account.id}
+                accountId={Number(account.id)}
                 opened={showModal}
                 onClose={() => setShowModal(false)}
                 onSubmit={handleModalSubmit}
-                isLoading={createMutation.isLoading}
+                isSubmitting={createMutation.isPending}
             />
         </>
     );

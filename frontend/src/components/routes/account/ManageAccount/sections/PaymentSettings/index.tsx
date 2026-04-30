@@ -20,6 +20,7 @@ import {VatSettingsModal} from './VatSettings/VatSettingsModal.tsx';
 import {VatNotice, getVatInfo} from './VatNotice';
 import {useGetAccountVatSetting} from '../../../../../../queries/useGetAccountVatSetting.ts';
 import {trackEvent, AnalyticsEvents} from "../../../../../../utilites/analytics.ts";
+import { RazorpayPanel } from "../../../../../PaymentSettings/RazorpayPanel.tsx";
 
 interface FeePlanDisplayProps {
     configuration?: {
@@ -824,11 +825,17 @@ const PaymentSettings = () => {
                 <LoadingMask/>
                 {(accountQuery.data) && (
                     <Grid gutter="xl">
-
                         <Grid.Col span={{base: 12, md: 6}}>
                             {accountQuery.isFetched && (
                                 <ConnectStatus account={accountQuery.data}/>
                             )}
+                            {/* Razorpay panel for eligible Indian vendors */}
+                            {accountQuery.data &&
+                                (accountQuery.data.currency_code === 'INR' ||
+                                    accountQuery.data.configuration?.supports_razorpay ||
+                                    accountQuery.data.is_vendor) && (
+                                    <RazorpayPanel account={accountQuery.data} />
+                                )}
                         </Grid.Col>
                         <Grid.Col span={{base: 12, md: 6}}>
                             {accountQuery.data?.configuration && (

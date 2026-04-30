@@ -9,7 +9,7 @@ interface RazorpayOnboardingModalProps {
     opened: boolean;
     onClose: () => void;
     onSubmit: (dto: CreateRazorpayLinkedAccountDTO) => void;
-    isLoading: boolean;
+    isSubmitting: boolean;
 }
 
 export const RazorpayOnboardingModal = ({
@@ -17,7 +17,7 @@ export const RazorpayOnboardingModal = ({
     opened,
     onClose,
     onSubmit,
-    isLoading,
+    isSubmitting,
 }: RazorpayOnboardingModalProps) => {
     const [activeStep, setActiveStep] = useState(0);
 
@@ -236,7 +236,7 @@ export const RazorpayOnboardingModal = ({
                     <Button
                         fullWidth
                         onClick={handleSubmit}
-                        loading={isLoading}
+                        loading={isSubmitting}
                     >
                         {t`Submit Onboarding Details`}
                     </Button>
