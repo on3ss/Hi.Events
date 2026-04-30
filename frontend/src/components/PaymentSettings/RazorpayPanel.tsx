@@ -101,6 +101,8 @@ export const RazorpayPanel = ({ account }: RazorpayPanelProps) => {
     const razorpayAccount = data?.razorpay_accounts?.[0];
     const isConnected = razorpayAccount?.is_onboarding_complete === true;
     const isIncomplete = razorpayAccount && !isConnected;
+    const initialEmail = account.email ?? '';
+    const initialLegalBusinessName = account.name ?? '';
 
     return (
         <>
@@ -170,6 +172,8 @@ export const RazorpayPanel = ({ account }: RazorpayPanelProps) => {
                 onClose={() => setShowModal(false)}
                 onSubmit={handleModalSubmit}
                 isSubmitting={createMutation.isPending}
+                initialEmail={initialEmail}
+                initialLegalBusinessName={initialLegalBusinessName}
             />
         </>
     );

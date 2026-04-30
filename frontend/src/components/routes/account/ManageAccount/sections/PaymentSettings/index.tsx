@@ -832,8 +832,7 @@ const PaymentSettings = () => {
                             {/* Razorpay panel for eligible Indian vendors */}
                             {accountQuery.data &&
                                 (accountQuery.data.currency_code === 'INR' ||
-                                    accountQuery.data.configuration?.supports_razorpay ||
-                                    accountQuery.data.is_vendor) && (
+                                    accountQuery.data.configuration?.supports_razorpay) && (
                                     <RazorpayPanel account={accountQuery.data} />
                                 )}
                         </Grid.Col>

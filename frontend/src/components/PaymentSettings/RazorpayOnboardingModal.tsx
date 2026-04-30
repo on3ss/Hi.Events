@@ -10,6 +10,8 @@ interface RazorpayOnboardingModalProps {
     onClose: () => void;
     onSubmit: (dto: CreateRazorpayLinkedAccountDTO) => void;
     isSubmitting: boolean;
+    initialEmail?: string;
+    initialLegalBusinessName?: string;
 }
 
 export const RazorpayOnboardingModal = ({
@@ -18,14 +20,16 @@ export const RazorpayOnboardingModal = ({
     onClose,
     onSubmit,
     isSubmitting,
+    initialEmail = '',
+    initialLegalBusinessName = '',
 }: RazorpayOnboardingModalProps) => {
     const [activeStep, setActiveStep] = useState(0);
 
     const form = useForm({
         initialValues: {
-            email: '',
+            email: initialEmail,
             phone: '',
-            legalBusinessName: '',
+            legalBusinessName: initialLegalBusinessName,
             businessType: 'partnership',
             contactName: '',
             regStreet1: '',
@@ -137,13 +141,23 @@ export const RazorpayOnboardingModal = ({
                 <Stepper.Step label={t`Business`} description={t`Company details`}>
                     <Grid>
                         <Grid.Col span={6}>
-                            <TextInput label={t`Email`} required {...form.getInputProps('email')} />
+                            <TextInput
+                                label={t`Email`}
+                                required
+                                disabled   // NEW: read-only, pre-filled from account
+                                {...form.getInputProps('email')}
+                            />
                         </Grid.Col>
                         <Grid.Col span={6}>
                             <TextInput label={t`Phone`} required {...form.getInputProps('phone')} />
                         </Grid.Col>
                         <Grid.Col span={12}>
-                            <TextInput label={t`Legal Business Name`} required {...form.getInputProps('legalBusinessName')} />
+                            <TextInput
+                                label={t`Legal Business Name`}
+                                required
+                                disabled   // optional: you may also disable this if pre-filled and not editable
+                                {...form.getInputProps('legalBusinessName')}
+                            />
                         </Grid.Col>
                         <Grid.Col span={6}>
                             <Select

@@ -113,8 +113,6 @@ export interface Account {
     timezone?: string;
     currency_code?: string;
     password?: string;
-    country?: string;
-    is_vendor?: boolean;
     stripe_connect_setup_complete?: boolean;
     stripe_account_id?: string;
     is_account_email_confirmed?: boolean;
