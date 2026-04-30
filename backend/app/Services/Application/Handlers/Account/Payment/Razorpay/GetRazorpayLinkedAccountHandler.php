@@ -2,6 +2,7 @@
 
 namespace HiEvents\Services\Application\Handlers\Account\Payment\Razorpay;
 
+use HiEvents\DomainObjects\AccountDomainObject;
 use HiEvents\DomainObjects\AccountRazorpayPlatformDomainObject;
 use HiEvents\Repository\Interfaces\AccountRazorpayPlatformRepositoryInterface;
 use HiEvents\Repository\Interfaces\AccountRepositoryInterface;
@@ -53,10 +54,9 @@ class GetRazorpayLinkedAccountHandler
         );
     }
 
-    private function isEligible($account): bool
+    private function isEligible(AccountDomainObject $account): bool
     {
-        return $account->country === 'IN'
-            || optional($account->configuration)->supports_razorpay
-            || $account->is_vendor;
+        return $account->getCurrencyCode() === 'INR'
+            || optional($account->getConfiguration())->supports_razorpay;
     }
 }
