@@ -1,5 +1,5 @@
 import {api} from "./client.ts";
-import {Account, GenericDataResponse, IdParam, User, StripeConnectAccountsResponse} from "../types.ts";
+import {Account, GenericDataResponse, IdParam, User, StripeConnectAccountsResponse, RazorpayAccountsResponse, CreateRazorpayLinkedAccountDTO, CreateRazorpayLinkedAccountResponse} from "../types.ts";
 
 interface CreateAccountRequest {
     first_name: string;
@@ -30,5 +30,18 @@ export const accountClient = {
     getStripeConnectAccounts: async (accountId: IdParam) => {
         const response = await api.get<GenericDataResponse<StripeConnectAccountsResponse>>(`accounts/${accountId}/stripe/connect_accounts`);
         return response.data;
-    }
+    },
+    getRazorpayAccounts: async (accountId: IdParam) => {
+        const response = await api.get<GenericDataResponse<RazorpayAccountsResponse>>(
+            `accounts/${accountId}/razorpay/accounts`
+        );
+        return response.data;
+    },
+    createRazorpayLinkedAccount: async (accountId: IdParam, payload: CreateRazorpayLinkedAccountDTO) => {
+        const response = await api.post<GenericDataResponse<CreateRazorpayLinkedAccountResponse>>(
+            `accounts/${accountId}/razorpay/linked-account`,
+            payload
+        );
+        return response.data;
+    },
 }
