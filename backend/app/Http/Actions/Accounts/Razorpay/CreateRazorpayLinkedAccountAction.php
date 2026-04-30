@@ -5,6 +5,7 @@ namespace HiEvents\Http\Actions\Accounts\Razorpay;
 use HiEvents\DomainObjects\AccountDomainObject;
 use HiEvents\DomainObjects\Enums\Role;
 use HiEvents\Http\Actions\BaseAction;
+use HiEvents\Http\Resources\Account\Razorpay\RazorpayLinkedAccountsResponseResource;
 use HiEvents\Services\Application\Handlers\Account\Payment\Razorpay\CreateRazorpayLinkedAccountHandler;
 use HiEvents\Services\Application\Handlers\Account\Payment\Razorpay\DTO\CreateRazorpayLinkedAccountDTO;
 use HiEvents\Services\Application\Handlers\Account\Payment\Razorpay\DTO\RegisteredAddressDTO;
@@ -29,9 +30,12 @@ class CreateRazorpayLinkedAccountAction extends BaseAction
         $this->isActionAuthorized($accountId, AccountDomainObject::class, Role::ADMIN);
 
         $dto = $this->buildDto($request, $accountId);
-        $response = $this->handler->handle($dto);
+        $result = $this->handler->handle($dto);
 
-        return response()->json($response);
+        return $this->resourceResponse(
+            resource: RazorpayLinkedAccountsResponseResource::class,
+            data: $result
+        );
     }
 
     private function buildDto(Request $request, int $accountId): CreateRazorpayLinkedAccountDTO
