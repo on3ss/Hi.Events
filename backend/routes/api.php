@@ -2,6 +2,8 @@
 
 use HiEvents\Http\Actions\Accounts\CreateAccountAction;
 use HiEvents\Http\Actions\Accounts\GetAccountAction;
+use HiEvents\Http\Actions\Accounts\Razorpay\CreateRazorpayLinkedAccountAction;
+use HiEvents\Http\Actions\Accounts\Razorpay\GetRazorpayLinkedAccountsAction;
 use HiEvents\Http\Actions\Accounts\Stripe\CreateStripeConnectAccountAction;
 use HiEvents\Http\Actions\Accounts\Stripe\GetStripeConnectAccountsAction;
 use HiEvents\Http\Actions\Accounts\UpdateAccountAction;
@@ -270,6 +272,11 @@ $router->middleware(['auth:api'])->group(
         $router->put('/accounts/{account_id?}', UpdateAccountAction::class);
         $router->get('/accounts/{account_id}/stripe/connect_accounts', GetStripeConnectAccountsAction::class);
         $router->post('/accounts/{account_id}/stripe/connect', CreateStripeConnectAccountAction::class);
+
+        $router->prefix('accounts/{accountId}/razorpay')->group(function (Router $router) {
+            $router->get('/accounts', GetRazorpayLinkedAccountsAction::class);
+            $router->post('/linked-account', CreateRazorpayLinkedAccountAction::class);
+        });
 
         // VAT Settings
         $router->get('/accounts/{account_id}/vat-settings', GetAccountVatSettingAction::class);
