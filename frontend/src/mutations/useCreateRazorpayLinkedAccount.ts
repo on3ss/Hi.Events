@@ -1,16 +1,13 @@
-import { useQuery } from '@tanstack/react-query';
-import { IdParam, RazorpayAccountsResponse } from '../types';
+import { useMutation } from '@tanstack/react-query';
 import { accountClient } from '../api/account.client';
+import { CreateRazorpayLinkedAccountDTO, CreateRazorpayLinkedAccountResponse } from '../types';
 import { AxiosError } from 'axios';
 
-export const useGetRazorpayAccounts = (accountId: IdParam, options?: { enabled?: boolean }) => {
-    return useQuery<RazorpayAccountsResponse, AxiosError>({
-        queryKey: ['razorpayAccounts', accountId],
-        queryFn: async () => {
-            const { data } = await accountClient.getRazorpayAccounts(accountId);
+export const useCreateRazorpayLinkedAccount = () => {
+    return useMutation<CreateRazorpayLinkedAccountResponse, AxiosError, CreateRazorpayLinkedAccountDTO>({
+        mutationFn: async (payload) => {
+            const { data } = await accountClient.createRazorpayLinkedAccount(payload.accountId, payload);
             return data;
         },
-        enabled: !!accountId && (options?.enabled ?? true),
-        retry: false,
     });
 };
