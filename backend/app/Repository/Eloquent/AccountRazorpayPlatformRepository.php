@@ -23,4 +23,13 @@ class AccountRazorpayPlatformRepository extends BaseRepository implements Accoun
         $results = $this->findWhere(['account_id' => $accountId]);
         return $results->first() ?: null;
     }
+
+    public function updateById(int $id, array $data): bool
+    {
+        return (bool) $this->model
+            ->newQuery()
+            ->where('id', $id)
+            ->update($data);
+
+    }
 }

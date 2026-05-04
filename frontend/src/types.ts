@@ -1,9 +1,9 @@
 /**
  * @todo - This file needs to be organized better. Split into multiple files.
  */
-import {SupportedLocales} from "./locales.ts";
+import { SupportedLocales } from "./locales.ts";
 
-export type ConfigKeys = 
+export type ConfigKeys =
     | 'VITE_API_URL_SERVER'
     | 'VITE_API_URL_CLIENT'
     | 'VITE_FRONTEND_URL'
@@ -733,8 +733,8 @@ export interface CheckInList {
 export type CheckInListRequest =
     Omit<CheckInList, 'event_id' | 'short_id' | 'id' | 'products' | 'total_attendees' | 'checked_in_attendees' | 'is_expired' | 'is_active'>
     & {
-    product_ids: IdParam[];
-};
+        product_ids: IdParam[];
+    };
 
 export interface QuestionRequestData {
     title: string;
@@ -1082,11 +1082,29 @@ export interface WaitlistStats {
     products: WaitlistProductStats[];
 }
 
+export type RazorpayStatus =
+    | 'not_started'
+    | 'initiated'
+    | 'creating_remote'
+    | 'created'
+    | 'pending_activation'
+    | 'active'
+    | 'failed'
+    | 'orphaned_remote';
+
 export interface RazorpayAccount {
-    id: string;
-    is_onboarding_complete: boolean;
-    country?: string;
-    platform?: string;
+    id: number;
+    status: RazorpayStatus;
+    razorpay_account_id?: string | null;
+    email?: string;
+    legal_business_name?: string;
+}
+
+export interface RazorpayViewProps {
+    status: RazorpayStatus;
+    data?: RazorpayAccount;
+    accountId: number;
+    onRetry?: () => void;
 }
 
 export interface RazorpayAccountsResponse {

@@ -28,7 +28,7 @@ class RazorpayAccountSetupException extends RuntimeException
     {
         return new self(
             message: "Razorpay error during {$context}: {$error->getMessage()}",
-            code: $error->getCode(),
+            code: (int) $error->getCode(),
             previous: $error,
             razorpayErrorDetails: [
                 'description' => $error->getMessage(),

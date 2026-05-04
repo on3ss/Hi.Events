@@ -36,6 +36,12 @@ class RazorpayApiClient implements RazorpayClientInterface
         return $this->api->account->create($data);
     }
 
+    public function listLinkedAccounts(array $params = []): array
+    {
+        $response = $this->api->account->all($params);
+        return $response->items ?? [];
+    }
+
     public function fetchLinkedAccount(string $accountId): object
     {
         return $this->api->account->fetch($accountId);

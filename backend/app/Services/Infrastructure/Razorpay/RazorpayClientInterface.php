@@ -12,6 +12,8 @@ interface RazorpayClientInterface
 
     public function createLinkedAccount(array $data): object;
 
+    public function listLinkedAccounts(array $params = []): array;
+
     public function fetchLinkedAccount(string $accountId): object;
 
     public function updateLinkedAccount(string $accountId, array $data): object;

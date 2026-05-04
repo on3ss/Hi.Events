@@ -35,16 +35,19 @@ class GetRazorpayLinkedAccountHandler
             );
         }
 
-        $razorpayAccounts = $platforms->map(function (AccountRazorpayPlatformDomainObject $platform) {
-            return new RazorpayLinkedAccountDTO(
-                id: $platform->getRazorpayAccountId(),
-                isSetupComplete: $platform->getStatus() === 'active',
+        $razorpayAccounts = $platforms->map(function (AccountRazorpayPlatformDomainObject $platform) use ($account){
+            new RazorpayLinkedAccountDTO(
+                id: $platform->getId(),
+                status: $platform->getStatus(),
+                razorpayAccountId: $platform->getRazorpayAccountId(),
+                email: $account->getEmail(),
+                legalBusinessName: $account->getName() ?? $account->getName(),
                 country: 'IN',
             );
         });
 
-        $primaryId = $razorpayAccounts->first()?->id;
-        $hasCompletedSetup = $razorpayAccounts->contains(fn($a) => $a->isSetupComplete);
+        $primaryId = $razorpayAccounts->first()?->getId();
+        $hasCompletedSetup = $razorpayAccounts->contains(fn(AccountRazorpayPlatformDomainObject $a) => $a->getRazorpayAccountId());
 
         return new GetRazorpayLinkedAccountsResponseDTO(
             account: $account,

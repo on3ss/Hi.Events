@@ -20,7 +20,7 @@ import {VatSettingsModal} from './VatSettings/VatSettingsModal.tsx';
 import {VatNotice, getVatInfo} from './VatNotice';
 import {useGetAccountVatSetting} from '../../../../../../queries/useGetAccountVatSetting.ts';
 import {trackEvent, AnalyticsEvents} from "../../../../../../utilites/analytics.ts";
-import { RazorpayPanel } from "../../../../../PaymentSettings/RazorpayPanel.tsx";
+import { RazorpayPanel } from "./RazorpayOnboarding/OnboardingPanel.tsx";
 
 interface FeePlanDisplayProps {
     configuration?: {
