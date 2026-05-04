@@ -13,13 +13,22 @@ class RazorpayLinkedAccountsResponseResource extends BaseResource
         $dto = $this->resource;
 
         return [
-            'razorpay_accounts' => $dto->razorpayAccounts->map(fn($acc) => [
-                'id'                    => $acc->id,
-                'is_onboarding_complete' => $acc->isSetupComplete,
-                'country'               => $acc->country,
-            ])->values()->toArray(),
+            'razorpay_accounts' => $dto->razorpayAccounts
+                ->map(fn($acc) => [
+                    'id' => $acc->id,
+                    'status' => $acc->status,
+                    'razorpay_account_id' => $acc->razorpayAccountId,
+                    'email' => $acc->email,
+                    'legal_business_name' => $acc->legalBusinessName,
+                    'country' => $acc->country,
+                ])
+                ->values()
+                ->toArray(),
+                
             'account' => [
-                'razorpay_platform' => $dto->primaryRazorpayAccountId ? 'razorpay' : null,
+                'razorpay_platform' => $dto->razorpayAccounts->isNotEmpty()
+                    ? 'razorpay'
+                    : null,
             ],
         ];
     }
