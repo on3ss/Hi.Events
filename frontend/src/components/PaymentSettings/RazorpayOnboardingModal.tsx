@@ -134,7 +134,7 @@ export const RazorpayOnboardingModal = ({
             opened={opened}
             onClose={onClose}
             title={t`Razorpay Onboarding`}
-            size="lg"
+            size="70%"
             closeOnClickOutside={false}
         >
             <Stepper active={activeStep} onStepClick={setActiveStep} mb="lg">
