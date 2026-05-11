@@ -300,7 +300,7 @@ msgstr "Một câu hỏi duy nhất cho mỗi sản phẩm. Ví dụ: Kích thư
 msgid "A standard tax, like VAT or GST"
 msgstr "Thuế tiêu chuẩn, như VAT hoặc GST"
 
-#: src/components/common/OrdersTable/index.tsx:443
+#: src/components/common/OrdersTable/index.tsx:436
 msgid "Abandoned"
 msgstr "Đã bỏ"
 
@@ -308,9 +308,9 @@ msgstr "Đã bỏ"
 msgid "About"
 msgstr "Thông tin sự kiện"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:435
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:464
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:682
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:434
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:463
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:681
 msgid "About Stripe Connect"
 msgstr "Giới thiệu về Stripe Connect"
 
@@ -327,14 +327,9 @@ msgstr "Hấp thụ phí"
 msgid "Accent Color"
 msgstr "Màu nhấn"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:98
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:159
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 msgid "Accept bank transfers, checks, or other offline payment methods"
 msgstr "Chấp nhận chuyển khoản ngân hàng, séc hoặc các phương thức thanh toán offline khác"
-
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
-msgid "Accept credit card payments with Razorpay"
-msgstr ""
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
 msgid "Accept credit card payments with Stripe"
@@ -348,16 +343,8 @@ msgstr "Chấp nhận lời mời"
 msgid "Accept Invitation"
 msgstr "Chấp nhận lời mời"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:118
-msgid "Accept online payments via third-party payment providers"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:7
-msgid "Accept payments with Razorpay"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:359
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:610
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:358
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:609
 msgid "Access Denied"
 msgstr "Truy cập bị từ chối"
 
@@ -371,7 +358,7 @@ msgstr "Truy cập bị từ chối"
 msgid "Account"
 msgstr "Tài khoản"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:344
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:343
 msgid "Account already connected!"
 msgstr "Tài khoản đã được kết nối!"
 
@@ -391,10 +378,6 @@ msgstr "Tên tài khoản"
 msgid "Account not found"
 msgstr "Không tìm thấy tài khoản"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:269
-msgid "Account Number"
-msgstr ""
-
 #: src/components/common/GlobalMenu/index.tsx:45
 #: src/components/routes/account/ManageAccount/index.tsx:19
 msgid "Account Settings"
@@ -411,11 +394,7 @@ msgstr "Tài khoản được cập nhật thành công"
 msgid "Accounts"
 msgstr "Tài Khoản"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:7
-msgid "Action required"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:72
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:71
 msgid "Action Required: Reconnect Your Stripe Account"
 msgstr "Cần hành động: Kết nối lại tài khoản Stripe của bạn"
 
@@ -426,7 +405,7 @@ msgstr "Cần hành động: Cần thông tin VAT"
 #: src/components/common/AdminEventsTable/index.tsx:112
 #: src/components/common/AffiliateTable/index.tsx:167
 #: src/components/common/AttendeeTable/index.tsx:346
-#: src/components/common/OrdersTable/index.tsx:452
+#: src/components/common/OrdersTable/index.tsx:445
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:467
 #: src/components/common/WaitlistTable/index.tsx:55
 #: src/components/common/WaitlistTable/index.tsx:210
@@ -489,7 +468,7 @@ msgstr "Thêm mô tả"
 msgid "Add event details and manage event settings."
 msgstr "Thêm chi tiết sự kiện và quản lý cài đặt sự kiện."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:205
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:153
 msgid "Add instructions for offline payments (e.g., bank transfer details, where to send checks, payment deadlines)"
 msgstr "Thêm hướng dẫn thanh toán offline (ví dụ: chi tiết chuyển khoản ngân hàng, nơi gửi séc, thời hạn thanh toán)"
 
@@ -669,7 +648,7 @@ msgstr "Tất cả những người tham dự sự kiện này"
 msgid "All Currencies"
 msgstr "Tất cả tiền tệ"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:186
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:185
 msgid "All done! You're now using our upgraded payment system."
 msgstr "Hoàn thành! Bây giờ bạn đang sử dụng hệ thống thanh toán nâng cấp của chúng tôi."
 
@@ -701,7 +680,7 @@ msgstr "Tất cả trạng thái"
 msgid "All Upcoming Events"
 msgstr "Tất cả sự kiện sắp diễn ra"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:209
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
 msgid "Allow attendees associated with unpaid orders to check in"
 msgstr "Cho phép người tham dự liên kết với đơn hàng chưa thanh toán được check-in"
 
@@ -723,8 +702,8 @@ msgstr "Cho phép công cụ tìm kiếm lập chỉ mục"
 msgid "Allow search engines to index this event"
 msgstr "Cho phép các công cụ tìm kiếm lập chỉ mục cho sự kiện này"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:206
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:418
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:205
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:417
 msgid "Almost there! Finish connecting your Stripe account to start accepting payments."
 msgstr "Gần xong rồi! Hoàn thành kết nối tài khoản Stripe để bắt đầu nhận thanh toán."
 
@@ -757,9 +736,8 @@ msgstr "Luôn có sẵn"
 msgid "Amazing, Event, Keywords..."
 msgstr "Tuyệt vời, sự kiện, từ khóa ..."
 
-#: src/components/common/OrdersTable/index.tsx:368
+#: src/components/common/OrdersTable/index.tsx:348
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:241
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:36
 msgid "Amount"
 msgstr "Số tiền"
@@ -1227,7 +1205,7 @@ msgid "Awaiting payment"
 msgstr "Đang chờ thanh toán"
 
 #: src/components/common/AttendeeTable/index.tsx:289
-#: src/components/common/OrdersTable/index.tsx:431
+#: src/components/common/OrdersTable/index.tsx:424
 #: src/components/routes/event/attendees.tsx:28
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:356
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:56
@@ -1241,10 +1219,6 @@ msgstr "Công ty TNHH Awesome Events"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:74
 msgid "Awesome Organizer Ltd."
 msgstr "Nhà tổ chức tuyệt vời Ltd."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:286
-msgid "Back"
-msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:114
 msgid "Back to Accounts"
@@ -1285,10 +1259,6 @@ msgstr "Màu nền"
 msgid "Background Type"
 msgstr "Loại nền"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:267
-msgid "Bank details"
-msgstr ""
-
 #: src/components/routes/organizer/Settings/index.tsx:29
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
@@ -1302,16 +1272,12 @@ msgstr "Trải nghiệm thanh toán tuyệt đẹp trên mọi thiết bị"
 msgid "Before your event can go live, there are a few things you need to do. Complete all the steps below to get started."
 msgstr "Trước khi sự kiện của bạn có thể phát trực tiếp, bạn cần thực hiện một vài việc. Hoàn thành tất cả các bước dưới đây để bắt đầu."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:271
-msgid "Beneficiary Name"
-msgstr ""
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:513
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:287
 msgid "Billing Address"
 msgstr "Địa chỉ thanh toán"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:219
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:167
 msgid "Billing Settings"
 msgstr "Cài đặt thanh toán"
 
@@ -1331,7 +1297,6 @@ msgstr "Xây dựng thương hiệu vé của bạn với logo, màu sắc và t
 msgid "Brazilian Portuguese"
 msgstr "Tiếng Bồ Đào Nha Brazil"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:201
 #: src/constants/eventCategories.ts:17
 msgid "Business"
 msgstr "Kinh doanh"
@@ -1348,10 +1313,6 @@ msgstr "Địa chỉ doanh nghiệp cho mục đích VAT"
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:294
 msgid "Business Name"
 msgstr "Tên doanh nghiệp"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:218
-msgid "Business Type"
-msgstr ""
 
 #: src/components/common/EmailTemplateEditor/CTAConfiguration.tsx:27
 msgid "Button Label"
@@ -1370,7 +1331,7 @@ msgid "Buyers see a clean price. The platform fee is deducted from your payout."
 msgstr "Người mua thấy giá rõ ràng. Phí nền tảng được khấu trừ từ khoản thanh toán của bạn."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/Payment/index.tsx:174
+#: src/components/routes/product-widget/Payment/index.tsx:152
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Bằng cách tiếp tục, bạn đồng ý với <0>Điều khoản dịch vụ của {0}</0>"
 
@@ -1451,7 +1412,7 @@ msgstr "Hủy sẽ hủy tất cả người tham dự liên quan đến đơn h
 
 #: src/components/common/AttendeeTable/index.tsx:295
 #: src/components/common/AttendeeTicket/index.tsx:149
-#: src/components/common/OrdersTable/index.tsx:437
+#: src/components/common/OrdersTable/index.tsx:430
 #: src/components/common/OrderStatusBadge/index.tsx:12
 #: src/components/common/WaitlistTable/index.tsx:27
 #: src/components/routes/admin/Messages/index.tsx:126
@@ -1683,8 +1644,6 @@ msgid "Choose who pays the platform fee. This does not affect additional fees yo
 msgstr "Chọn ai trả phí nền tảng. Điều này không ảnh hưởng đến các khoản phí bổ sung mà bạn đã cấu hình trong cài đặt tài khoản."
 
 #: src/components/common/CheckoutQuestion/index.tsx:162
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:238
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:259
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:134
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:92
 #: src/components/routes/product-widget/CollectInformation/index.tsx:533
@@ -1812,16 +1771,12 @@ msgstr "Các từ khóa mô tả sự kiện, được phân tách bằng dấu 
 msgid "Communication Preferences"
 msgstr "Tùy chọn liên lạc"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:201
-msgid "Company details"
-msgstr ""
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:712
 msgid "Complete Order"
 msgstr "Hoàn tất đơn hàng"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:340
-#: src/components/routes/product-widget/Payment/index.tsx:170
+#: src/components/routes/product-widget/Payment/index.tsx:148
 msgid "Complete Payment"
 msgstr "Hoàn tất thanh toán"
 
@@ -1830,7 +1785,7 @@ msgstr "Hoàn tất thanh toán"
 msgid "Complete Stripe Setup"
 msgstr "Hoàn tất thiết lập Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:116
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:115
 msgid "Complete the setup below to continue"
 msgstr "Hoàn thành thiết lập bên dưới để tiếp tục"
 
@@ -1850,7 +1805,7 @@ msgstr "Hoàn tất thanh toán để đảm bảo vé của bạn."
 msgid "Complete your profile to join the team."
 msgstr "Hoàn thành hồ sơ của bạn để tham gia nhóm."
 
-#: src/components/common/OrdersTable/index.tsx:419
+#: src/components/common/OrdersTable/index.tsx:412
 #: src/components/modals/SendMessageModal/index.tsx:333
 #: src/components/routes/event/GettingStarted/index.tsx:75
 #: src/components/routes/event/orders.tsx:23
@@ -1980,11 +1935,11 @@ msgstr "Chúc mừng bạn đã tạo sự kiện thành công!"
 msgid "Congratulations! Your event is now visible to the public."
 msgstr "Chúc mừng! Sự kiện của bạn hiện đã hiển thị công khai."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:236
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:235
 msgid "Connect & Upgrade"
 msgstr "Kết nối và nâng cấp"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:654
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:653
 msgid "Connect Documentation"
 msgstr "Tài liệu kết nối"
 
@@ -2009,14 +1964,10 @@ msgstr "Kết nối Stripe để bật tính năng nhắn tin"
 msgid "Connect to Stripe"
 msgstr "Kết nối với Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:11
-msgid "Connect with Razorpay"
-msgstr ""
-
 #: src/components/common/StripeConnectButton/index.tsx:85
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:236
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:455
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:672
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:235
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:454
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:671
 #: src/components/routes/event/GettingStarted/index.tsx:159
 msgid "Connect with Stripe"
 msgstr "Kết nối với Stripe"
@@ -2025,15 +1976,15 @@ msgstr "Kết nối với Stripe"
 msgid "Connect your Stripe account to accept payments for tickets and products."
 msgstr "Kết nối tài khoản Stripe để chấp nhận thanh toán cho vé và sản phẩm."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:224
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:223
 msgid "Connect your Stripe account to accept payments."
 msgstr "Kết nối tài khoản Stripe để nhận thanh toán."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:447
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:446
 msgid "Connect your Stripe account to start accepting payments for your events."
 msgstr "Kết nối tài khoản Stripe để bắt đầu nhận thanh toán cho sự kiện của bạn."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:222
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:221
 msgid "Connect your Stripe account to start accepting payments."
 msgstr "Kết nối tài khoản Stripe để bắt đầu nhận thanh toán."
 
@@ -2041,8 +1992,8 @@ msgstr "Kết nối tài khoản Stripe để bắt đầu nhận thanh toán."
 msgid "Connect your Stripe account to start receiving payments."
 msgstr "Kết nối tài khoản Stripe của bạn để bắt đầu nhận thanh toán."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:393
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:630
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:392
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:629
 msgid "Connected to Stripe"
 msgstr "Đã kết nối với Stripe"
 
@@ -2068,10 +2019,6 @@ msgstr "Email liên hệ"
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:81
 msgid "Contact email for support"
 msgstr "Email liên hệ hỗ trợ"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:230
-msgid "Contact Name"
-msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
@@ -2167,7 +2114,7 @@ msgid "Copy details to first attendee"
 msgstr "Sao chép chi tiết cho người tham dự đầu tiên"
 
 #: src/components/common/AttendeeTable/index.tsx:197
-#: src/components/common/OrdersTable/index.tsx:283
+#: src/components/common/OrdersTable/index.tsx:263
 msgid "Copy Email"
 msgstr "Sao chép Email"
 
@@ -2198,8 +2145,6 @@ msgid "Copy URL"
 msgstr "Sao chép URL"
 
 #: src/components/common/CheckoutQuestion/index.tsx:174
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:241
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:262
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:152
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:110
 #: src/components/routes/product-widget/CollectInformation/index.tsx:554
@@ -2440,7 +2385,7 @@ msgstr "Tiền tệ"
 msgid "Current Password"
 msgstr "Mật khẩu hiện tại"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:165
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:164
 msgid "Current payment processor"
 msgstr "Bộ xử lý thanh toán hiện tại"
 
@@ -2487,7 +2432,7 @@ msgid "Custom template"
 msgstr "Mẫu tùy chỉnh"
 
 #: src/components/common/AdminOrdersTable/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:227
+#: src/components/common/OrdersTable/index.tsx:207
 msgid "Customer"
 msgstr "Khách hàng"
 
@@ -2778,11 +2723,11 @@ msgstr "Bỏ qua thông báo này"
 msgid "Display a checkbox allowing customers to opt-in to receive marketing communications from this event organizer."
 msgstr "Hiển thị hộp kiểm cho phép khách hàng đăng ký nhận thông tin tiếp thị từ ban tổ chức sự kiện này."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:242
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:190
 msgid "Document Label"
 msgstr "Nhãn tài liệu"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:693
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:692
 msgid "Documentation"
 msgstr "Tài liệu"
 
@@ -3060,8 +3005,6 @@ msgstr "Danh Sách Đăng Ký Đủ Điều Kiện"
 #: src/components/modals/EditUserModal/index.tsx:80
 #: src/components/modals/InviteUserModal/index.tsx:61
 #: src/components/modals/JoinWaitlistModal/index.tsx:171
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:205
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:253
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:128
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -3181,7 +3124,7 @@ msgstr "Bật tự phục vụ cho người tham dự"
 msgid "Enable attendee self-service by default"
 msgstr "Bật tự phục vụ cho người tham dự theo mặc định"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:233
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:181
 msgid "Enable Invoicing"
 msgstr "Bật hóa đơn"
 
@@ -3288,10 +3231,6 @@ msgstr "Nhập số VAT bao gồm mã quốc gia"
 #: src/components/forms/AffiliateForm/index.tsx:39
 msgid "Enter unique affiliate code"
 msgstr "Nhập mã đối tác duy nhất"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:84
-msgid "Enter valid 10-digit mobile"
-msgstr ""
 
 #: src/components/common/ContactOrganizerModal/index.tsx:80
 #: src/components/routes/auth/Login/index.tsx:150
@@ -3908,13 +3847,13 @@ msgid "Fee Handling"
 msgstr "Xử lý phí"
 
 #: src/components/common/InlineOrderSummary/index.tsx:140
-#: src/components/common/OrdersTable/index.tsx:379
+#: src/components/common/OrdersTable/index.tsx:359
 #: src/components/forms/ProductForm/index.tsx:409
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 msgid "Fees"
 msgstr "Các khoản phí"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:292
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:291
 msgid "Fees are subject to change. You will be notified of any changes to your fee structure."
 msgstr "Các khoản phí có thể thay đổi. Bạn sẽ được thông báo về bất kỳ thay đổi nào trong cấu trúc phí của mình."
 
@@ -3956,16 +3895,12 @@ msgstr "Bộ lọc"
 msgid "Filters ({activeFilterCount})"
 msgstr "Bộ lọc ({activeFilterCount})"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:303
-msgid "Finish"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:215
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:214
 msgid "Finish Setup"
 msgstr "Hoàn thành thiết lập"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:426
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:673
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:425
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:672
 msgid "Finish Stripe Setup"
 msgstr "Hoàn thành thiết lập Stripe"
 
@@ -3973,7 +3908,7 @@ msgstr "Hoàn thành thiết lập Stripe"
 msgid "First attendee"
 msgstr "Người tham dự đầu tiên"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:258
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:206
 msgid "First Invoice Number"
 msgstr "Số hóa đơn đầu tiên"
 
@@ -4041,7 +3976,7 @@ msgstr "Phí cố định được tính cho mỗi giao dịch"
 msgid "Fixed fee must be 0 or greater"
 msgstr "Phí cố định phải bằng 0 hoặc lớn hơn"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:277
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:276
 msgid "Fixed Fee:"
 msgstr "Phí cố định:"
 
@@ -4189,10 +4124,6 @@ msgstr "Tổng doanh số"
 msgid "Gross Sales"
 msgstr "Doanh thu gộp"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:244
-msgid "GST"
-msgstr ""
-
 #: src/components/layouts/Event/index.tsx:117
 msgid "Guest Management"
 msgstr "Quản lý khách"
@@ -4230,7 +4161,7 @@ msgstr "Đây là component React bạn có thể sử dụng để nhúng widge
 msgid "Here is your affiliate link"
 msgstr "Đây là liên kết đối tác của bạn"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:85
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:84
 msgid "Here's what to expect:"
 msgstr "Đây là những gì cần mong đợi:"
 
@@ -4415,7 +4346,7 @@ msgstr "Nếu tab mới không tự động mở, vui lòng nhấn nút bên dư
 msgid "If blank, the address will be used to generate a Google Maps link"
 msgstr "Nếu để trống, địa chỉ sẽ được sử dụng để tạo liên kết Google Maps"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:210
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:158
 msgid "If enabled, check-in staff can either mark attendees as checked in or mark the order as paid and check in the attendees. If disabled, attendees associated with unpaid orders cannot be checked in."
 msgstr "Nếu được bật, nhân viên check-in có thể đánh dấu người tham dự đã check-in hoặc đánh dấu đơn hàng đã thanh toán và check-in người tham dự. Nếu tắt, những người tham dự liên kết với đơn hàng chưa thanh toán sẽ không thể check-in."
 
@@ -4434,10 +4365,6 @@ msgstr "Nếu bạn không yêu cầu thay đổi này, vui lòng thay đổi ng
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Nếu bạn có tài khoản với chúng tôi, bạn sẽ nhận được email với hướng dẫn về cách đặt lại mật khẩu."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:270
-msgid "IFSC Code"
-msgstr ""
 
 #: src/components/common/ImageUploadDropzone/index.tsx:124
 msgid "Image deleted successfully"
@@ -4567,8 +4494,6 @@ msgid "Invalid"
 msgstr "Không hợp lệ"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:35
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:83
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:97
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:33
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:33
 msgid "Invalid email"
@@ -4583,24 +4508,10 @@ msgstr "Định dạng email không hợp lệ"
 msgid "Invalid file type. Please upload an image."
 msgstr "Loại tệp không hợp lệ. Vui lòng tải lên hình ảnh."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:109
-msgid "Invalid IFSC"
-msgstr ""
-
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:144
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:175
 msgid "Invalid Liquid syntax. Please correct it and try again."
 msgstr "Cú pháp Liquid không hợp lệ. Vui lòng sửa và thử lại."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:94
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:105
-msgid "Invalid PAN"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:91
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:102
-msgid "Invalid postal code"
-msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/PaymentSettings/VatSettings/VatSettingsForm.tsx:157
 msgid "Invalid VAT number format"
@@ -4638,7 +4549,7 @@ msgstr "Mời người dùng"
 msgid "Invite Your Team"
 msgstr "Mời nhóm của bạn"
 
-#: src/components/common/OrdersTable/index.tsx:321
+#: src/components/common/OrdersTable/index.tsx:301
 msgid "Invoice"
 msgstr "Hóa đơn"
 
@@ -4647,15 +4558,15 @@ msgstr "Hóa đơn"
 msgid "Invoice downloaded successfully"
 msgstr "Hóa đơn được tải xuống thành công"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:304
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:252
 msgid "Invoice Notes"
 msgstr "Ghi chú hóa đơn"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:249
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
 msgid "Invoice Numbering"
 msgstr "Đánh số hóa đơn"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:229
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Invoice Settings"
 msgstr "Cài đặt hóa đơn"
 
@@ -4675,11 +4586,11 @@ msgstr "Tiếng Ý"
 msgid "Item"
 msgstr "Mục"
 
-#: src/components/common/OrdersTable/index.tsx:360
+#: src/components/common/OrdersTable/index.tsx:340
 msgid "item(s)"
 msgstr "mục"
 
-#: src/components/common/OrdersTable/index.tsx:342
+#: src/components/common/OrdersTable/index.tsx:322
 msgid "Items"
 msgstr "Mục"
 
@@ -4730,7 +4641,7 @@ msgstr ""
 msgid "Joined"
 msgstr "Đã tham gia"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:121
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:120
 msgid "Just click the button below to reconnect your Stripe account."
 msgstr "Chỉ cần nhấn nút bên dưới để kết nối lại tài khoản Stripe của bạn."
 
@@ -4741,10 +4652,6 @@ msgstr "Chỉ đang tìm vé của bạn?"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:567
 msgid "Keep me updated on news and events from {0}"
 msgstr "Giữ cho tôi cập nhật tin tức và sự kiện từ {0}"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:250
-msgid "Key person"
-msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:85
 msgid "Label"
@@ -4845,13 +4752,9 @@ msgstr "Trình kích hoạt cuối cùng"
 msgid "Last Used"
 msgstr "Được sử dụng lần cuối"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Để trống để sử dụng từ mặc định \"Hóa đơn\""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:213
-msgid "Legal Business Name"
-msgstr ""
 
 #: src/components/modals/EditAccountVatSettingsModal/index.tsx:141
 msgid "Legal business name for VAT purposes"
@@ -4977,7 +4880,7 @@ msgstr "Tra cứu vé của tôi"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:222
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:170
 msgid "Make billing address mandatory during checkout"
 msgstr "Bắt buộc nhập địa chỉ thanh toán, trong khi thanh toán"
 
@@ -5011,7 +4914,7 @@ msgstr "Quản lý sự kiện"
 msgid "Manage order"
 msgstr "Quản lý đơn hàng"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:99
 msgid "Manage payment and invoicing settings for this event."
 msgstr "Quản lý cài đặt thanh toán và lập hóa đơn cho sự kiện này."
 
@@ -5035,7 +4938,7 @@ msgstr "Quản lý chi tiết tài khoản của bạn và cài đặt mặc đ�
 msgid "Manage your event's waitlist, view stats, and offer tickets to attendees."
 msgstr ""
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:818
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:817
 msgid "Manage your payment processing and view platform fees"
 msgstr "Quản lý xử lý thanh toán và xem phí nền tảng của bạn"
 
@@ -5082,7 +4985,7 @@ msgstr "Phương tiện"
 
 #: src/components/common/AttendeeTable/index.tsx:188
 #: src/components/common/ContactOrganizerModal/index.tsx:88
-#: src/components/common/OrdersTable/index.tsx:274
+#: src/components/common/OrdersTable/index.tsx:254
 #: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Message"
 msgstr "Tin nhắn"
@@ -5245,7 +5148,6 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
 #: src/components/modals/DuplicateEventModal/index.tsx:109
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:252
 #: src/components/routes/admin/Configurations/index.tsx:219
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:75
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:230
@@ -5293,10 +5195,6 @@ msgstr "Mật khẩu mới"
 #: src/components/routes/admin/Dashboard/index.tsx:225
 msgid "New Signups"
 msgstr "Đăng ký mới"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:291
-msgid "Next"
-msgstr ""
 
 #: src/constants/eventCategories.ts:4
 msgid "Nightlife"
@@ -5420,11 +5318,11 @@ msgstr "Không có công việc thất bại"
 msgid "No filters available"
 msgstr "Không có bộ lọc có sẵn"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:87
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:86
 msgid "No impact on your current or past transactions"
 msgstr "Không ảnh hưởng đến giao dịch hiện tại hoặc quá khứ của bạn"
 
-#: src/components/common/OrdersTable/index.tsx:326
+#: src/components/common/OrdersTable/index.tsx:306
 msgid "No invoice"
 msgstr "Không có hóa đơn"
 
@@ -5449,7 +5347,7 @@ msgstr "Chưa có câu hỏi đơn hàng"
 msgid "No orders found"
 msgstr "Không tìm thấy đơn hàng"
 
-#: src/components/common/OrdersTable/index.tsx:473
+#: src/components/common/OrdersTable/index.tsx:466
 msgid "No orders to show"
 msgstr "Không có đơn hàng nào để hiển thị"
 
@@ -5473,7 +5371,7 @@ msgstr "Không có đơn hàng đã thanh toán"
 msgid "No past events"
 msgstr "Không có sự kiện trước đó"
 
-#: src/components/routes/product-widget/Payment/index.tsx:91
+#: src/components/routes/product-widget/Payment/index.tsx:87
 msgid "No payment methods are currently available. Please contact the event organizer for assistance."
 msgstr "Hiện không có phương thức thanh toán. Vui lòng liên hệ ban tổ chức sự kiện để được hỗ trợ."
 
@@ -5634,11 +5532,11 @@ msgstr "Cài đặt thông báo"
 msgid "Notify organizer of new orders"
 msgstr "Thông báo cho ban tổ chức các đơn hàng mới"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:269
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:217
 msgid "Number of days allowed for payment (leave blank to omit payment terms from invoices)"
 msgstr "Số ngày quá hạn thanh toán (để trống để bỏ qua các điều khoản thanh toán từ hóa đơn)"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:251
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:199
 msgid "Number Prefix"
 msgstr "Tiền tố số"
 
@@ -5681,12 +5579,12 @@ msgstr "Đề nghị hết hạn sau {timeoutHours} giờ."
 msgid "Office or venue name"
 msgstr "Tên văn phòng hoặc địa điểm"
 
-#: src/components/common/OrdersTable/index.tsx:214
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/common/OrdersTable/index.tsx:389
+#: src/components/routes/product-widget/Payment/index.tsx:131
 msgid "Offline"
 msgstr "Ngoại tuyến"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:145
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "Các đơn hàng ngoại tuyến không được phản ánh trong thống kê sự kiện cho đến khi đơn hàng được đánh dấu là được thanh toán."
 
@@ -5695,26 +5593,25 @@ msgstr "Các đơn hàng ngoại tuyến không được phản ánh trong thố
 msgid "Offline Payment"
 msgstr "Thanh toán ngoại tuyến"
 
-#: src/components/routes/product-widget/Payment/index.tsx:81
+#: src/components/routes/product-widget/Payment/index.tsx:77
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Thanh toán offline không thành công. Vui lòng thử loại hoặc liên hệ với ban tổ chức sự kiện."
 
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:49
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:82
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:203
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:151
 msgid "Offline Payment Instructions"
 msgstr "Hướng Dẫn Thanh Toán Offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:97
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:90
 msgid "Offline Payments"
 msgstr "Thanh toán offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:139
 msgid "Offline Payments Information"
 msgstr "Thông tin thanh toán offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:186
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:134
 msgid "Offline Payments Settings"
 msgstr "Cài đặt thanh toán offline"
 
@@ -5728,7 +5625,7 @@ msgstr "Đang Bán"
 msgid "On sale {0}"
 msgstr "Đang giảm giá {0}"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:554
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:553
 msgid "Once you complete the upgrade, your old account will only be used for refunds."
 msgstr "Khi bạn hoàn thành nâng cấp, tài khoản cũ sẽ chỉ được sử dụng để hoàn tiền."
 
@@ -5750,6 +5647,7 @@ msgid "Ongoing"
 msgstr "Đang diễn ra"
 
 #: src/components/common/EventCard/index.tsx:93
+#: src/components/routes/product-widget/Payment/index.tsx:123
 msgid "Online"
 msgstr "Trực tuyến"
 
@@ -5761,10 +5659,6 @@ msgstr "Sự kiện trực tuyến"
 #: src/components/common/OnlineEventDetails/index.tsx:9
 msgid "Online Event Details"
 msgstr "Chi tiết sự kiện trực tuyến"
-
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:116
-msgid "Online Payments"
-msgstr ""
 
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:72
 msgid "Only account administrators can delete or archive events. Contact your account admin for assistance."
@@ -5791,9 +5685,9 @@ msgstr "Mở Trang Check-In"
 msgid "Open sidebar"
 msgstr "Mở thanh bên"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:197
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:406
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:643
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:196
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:405
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:642
 msgid "Open Stripe Dashboard"
 msgstr "Mở bảng điều khiển Stripe"
 
@@ -5801,11 +5695,11 @@ msgstr "Mở bảng điều khiển Stripe"
 msgid "Option {i}"
 msgstr "Tùy chọn {i}"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:305
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:253
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
 msgstr "Thông tin bổ sung tùy chọn xuất hiện trên tất cả các hóa đơn (ví dụ: điều khoản thanh toán, phí thanh toán trễ, chính sách trả lại)"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:252
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:200
 msgid "Optional prefix for invoice numbers (e.g., INV-)"
 msgstr "Tiền tố tùy chọn cho số hóa đơn (ví dụ: Inv-)"
 
@@ -5885,7 +5779,7 @@ msgstr "Đơn Vị Tiền Tệ Đơn Hàng"
 msgid "Order Date"
 msgstr "Ngày đơn hàng"
 
-#: src/components/common/OrdersTable/index.tsx:297
+#: src/components/common/OrdersTable/index.tsx:277
 #: src/components/modals/ManageAttendeeModal/index.tsx:166
 #: src/components/modals/ManageOrderModal/index.tsx:86
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:591
@@ -5914,7 +5808,6 @@ msgid "Order Holders"
 msgstr "Người đặt hàng"
 
 #: src/components/common/AdminOrdersTable/index.tsx:67
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:232
 msgid "Order ID"
 msgstr "Mã đơn hàng"
 
@@ -6068,16 +5961,16 @@ msgstr "Tài khoản tự nhiên"
 msgid "Organization"
 msgstr "Tổ chức"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:287
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:235
 msgid "Organization Address"
 msgstr "Địa chỉ tổ chức"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:278
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:226
 msgid "Organization Details"
 msgstr "Chi tiết tổ chức"
 
 #: src/components/forms/OrganizerForm/index.tsx:28
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:280
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:228
 msgid "Organization Name"
 msgstr "Tên tổ chức"
 
@@ -6165,7 +6058,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "Ban tổ chức chỉ có thể quản lý các sự kiện và sản phẩm. Họ không thể quản lý người dùng, tài khoản hoặc thông tin thanh toán."
 
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:98
-#: src/components/common/OrdersTable/index.tsx:220
+#: src/components/common/OrdersTable/index.tsx:394
 #: src/constants/eventCategories.ts:22
 msgid "Other"
 msgstr "Khác"
@@ -6226,11 +6119,6 @@ msgstr "Sản phẩm trả phí"
 msgid "Paid, free, tiered pricing, and donation-based tickets"
 msgstr "Vé trả phí, miễn phí, giá nhiều cấp và dựa trên quyên góp"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:243
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:254
-msgid "PAN"
-msgstr ""
-
 #: src/components/modals/RefundOrderModal/index.tsx:109
 msgid "Partial refund"
 msgstr "Hoàn tiền một phần"
@@ -6240,13 +6128,9 @@ msgstr "Hoàn tiền một phần"
 msgid "Partially Refunded"
 msgstr "Hoàn lại tiền một phần"
 
-#: src/components/common/OrdersTable/index.tsx:384
+#: src/components/common/OrdersTable/index.tsx:364
 msgid "Partially refunded: {0}"
 msgstr "Hoàn tiền một phần: {0}"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:220
-msgid "Partnership"
-msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:191
 msgid "Pass fee to buyer"
@@ -6310,7 +6194,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "Tạm dừng"
 
-#: src/components/routes/product-widget/Payment/index.tsx:168
+#: src/components/routes/product-widget/Payment/index.tsx:146
 msgid "Pay"
 msgstr "Thanh toán"
 
@@ -6323,10 +6207,9 @@ msgstr "Thanh toán để mở khóa"
 msgid "Payload"
 msgstr "Tải trọng"
 
-#: src/components/common/OrdersTable/index.tsx:395
+#: src/components/common/OrdersTable/index.tsx:375
 #: src/components/common/ProgressStepper/index.tsx:19
 #: src/components/forms/StripeCheckoutForm/index.tsx:127
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:191
 msgid "Payment"
 msgstr "Thanh toán"
 
@@ -6334,7 +6217,7 @@ msgstr "Thanh toán"
 msgid "Payment & Invoicing"
 msgstr "Thanh toán & Hoá đơn"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:98
 msgid "Payment & Invoicing Settings"
 msgstr "Cài đặt Thanh toán & Hoá đơn"
 
@@ -6346,13 +6229,9 @@ msgstr "Thanh toán & Gói"
 msgid "Payment Date"
 msgstr "Ngày thanh toán"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:268
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:216
 msgid "Payment Due Period"
 msgstr "Thời hạn thanh toán"
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:131
-msgid "Payment Error"
-msgstr ""
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:57
 msgid "Payment Failed"
@@ -6363,16 +6242,17 @@ msgstr "Thanh toán thất bại"
 msgid "Payment Instructions"
 msgstr "Hướng dẫn thanh toán"
 
-#: src/components/routes/product-widget/Payment/index.tsx:124
+#: src/components/routes/product-widget/Payment/index.tsx:114
 msgid "Payment method"
 msgstr "Phương thức thanh toán"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:112
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
 msgid "Payment Methods"
 msgstr "Phương thức thanh toán"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:475
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:487
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:474
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:486
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:620
 msgid "Payment Processing"
 msgstr "Thanh toán đang xử lý"
 
@@ -6388,7 +6268,7 @@ msgstr "Đã nhận thanh toán"
 msgid "Payment Received"
 msgstr "Thanh toán đã nhận"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:817
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:816
 msgid "Payment Settings"
 msgstr "Cài đặt thanh toán"
 
@@ -6400,28 +6280,15 @@ msgstr "Tình trạng thanh toán"
 msgid "Payment succeeded!"
 msgstr "Thanh toán thành công!"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:266
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:214
 msgid "Payment Terms"
 msgstr "Điều khoản thanh toán"
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:100
-msgid "Payment Verification Failed"
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:101
-msgid "Payment verification failed. Please contact support with order ID {0}."
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:254
-msgid "Payments are processed securely by Razorpay using industry-standard encryption."
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:159
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "Thanh toán không khả dụng"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:88
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:87
 msgid "Payments will continue to flow without interruption"
 msgstr "Thanh toán sẽ tiếp tục diễn ra không bị gián đoạn"
 
@@ -6491,7 +6358,6 @@ msgstr "Xóa vĩnh viễn ban tổ chức này và tất cả các sự kiện c
 msgid "Personal Information"
 msgstr "Thông tin cá nhân"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:209
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:97
 msgid "Phone"
 msgstr "Điện thoại"
@@ -6517,7 +6383,7 @@ msgstr "Phí nền tảng"
 msgid "Platform fee of {0} deducted from your payout"
 msgstr "Phí nền tảng {0} được khấu trừ từ khoản thanh toán của bạn"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:249
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:248
 #: src/components/routes/event/Settings/index.tsx:98
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:46
 #: src/components/routes/organizer/Reports/index.tsx:41
@@ -6554,10 +6420,6 @@ msgstr "Vui lòng kiểm tra email của bạn là hợp lệ"
 #: src/components/routes/profile/ManageProfile/index.tsx:170
 msgid "Please check your email to confirm your email address"
 msgstr "Vui lòng kiểm tra email của bạn để xác nhận địa chỉ email của bạn"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:278
-msgid "Please confirm all your details are correct before submitting."
-msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:354
 msgid "Please continue in the new tab"
@@ -6600,7 +6462,6 @@ msgstr "Xin lưu ý"
 msgid "Please provide an image."
 msgstr "Vui lòng cung cấp một hình ảnh."
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:176
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:65
 msgid "Please restart the checkout process."
 msgstr "Vui lòng bắt đầu lại quy trình thanh toán."
@@ -6672,11 +6533,6 @@ msgstr "Tin nhắn sau phần thanh toán"
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:83
 msgid "Post Checkout Message"
 msgstr "Tin Nhắn Sau Thanh Toán"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:240
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:261
-msgid "Postal Code"
-msgstr ""
 
 #: src/components/common/PoweredByFooter/index.tsx:60
 msgid "Powered by"
@@ -6763,10 +6619,6 @@ msgstr "In ra PDF"
 #: src/components/layouts/OrganizerHomepage/index.tsx:328
 msgid "Privacy Policy"
 msgstr "Chính sách quyền riêng tư"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:222
-msgid "Private Limited"
-msgstr ""
 
 #: src/components/modals/RefundOrderModal/index.tsx:150
 msgid "Process Refund"
@@ -6907,18 +6759,10 @@ msgstr "Chỉ khuyến mãi"
 msgid "Promotional emails may result in account suspension"
 msgstr "Email quảng cáo có thể dẫn đến đình chỉ tài khoản"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:221
-msgid "Proprietorship"
-msgstr ""
-
 #: src/components/forms/QuestionForm/index.tsx:189
 msgid ""
 "Provide additional context or instructions for this question. Use this field to add terms\n"
 "and conditions, guidelines, or any important information that attendees need to know before answering."
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:223
-msgid "Public Limited"
 msgstr ""
 
 #: src/components/common/StatusToggle/index.tsx:97
@@ -6998,33 +6842,11 @@ msgstr "Tỷ lệ"
 msgid "Rate limit exceeded. Please try again later."
 msgstr "Vượt quá giới hạn yêu cầu. Vui lòng thử lại sau."
 
-#: src/components/common/OrdersTable/index.tsx:210
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
-#: src/components/routes/product-widget/Payment/index.tsx:144
-msgid "Razorpay"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ConnectedState.tsx:7
-msgid "Razorpay account connected"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:194
-msgid "Razorpay Onboarding"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingPanel.tsx:69
-msgid "Razorpay Payment Processing"
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:160
-msgid "Razorpay payments are not enabled for this event."
-msgstr ""
-
 #: src/components/common/WaitlistTable/index.tsx:69
 msgid "Re-offer Spot"
 msgstr "Cung cấp lại suất"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:225
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:224
 msgid "Ready to upgrade? This takes only a few minutes."
 msgstr "Sẵn sàng nâng cấp? Điều này chỉ mất vài phút."
 
@@ -7079,10 +6901,10 @@ msgstr "Reddit"
 
 #: src/components/common/StripeConnectButton/index.tsx:59
 #: src/components/common/StripeConnectButton/index.tsx:74
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:327
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:340
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:580
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:598
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:326
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:339
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:579
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:597
 msgid "Redirecting to Stripe..."
 msgstr "Đang chuyển hướng đến Stripe..."
 
@@ -7098,7 +6920,7 @@ msgstr "Làm mới xem trước"
 msgid "Refund amount"
 msgstr "Số tiền hoàn lại"
 
-#: src/components/common/OrdersTable/index.tsx:386
+#: src/components/common/OrdersTable/index.tsx:366
 msgid "Refund failed"
 msgstr "Hoàn tiền thất bại"
 
@@ -7114,7 +6936,7 @@ msgstr "Lệnh hoàn trả"
 msgid "Refund Order {0}"
 msgstr "Hoàn tiền đơn hàng {0}"
 
-#: src/components/common/OrdersTable/index.tsx:385
+#: src/components/common/OrdersTable/index.tsx:365
 msgid "Refund pending"
 msgstr "Hoàn tiền đang chờ"
 
@@ -7134,7 +6956,7 @@ msgstr "Trạng thái hoàn trả"
 msgid "Refunded"
 msgstr "Đã hoàn lại"
 
-#: src/components/common/OrdersTable/index.tsx:383
+#: src/components/common/OrdersTable/index.tsx:363
 msgid "Refunded: {0}"
 msgstr "Đã hoàn tiền: {0}"
 
@@ -7150,10 +6972,6 @@ msgstr "Cài đặt khu vực"
 #: src/components/routes/auth/Register/index.tsx:137
 msgid "Register"
 msgstr "Đăng ký"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:233
-msgid "Registered Address"
-msgstr ""
 
 #: src/components/common/QuestionsTable/index.tsx:412
 #: src/components/layouts/Event/index.tsx:107
@@ -7190,21 +7008,11 @@ msgstr "Báo cáo"
 msgid "Request a new link"
 msgstr "Yêu cầu liên kết mới"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:221
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:169
 msgid "Require Billing Address"
 msgstr "Yêu cầu địa chỉ thanh toán"
 
 #: src/components/common/QuestionsTable/index.tsx:118
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:85
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:87
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:88
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:89
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:96
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:98
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:99
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:100
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:107
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:110
 msgid "Required"
 msgstr "Bắt buộc"
 
@@ -7252,11 +7060,11 @@ msgstr "Gửi lại email vé"
 msgid "Resending..."
 msgstr "Đang gửi lại ..."
 
-#: src/components/common/OrdersTable/index.tsx:425
+#: src/components/common/OrdersTable/index.tsx:418
 msgid "Reserved"
 msgstr "Đã đặt chỗ"
 
-#: src/components/common/OrdersTable/index.tsx:332
+#: src/components/common/OrdersTable/index.tsx:312
 msgid "Reserved until"
 msgstr "Đặt trước đến"
 
@@ -7272,10 +7080,6 @@ msgstr "Đặt lại mật khẩu"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "Đang đặt lại..."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:256
-msgid "Residential Address"
-msgstr ""
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -7312,7 +7116,6 @@ msgstr "Khôi phục sự kiện này để làm cho nó hiển thị trở lạ
 msgid "Restore this organizer and make it active again."
 msgstr "Khôi phục ban tổ chức này và làm cho nó hoạt động trở lại."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:11
 #: src/components/routes/admin/FailedJobs/index.tsx:199
 msgid "Retry"
 msgstr "Thử lại"
@@ -7325,8 +7128,6 @@ msgstr "Thử lại tất cả"
 msgid "Retry Job"
 msgstr "Thử lại công việc"
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:162
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:178
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:52
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
 msgid "Return to Event"
@@ -7347,14 +7148,6 @@ msgstr "Doanh thu"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:67
 msgid "Revenue Summary"
 msgstr "Tóm tắt doanh thu"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:294
-#~ msgid "Review"
-#~ msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:277
-msgid "Review & Submit"
-msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:130
 msgid "Revoke invitation"
@@ -7452,7 +7245,7 @@ msgstr "San Francisco"
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:132
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:166
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:102
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:317
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:265
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:76
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:116
@@ -7463,10 +7256,6 @@ msgstr "San Francisco"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:88
 msgid "Save"
 msgstr "Lưu"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:297
-msgid "Save & Review"
-msgstr ""
 
 #: src/components/modals/ManageAttendeeModal/index.tsx:231
 #: src/components/modals/ManageOrderModal/index.tsx:175
@@ -7608,10 +7397,6 @@ msgstr "Màu phụ"
 #: src/components/common/WidgetEditor/index.tsx:205
 msgid "Secondary Text Color"
 msgstr "Màu chữ phụ"
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:221
-msgid "Secure"
-msgstr ""
 
 #: src/components/common/InlineOrderSummary/index.tsx:215
 msgid "Secure Checkout"
@@ -7888,7 +7673,7 @@ msgstr "Đặt cài đặt phí nền tảng mặc định cho các sự kiện 
 msgid "Set default settings for new events created under this organizer."
 msgstr "Đặt cài đặt mặc định cho các sự kiện mới được tạo dưới tổ chức này."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:259
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:207
 msgid "Set the starting number for invoice numbering. This cannot be changed once invoices have been generated."
 msgstr "Đặt số bắt đầu cho hóa đơn. Sau khi hóa đơn được tạo, số này không thể thay đổi."
 
@@ -7904,17 +7689,9 @@ msgstr "Thiết lập sự kiện của bạn"
 msgid "Set up your organization"
 msgstr "Thiết lập tổ chức của bạn"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:9
-msgid "Set up your Razorpay account to start receiving payments."
-msgstr ""
-
 #: src/components/routes/event/GettingStarted/index.tsx:188
 msgid "Set your event live"
 msgstr "Đặt sự kiện của bạn trực tiếp"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ProcessingState.tsx:8
-msgid "Setting up your account..."
-msgstr ""
 
 #: src/components/common/QuestionsTable/index.tsx:373
 msgid "Setting updated"
@@ -7930,10 +7707,6 @@ msgstr "Đã cập nhật cài đặt"
 #: src/components/modals/DuplicateEventModal/index.tsx:26
 msgid "Settings"
 msgstr "Cài đặt"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:267
-msgid "Settlement"
-msgstr ""
 
 #: src/components/layouts/Event/index.tsx:103
 msgid "Setup & Design"
@@ -8072,11 +7845,8 @@ msgid "Sold Out"
 msgstr "Đã bán hết"
 
 #: src/components/common/ErrorDisplay/index.tsx:15
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:185
 #: src/components/routes/auth/AcceptInvitation/index.tsx:48
 #: src/components/routes/product-widget/CollectInformation/index.tsx:386
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:169
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:175
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:64
 msgid "Something went wrong"
 msgstr "Đã xảy ra lỗi"
@@ -8131,10 +7901,6 @@ msgstr "Tiếng Tây Ban Nha"
 msgid "Sports"
 msgstr "Thể thao"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:250
-msgid "Stakeholder"
-msgstr ""
-
 #: src/components/forms/ProductForm/index.tsx:156
 msgid "Standard product with a fixed price"
 msgstr "Sản phẩm tiêu chuẩn với giá cố định"
@@ -8162,11 +7928,6 @@ msgstr "Ngày bắt đầu là bắt buộc"
 msgid "Start time of the event"
 msgstr "Thời gian bắt đầu sự kiện"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:239
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:260
-msgid "State"
-msgstr ""
-
 #: src/components/common/CheckoutQuestion/index.tsx:165
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:139
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:97
@@ -8188,7 +7949,7 @@ msgstr "Thống kê dựa trên ngày tạo tài khoản"
 #: src/components/common/AffiliateTable/index.tsx:83
 #: src/components/common/AttendeeTable/index.tsx:274
 #: src/components/common/OrderDetails/index.tsx:51
-#: src/components/common/OrdersTable/index.tsx:410
+#: src/components/common/OrdersTable/index.tsx:403
 #: src/components/common/OrganizerWebhookTable/index.tsx:238
 #: src/components/common/WaitlistTable/index.tsx:181
 #: src/components/common/WebhookTable/index.tsx:238
@@ -8206,7 +7967,7 @@ msgstr "Thống kê dựa trên ngày tạo tài khoản"
 msgid "Status"
 msgstr "Trạng thái"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:184
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:183
 msgid "Still handling refunds for your older transactions."
 msgstr "Vẫn đang xử lý hoàn tiền cho các giao dịch cũ của bạn."
 
@@ -8214,26 +7975,13 @@ msgstr "Vẫn đang xử lý hoàn tiền cho các giao dịch cũ của bạn."
 msgid "Stop Impersonating"
 msgstr "Dừng Mạo Danh"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:258
-msgid "Street"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:235
-msgid "Street 1"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:236
-msgid "Street 2"
-msgstr ""
-
-#: src/components/common/OrdersTable/index.tsx:206
+#: src/components/common/OrdersTable/index.tsx:384
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:85
-#: src/components/routes/product-widget/Payment/index.tsx:134
 msgid "Stripe"
 msgstr "Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:163
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:162
 msgid "Stripe Connect"
 msgstr "Stripe Connect"
 
@@ -8248,10 +7996,6 @@ msgstr "Stripe chưa kết nối"
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:104
 msgid "Stripe Payment ID"
 msgstr "ID thanh toán Stripe"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:621
-msgid "Stripe Payment Processing"
-msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:50
 msgid "Stripe payments are not enabled for this event."
@@ -8279,10 +8023,6 @@ msgstr "Tiêu đề sẽ xuất hiện ở đây"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:255
 msgid "Subject:"
 msgstr "Tiêu đề:"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:275
-#~ msgid "Submit Onboarding"
-#~ msgstr ""
 
 #: src/components/common/InlineOrderSummary/index.tsx:132
 #: src/components/common/OrderSummary/index.tsx:41
@@ -8486,12 +8226,12 @@ msgstr "Mặc định hệ thống"
 msgid "T-shirt"
 msgstr "Áo thun"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:86
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:85
 msgid "Takes just a few minutes"
 msgstr "Chỉ mất vài phút"
 
 #: src/components/common/AdminOrdersTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:378
+#: src/components/common/OrdersTable/index.tsx:358
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
@@ -8511,11 +8251,11 @@ msgstr "Thuế & Phí"
 msgid "Tax collected grouped by tax type and event"
 msgstr "Thuế thu được theo loại thuế và sự kiện"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:295
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
 msgid "Tax Details"
 msgstr "Chi tiết thuế"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:296
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:244
 msgid "Tax information to appear at the bottom of all invoices (e.g., VAT number, tax registration)"
 msgstr "Thông tin thuế sẽ xuất hiện ở cuối tất cả các hóa đơn (ví dụ: mã số thuế VAT, đăng ký thuế)"
 
@@ -8608,7 +8348,7 @@ msgstr "Văn bản có thể khó đọc"
 msgid "Thank you for attending!"
 msgstr "Cảm ơn bạn đã tham dự!"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:92
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:91
 msgid "Thanks for your support as we continue to grow and improve Hi.Events!"
 msgstr "Cảm ơn sự hỗ trợ của bạn khi chúng tôi tiếp tục phát triển và cải thiện Hi.Events!"
 
@@ -8834,7 +8574,7 @@ msgstr "Sự kiện này đã kết thúc"
 msgid "This event is not published yet"
 msgstr "Sự kiện này chưa được xuất bản"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:204
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
 msgid "This information will be shown on the payment page, order summary page, and order confirmation email."
 msgstr "Thông tin này sẽ được hiển thị trên trang thanh toán, trang tóm tắt đơn hàng và email xác nhận đơn hàng."
 
@@ -9152,7 +8892,7 @@ msgstr "Để chỉnh sửa cấu hình, hãy vào phần Cấu hình trong menu
 msgid "To increase your limits, contact us at"
 msgstr "Để tăng giới hạn của bạn, hãy liên hệ với chúng tôi tại"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:663
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:662
 msgid "To receive credit card payments, you need to connect your Stripe account. Stripe is our payment processing partner that ensures secure transactions and timely payouts."
 msgstr "Để nhận thanh toán bằng thẻ tín dụng, bạn cần kết nối tài khoản Stripe của mình. Stripe là đối tác xử lý thanh toán của chúng tôi, đảm bảo giao dịch an toàn và thanh toán kịp thời."
 
@@ -9254,7 +8994,7 @@ msgstr "Theo dõi sự phát triển và hiệu suất tài khoản theo nguồn
 msgid "Track sales, revenue, and attendance with detailed reports"
 msgstr "Theo dõi doanh số, doanh thu và lượng người tham dự với báo cáo chi tiết"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:265
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:264
 msgid "Transaction Fee:"
 msgstr "Phí giao dịch:"
 
@@ -9342,10 +9082,6 @@ msgstr "Không thể lấy thông tin người tham dự"
 #: src/components/modals/JoinWaitlistModal/index.tsx:124
 msgid "Unable to join waitlist"
 msgstr "Không thể tham gia danh sách chờ"
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:132
-msgid "Unable to start Razorpay payment. Please try again or use another method."
-msgstr ""
 
 #: src/components/modals/EditQuestionModal/index.tsx:84
 msgid "Unable to update question. Please check the your details"
@@ -9439,7 +9175,7 @@ msgstr "Cập nhật tên sự kiện, mô tả và ngày"
 msgid "Update profile"
 msgstr "Cập nhật hồ sơ"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:171
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:170
 msgid "Upgrade Available"
 msgstr "Có nâng cấp"
 
@@ -9675,10 +9411,6 @@ msgstr "Tên địa điểm"
 msgid "Verification code"
 msgstr "Mã xác thực"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/PendingState.tsx:8
-msgid "Verification in progress"
-msgstr ""
-
 #: src/components/routes/admin/Attribution/index.tsx:136
 #: src/components/routes/admin/Dashboard/index.tsx:421
 msgid "Verified"
@@ -9878,10 +9610,6 @@ msgstr "Chúng tôi không thể tải dữ liệu. Vui lòng thử lại."
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Chúng tôi không thể sắp xếp lại các danh mục. Vui lòng thử lại."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:9
-msgid "We found an existing account but couldn't complete setup automatically."
-msgstr ""
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:387
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Đã xảy ra sự cố khi tải trang này. Vui lòng thử lại."
@@ -9923,7 +9651,7 @@ msgstr "Chúng tôi sẽ xác thực số VAT của bạn ở chế độ nền.
 msgid "We're processing your order. Please wait..."
 msgstr "Chúng tôi đang xử lý đơn hàng của bạn. Đợi một chút..."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:75
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:74
 msgid "We've officially moved our headquarters to Ireland 🇮🇪. As part of this transition, we're now using Stripe Ireland instead of Stripe Canada. To keep your payouts running smoothly, you'll need to reconnect your Stripe account."
 msgstr "Chúng tôi đã chính thức chuyển trụ sở chính đến Ireland 🇮🇪. Như một phần của quá trình chuyển đổi này, chúng tôi hiện sử dụng Stripe Ireland thay vì Stripe Canada. Để giữ cho các khoản thanh toán của bạn diễn ra suôn sẻ, bạn cần kết nối lại tài khoản Stripe của mình."
 
@@ -10123,7 +9851,7 @@ msgstr "Khi check-in mở"
 msgid "When customers purchase tickets, their orders will appear here."
 msgstr "Khi khách hàng mua vé, đơn hàng của họ sẽ hiển thị tại đây."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:234
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:182
 msgid "When enabled, invoices will be generated for ticket orders. Invoices will sent along with the order confirmation email. Attendees can also download their invoices from the order confirmation page."
 msgstr "Khi được bật, hóa đơn sẽ được tạo cho các đơn hàng vé. Hóa đơn sẽ được gửi kèm với email xác nhận đơn hàng. Người tham dự cũng có thể tải hóa đơn của họ từ trang xác nhận đơn hàng."
 
@@ -10139,7 +9867,7 @@ msgstr "Khi được bật, các sự kiện mới sẽ hiển thị hộp kiể
 msgid "When enabled, no application fees will be charged on Stripe Connect transactions. Use this for countries where application fees are not supported."
 msgstr "Khi được bật, không có phí ứng dụng nào sẽ được tính cho các giao dịch Stripe Connect. Sử dụng cho các quốc gia không hỗ trợ phí ứng dụng."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:193
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:141
 msgid "When offline payments are enabled, users will be able to complete their orders and receive their tickets. Their tickets will clearly indicate the order is not paid, and the check-in tool will notify the check-in staff if an order requires payment."
 msgstr "Khi thanh toán ngoại tuyến được bật, người dùng có thể hoàn tất đơn hàng và nhận vé của họ. Vé của họ sẽ hiển thị rõ ràng rằng đơn hàng chưa được thanh toán, và công cụ check-in sẽ thông báo cho nhân viên check-in nếu đơn hàng cần thanh toán."
 
@@ -10348,11 +10076,7 @@ msgstr "Bạn sở hữu 100% dữ liệu người tham dự của mình, luôn 
 msgid "You receive"
 msgstr "Bạn nhận được"
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:193
-msgid "You will be redirected to Razorpay to securely complete your payment."
-msgstr ""
-
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:195
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:143
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Bạn sẽ phải đánh dấu một đơn hàng theo cách thủ công. Được thực hiện trong trang quản lý đơn hàng."
 
@@ -10368,7 +10092,7 @@ msgstr "Bạn sẽ cần tại một sản phẩm trước khi bạn có thể t
 msgid "You'll need at least one product to get started. Free, paid or let the user decide what to pay."
 msgstr "Bạn cần ít nhất một sản phẩm để bắt đầu. Miễn phí, trả phí hoặc để người dùng quyết định số tiền thanh toán."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:183
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:182
 msgid "You're all set! Your payments are being processed smoothly."
 msgstr "Bạn đã sẵn sàng! Thanh toán của bạn đang được xử lý suôn sẻ."
 
@@ -10387,10 +10111,6 @@ msgstr "Bạn đã được mời một suất!"
 #: src/components/modals/SendMessageModal/index.tsx:273
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "Tài khoản của bạn có giới hạn nhắn tin. Để tăng giới hạn của bạn, hãy liên hệ với chúng tôi tại"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ConnectedState.tsx:9
-msgid "Your account is ready to receive payments."
-msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:64
 msgid "Your account name is used on event pages and in emails."
@@ -10488,7 +10208,7 @@ msgstr "Đơn hàng của bạn đang chờ thanh toán"
 msgid "Your orders have been exported successfully."
 msgstr "Đơn hàng của bạn đã được xuất thành công."
 
-#: src/components/common/OrdersTable/index.tsx:476
+#: src/components/common/OrdersTable/index.tsx:469
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Đơn hàng của bạn sẽ xuất hiện ở đây sau khi chúng bắt đầu tham gia."
 
@@ -10525,12 +10245,12 @@ msgstr "Gói của bạn"
 msgid "Your refund is processing."
 msgstr "Hoàn lại tiền của bạn đang xử lý."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:180
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:179
 msgid "Your Stripe account is connected and processing payments."
 msgstr "Tài khoản Stripe của bạn đã được kết nối và đang xử lý thanh toán."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:397
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:634
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:396
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:633
 msgid "Your Stripe account is connected and ready to process payments."
 msgstr "Tài khoản Stripe của bạn được kết nối và sẵn sàng xử lý thanh toán."
 

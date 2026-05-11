@@ -300,7 +300,7 @@ msgstr "Une seule question par produit. Par exemple, Quelle est votre taille de 
 msgid "A standard tax, like VAT or GST"
 msgstr "Une taxe standard, comme la TVA ou la TPS"
 
-#: src/components/common/OrdersTable/index.tsx:443
+#: src/components/common/OrdersTable/index.tsx:436
 msgid "Abandoned"
 msgstr "Abandonné"
 
@@ -308,9 +308,9 @@ msgstr "Abandonné"
 msgid "About"
 msgstr "À propos"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:435
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:464
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:682
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:434
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:463
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:681
 msgid "About Stripe Connect"
 msgstr "À propos de Stripe Connect"
 
@@ -327,14 +327,9 @@ msgstr "Absorber les frais"
 msgid "Accent Color"
 msgstr "Couleur d'Accent"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:98
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:159
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 msgid "Accept bank transfers, checks, or other offline payment methods"
 msgstr "Accepter les virements bancaires, chèques ou autres méthodes de paiement hors ligne"
-
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
-msgid "Accept credit card payments with Razorpay"
-msgstr ""
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
 msgid "Accept credit card payments with Stripe"
@@ -348,16 +343,8 @@ msgstr "Accepter l'invitation"
 msgid "Accept Invitation"
 msgstr "Accepter l'invitation"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:118
-msgid "Accept online payments via third-party payment providers"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:7
-msgid "Accept payments with Razorpay"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:359
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:610
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:358
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:609
 msgid "Access Denied"
 msgstr "Accès refusé"
 
@@ -371,7 +358,7 @@ msgstr "Accès refusé"
 msgid "Account"
 msgstr "Compte"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:344
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:343
 msgid "Account already connected!"
 msgstr "Compte déjà connecté !"
 
@@ -391,10 +378,6 @@ msgstr "Nom du compte"
 msgid "Account not found"
 msgstr "Compte introuvable"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:269
-msgid "Account Number"
-msgstr ""
-
 #: src/components/common/GlobalMenu/index.tsx:45
 #: src/components/routes/account/ManageAccount/index.tsx:19
 msgid "Account Settings"
@@ -411,11 +394,7 @@ msgstr "Compte mis à jour avec succès"
 msgid "Accounts"
 msgstr "Comptes"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:7
-msgid "Action required"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:72
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:71
 msgid "Action Required: Reconnect Your Stripe Account"
 msgstr "Action requise : Reconnectez votre compte Stripe"
 
@@ -426,7 +405,7 @@ msgstr "Action requise : Informations TVA nécessaires"
 #: src/components/common/AdminEventsTable/index.tsx:112
 #: src/components/common/AffiliateTable/index.tsx:167
 #: src/components/common/AttendeeTable/index.tsx:346
-#: src/components/common/OrdersTable/index.tsx:452
+#: src/components/common/OrdersTable/index.tsx:445
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:467
 #: src/components/common/WaitlistTable/index.tsx:55
 #: src/components/common/WaitlistTable/index.tsx:210
@@ -489,7 +468,7 @@ msgstr "Ajouter une description"
 msgid "Add event details and manage event settings."
 msgstr "Ajoutez les détails de l’événement et gérez les paramètres."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:205
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:153
 msgid "Add instructions for offline payments (e.g., bank transfer details, where to send checks, payment deadlines)"
 msgstr "Ajoutez des instructions pour les paiements hors ligne (par exemple, les détails du virement bancaire, où envoyer les chèques, les délais de paiement)"
 
@@ -669,7 +648,7 @@ msgstr "Tous les participants à cet événement"
 msgid "All Currencies"
 msgstr "Toutes les devises"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:186
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:185
 msgid "All done! You're now using our upgraded payment system."
 msgstr "Terminé ! Vous utilisez maintenant notre système de paiement amélioré."
 
@@ -701,7 +680,7 @@ msgstr "Tous les statuts"
 msgid "All Upcoming Events"
 msgstr "Tous les événements à venir"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:209
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
 msgid "Allow attendees associated with unpaid orders to check in"
 msgstr "Autoriser les participants associés à des commandes impayées à s'enregistrer"
 
@@ -723,8 +702,8 @@ msgstr "Autoriser l'indexation des moteurs de recherche"
 msgid "Allow search engines to index this event"
 msgstr "Autoriser les moteurs de recherche à indexer cet événement"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:206
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:418
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:205
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:417
 msgid "Almost there! Finish connecting your Stripe account to start accepting payments."
 msgstr "Presque fini ! Terminez la connexion de votre compte Stripe pour commencer à accepter les paiements."
 
@@ -757,9 +736,8 @@ msgstr "Toujours disponible"
 msgid "Amazing, Event, Keywords..."
 msgstr "Incroyable, Événement, Mots-clés..."
 
-#: src/components/common/OrdersTable/index.tsx:368
+#: src/components/common/OrdersTable/index.tsx:348
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:241
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:36
 msgid "Amount"
 msgstr "Montant"
@@ -1227,7 +1205,7 @@ msgid "Awaiting payment"
 msgstr "En attente de paiement"
 
 #: src/components/common/AttendeeTable/index.tsx:289
-#: src/components/common/OrdersTable/index.tsx:431
+#: src/components/common/OrdersTable/index.tsx:424
 #: src/components/routes/event/attendees.tsx:28
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:356
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:56
@@ -1241,10 +1219,6 @@ msgstr "Awesome Events SARL"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:74
 msgid "Awesome Organizer Ltd."
 msgstr "Organisateur génial Ltd."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:286
-msgid "Back"
-msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:114
 msgid "Back to Accounts"
@@ -1285,10 +1259,6 @@ msgstr "Couleur de fond"
 msgid "Background Type"
 msgstr "Type d'arrière-plan"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:267
-msgid "Bank details"
-msgstr ""
-
 #: src/components/routes/organizer/Settings/index.tsx:29
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
@@ -1302,16 +1272,12 @@ msgstr "Une expérience de paiement élégante sur tous les appareils"
 msgid "Before your event can go live, there are a few things you need to do. Complete all the steps below to get started."
 msgstr "Avant que votre événement puisse être mis en ligne, vous devez effectuer quelques étapes. Complétez toutes les étapes ci-dessous pour commencer."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:271
-msgid "Beneficiary Name"
-msgstr ""
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:513
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:287
 msgid "Billing Address"
 msgstr "Adresse de facturation"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:219
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:167
 msgid "Billing Settings"
 msgstr "Paramètres de facturation"
 
@@ -1331,7 +1297,6 @@ msgstr "Personnalisez vos billets avec un logo, des couleurs et un message de pi
 msgid "Brazilian Portuguese"
 msgstr "Portugais brésilien"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:201
 #: src/constants/eventCategories.ts:17
 msgid "Business"
 msgstr "Affaires"
@@ -1348,10 +1313,6 @@ msgstr "Adresse professionnelle aux fins de la TVA"
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:294
 msgid "Business Name"
 msgstr "Nom de l'entreprise"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:218
-msgid "Business Type"
-msgstr ""
 
 #: src/components/common/EmailTemplateEditor/CTAConfiguration.tsx:27
 msgid "Button Label"
@@ -1370,7 +1331,7 @@ msgid "Buyers see a clean price. The platform fee is deducted from your payout."
 msgstr "Les acheteurs voient un prix net. Les frais de plateforme sont déduits de votre paiement."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/Payment/index.tsx:174
+#: src/components/routes/product-widget/Payment/index.tsx:152
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "En continuant, vous acceptez les <0>Conditions d'utilisation de {0}</0>"
 
@@ -1451,7 +1412,7 @@ msgstr "L'annulation annulera tous les participants associés à cette commande 
 
 #: src/components/common/AttendeeTable/index.tsx:295
 #: src/components/common/AttendeeTicket/index.tsx:149
-#: src/components/common/OrdersTable/index.tsx:437
+#: src/components/common/OrdersTable/index.tsx:430
 #: src/components/common/OrderStatusBadge/index.tsx:12
 #: src/components/common/WaitlistTable/index.tsx:27
 #: src/components/routes/admin/Messages/index.tsx:126
@@ -1683,8 +1644,6 @@ msgid "Choose who pays the platform fee. This does not affect additional fees yo
 msgstr "Choisissez qui paie les frais de plateforme. Cela n'affecte pas les frais supplémentaires que vous avez configurés dans les paramètres de votre compte."
 
 #: src/components/common/CheckoutQuestion/index.tsx:162
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:238
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:259
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:134
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:92
 #: src/components/routes/product-widget/CollectInformation/index.tsx:533
@@ -1812,16 +1771,12 @@ msgstr "Mots-clés séparés par des virgules qui décrivent l'événement. Ceux
 msgid "Communication Preferences"
 msgstr "Préférences de communication"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:201
-msgid "Company details"
-msgstr ""
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:712
 msgid "Complete Order"
 msgstr "Complétez la commande"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:340
-#: src/components/routes/product-widget/Payment/index.tsx:170
+#: src/components/routes/product-widget/Payment/index.tsx:148
 msgid "Complete Payment"
 msgstr "Paiement complet"
 
@@ -1830,7 +1785,7 @@ msgstr "Paiement complet"
 msgid "Complete Stripe Setup"
 msgstr "Finaliser la configuration de Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:116
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:115
 msgid "Complete the setup below to continue"
 msgstr "Complétez la configuration ci-dessous pour continuer"
 
@@ -1850,7 +1805,7 @@ msgstr "Finalisez votre paiement pour sécuriser vos billets."
 msgid "Complete your profile to join the team."
 msgstr "Complétez votre profil pour rejoindre l'équipe."
 
-#: src/components/common/OrdersTable/index.tsx:419
+#: src/components/common/OrdersTable/index.tsx:412
 #: src/components/modals/SendMessageModal/index.tsx:333
 #: src/components/routes/event/GettingStarted/index.tsx:75
 #: src/components/routes/event/orders.tsx:23
@@ -1980,11 +1935,11 @@ msgstr "Félicitations pour la création de votre événement !"
 msgid "Congratulations! Your event is now visible to the public."
 msgstr "Félicitations ! Votre événement est maintenant visible par le public."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:236
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:235
 msgid "Connect & Upgrade"
 msgstr "Connecter et mettre à niveau"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:654
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:653
 msgid "Connect Documentation"
 msgstr "Documentation de connexion"
 
@@ -2009,14 +1964,10 @@ msgstr "Connectez Stripe pour activer la messagerie"
 msgid "Connect to Stripe"
 msgstr "Se connecter à Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:11
-msgid "Connect with Razorpay"
-msgstr ""
-
 #: src/components/common/StripeConnectButton/index.tsx:85
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:236
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:455
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:672
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:235
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:454
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:671
 #: src/components/routes/event/GettingStarted/index.tsx:159
 msgid "Connect with Stripe"
 msgstr "Connectez-vous avec Stripe"
@@ -2025,15 +1976,15 @@ msgstr "Connectez-vous avec Stripe"
 msgid "Connect your Stripe account to accept payments for tickets and products."
 msgstr "Connectez votre compte Stripe pour accepter les paiements des billets et produits."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:224
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:223
 msgid "Connect your Stripe account to accept payments."
 msgstr "Connectez votre compte Stripe pour accepter les paiements."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:447
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:446
 msgid "Connect your Stripe account to start accepting payments for your events."
 msgstr "Connectez votre compte Stripe pour commencer à accepter les paiements pour vos événements."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:222
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:221
 msgid "Connect your Stripe account to start accepting payments."
 msgstr "Connectez votre compte Stripe pour commencer à accepter les paiements."
 
@@ -2041,8 +1992,8 @@ msgstr "Connectez votre compte Stripe pour commencer à accepter les paiements."
 msgid "Connect your Stripe account to start receiving payments."
 msgstr "Connectez votre compte Stripe pour commencer à recevoir des paiements."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:393
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:630
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:392
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:629
 msgid "Connected to Stripe"
 msgstr "Connecté à Stripe"
 
@@ -2068,10 +2019,6 @@ msgstr "E-mail de contact"
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:81
 msgid "Contact email for support"
 msgstr "Email de contact pour le support"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:230
-msgid "Contact Name"
-msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
@@ -2167,7 +2114,7 @@ msgid "Copy details to first attendee"
 msgstr "Copier les détails vers le premier participant"
 
 #: src/components/common/AttendeeTable/index.tsx:197
-#: src/components/common/OrdersTable/index.tsx:283
+#: src/components/common/OrdersTable/index.tsx:263
 msgid "Copy Email"
 msgstr "Copier l'Email"
 
@@ -2198,8 +2145,6 @@ msgid "Copy URL"
 msgstr "Copier le lien"
 
 #: src/components/common/CheckoutQuestion/index.tsx:174
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:241
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:262
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:152
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:110
 #: src/components/routes/product-widget/CollectInformation/index.tsx:554
@@ -2440,7 +2385,7 @@ msgstr "Devise"
 msgid "Current Password"
 msgstr "Mot de passe actuel"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:165
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:164
 msgid "Current payment processor"
 msgstr "Processeur de paiement actuel"
 
@@ -2487,7 +2432,7 @@ msgid "Custom template"
 msgstr "Modèle personnalisé"
 
 #: src/components/common/AdminOrdersTable/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:227
+#: src/components/common/OrdersTable/index.tsx:207
 msgid "Customer"
 msgstr "Client"
 
@@ -2778,11 +2723,11 @@ msgstr "Ignorer ce message"
 msgid "Display a checkbox allowing customers to opt-in to receive marketing communications from this event organizer."
 msgstr "Affiche une case permettant aux clients de s'inscrire pour recevoir des communications marketing de cet organisateur d'événements."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:242
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:190
 msgid "Document Label"
 msgstr "Étiquette du document"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:693
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:692
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -3060,8 +3005,6 @@ msgstr "Listes d'Enregistrement Éligibles"
 #: src/components/modals/EditUserModal/index.tsx:80
 #: src/components/modals/InviteUserModal/index.tsx:61
 #: src/components/modals/JoinWaitlistModal/index.tsx:171
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:205
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:253
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:128
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -3181,7 +3124,7 @@ msgstr "Activer le libre-service pour les participants"
 msgid "Enable attendee self-service by default"
 msgstr "Activer le libre-service pour les participants par défaut"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:233
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:181
 msgid "Enable Invoicing"
 msgstr "Activer la facturation"
 
@@ -3288,10 +3231,6 @@ msgstr "Entrez le numéro de TVA avec le code pays"
 #: src/components/forms/AffiliateForm/index.tsx:39
 msgid "Enter unique affiliate code"
 msgstr "Saisir un code d'affiliation unique"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:84
-msgid "Enter valid 10-digit mobile"
-msgstr ""
 
 #: src/components/common/ContactOrganizerModal/index.tsx:80
 #: src/components/routes/auth/Login/index.tsx:150
@@ -3908,13 +3847,13 @@ msgid "Fee Handling"
 msgstr "Gestion des frais"
 
 #: src/components/common/InlineOrderSummary/index.tsx:140
-#: src/components/common/OrdersTable/index.tsx:379
+#: src/components/common/OrdersTable/index.tsx:359
 #: src/components/forms/ProductForm/index.tsx:409
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 msgid "Fees"
 msgstr "Frais"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:292
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:291
 msgid "Fees are subject to change. You will be notified of any changes to your fee structure."
 msgstr "Les frais sont susceptibles de changer. Vous serez informé de toute modification de votre structure tarifaire."
 
@@ -3956,16 +3895,12 @@ msgstr "Filtres"
 msgid "Filters ({activeFilterCount})"
 msgstr "Filtres ({activeFilterCount})"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:303
-msgid "Finish"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:215
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:214
 msgid "Finish Setup"
 msgstr "Terminer la configuration"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:426
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:673
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:425
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:672
 msgid "Finish Stripe Setup"
 msgstr "Terminer la configuration Stripe"
 
@@ -3973,7 +3908,7 @@ msgstr "Terminer la configuration Stripe"
 msgid "First attendee"
 msgstr "Premier participant"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:258
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:206
 msgid "First Invoice Number"
 msgstr "Premier numéro de facture"
 
@@ -4041,7 +3976,7 @@ msgstr "Frais fixes facturés par transaction"
 msgid "Fixed fee must be 0 or greater"
 msgstr "Les frais fixes doivent être égaux ou supérieurs à 0"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:277
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:276
 msgid "Fixed Fee:"
 msgstr "Frais fixes :"
 
@@ -4189,10 +4124,6 @@ msgstr "Ventes brutes"
 msgid "Gross Sales"
 msgstr "Ventes brutes"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:244
-msgid "GST"
-msgstr ""
-
 #: src/components/layouts/Event/index.tsx:117
 msgid "Guest Management"
 msgstr "Gestion des invités"
@@ -4230,7 +4161,7 @@ msgstr "Voici le composant React que vous pouvez utiliser pour intégrer le widg
 msgid "Here is your affiliate link"
 msgstr "Voici votre lien d'affiliation"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:85
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:84
 msgid "Here's what to expect:"
 msgstr "Voici à quoi vous attendre :"
 
@@ -4415,7 +4346,7 @@ msgstr "Si un nouvel onglet ne s'est pas ouvert automatiquement, veuillez clique
 msgid "If blank, the address will be used to generate a Google Maps link"
 msgstr "Si vide, l'adresse sera utilisée pour générer un lien Google Maps"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:210
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:158
 msgid "If enabled, check-in staff can either mark attendees as checked in or mark the order as paid and check in the attendees. If disabled, attendees associated with unpaid orders cannot be checked in."
 msgstr "Si activé, le personnel d'enregistrement peut marquer les participants comme enregistrés ou marquer la commande comme payée et enregistrer les participants. Si désactivé, les participants associés à des commandes impayées ne peuvent pas être enregistrés."
 
@@ -4434,10 +4365,6 @@ msgstr "Si vous n'avez pas demandé ce changement, veuillez immédiatement modif
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Si vous avez un compte chez nous, vous recevrez un e-mail avec des instructions pour réinitialiser votre mot de passe."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:270
-msgid "IFSC Code"
-msgstr ""
 
 #: src/components/common/ImageUploadDropzone/index.tsx:124
 msgid "Image deleted successfully"
@@ -4567,8 +4494,6 @@ msgid "Invalid"
 msgstr "Invalide"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:35
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:83
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:97
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:33
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:33
 msgid "Invalid email"
@@ -4583,24 +4508,10 @@ msgstr "Format d'e-mail invalide"
 msgid "Invalid file type. Please upload an image."
 msgstr "Type de fichier invalide. Veuillez télécharger une image."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:109
-msgid "Invalid IFSC"
-msgstr ""
-
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:144
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:175
 msgid "Invalid Liquid syntax. Please correct it and try again."
 msgstr "Syntaxe Liquid invalide. Veuillez la corriger et réessayer."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:94
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:105
-msgid "Invalid PAN"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:91
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:102
-msgid "Invalid postal code"
-msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/PaymentSettings/VatSettings/VatSettingsForm.tsx:157
 msgid "Invalid VAT number format"
@@ -4638,7 +4549,7 @@ msgstr "Inviter un utilisateur"
 msgid "Invite Your Team"
 msgstr "Invitez votre équipe"
 
-#: src/components/common/OrdersTable/index.tsx:321
+#: src/components/common/OrdersTable/index.tsx:301
 msgid "Invoice"
 msgstr "Facture"
 
@@ -4647,15 +4558,15 @@ msgstr "Facture"
 msgid "Invoice downloaded successfully"
 msgstr "Facture téléchargée avec succès"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:304
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:252
 msgid "Invoice Notes"
 msgstr "Notes de facture"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:249
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
 msgid "Invoice Numbering"
 msgstr "Numérotation des factures"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:229
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Invoice Settings"
 msgstr "Paramètres de facturation"
 
@@ -4675,11 +4586,11 @@ msgstr "Italien"
 msgid "Item"
 msgstr "Article"
 
-#: src/components/common/OrdersTable/index.tsx:360
+#: src/components/common/OrdersTable/index.tsx:340
 msgid "item(s)"
 msgstr "article(s)"
 
-#: src/components/common/OrdersTable/index.tsx:342
+#: src/components/common/OrdersTable/index.tsx:322
 msgid "Items"
 msgstr "Articles"
 
@@ -4730,7 +4641,7 @@ msgstr ""
 msgid "Joined"
 msgstr "Inscrit"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:121
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:120
 msgid "Just click the button below to reconnect your Stripe account."
 msgstr "Cliquez simplement sur le bouton ci-dessous pour reconnecter votre compte Stripe."
 
@@ -4741,10 +4652,6 @@ msgstr "Vous cherchez vos billets ?"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:567
 msgid "Keep me updated on news and events from {0}"
 msgstr "Me tenir informé des actualités et événements de {0}"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:250
-msgid "Key person"
-msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:85
 msgid "Label"
@@ -4845,13 +4752,9 @@ msgstr "Dernier déclenchement"
 msgid "Last Used"
 msgstr "Dernière utilisation"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Laisser vide pour utiliser le mot par défaut \"Facture\""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:213
-msgid "Legal Business Name"
-msgstr ""
 
 #: src/components/modals/EditAccountVatSettingsModal/index.tsx:141
 msgid "Legal business name for VAT purposes"
@@ -4977,7 +4880,7 @@ msgstr "Rechercher mes billets"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:222
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:170
 msgid "Make billing address mandatory during checkout"
 msgstr "Rendre l'adresse de facturation obligatoire lors du paiement"
 
@@ -5011,7 +4914,7 @@ msgstr "Gérer l'événement"
 msgid "Manage order"
 msgstr "Gérer la commande"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:99
 msgid "Manage payment and invoicing settings for this event."
 msgstr "Gérer les paramètres de paiement et de facturation pour cet événement."
 
@@ -5035,7 +4938,7 @@ msgstr "Gérez les détails de votre compte et les paramètres par défaut"
 msgid "Manage your event's waitlist, view stats, and offer tickets to attendees."
 msgstr ""
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:818
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:817
 msgid "Manage your payment processing and view platform fees"
 msgstr "Gérez votre traitement des paiements et consultez les frais de plateforme"
 
@@ -5082,7 +4985,7 @@ msgstr "Support"
 
 #: src/components/common/AttendeeTable/index.tsx:188
 #: src/components/common/ContactOrganizerModal/index.tsx:88
-#: src/components/common/OrdersTable/index.tsx:274
+#: src/components/common/OrdersTable/index.tsx:254
 #: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Message"
 msgstr "Message"
@@ -5245,7 +5148,6 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
 #: src/components/modals/DuplicateEventModal/index.tsx:109
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:252
 #: src/components/routes/admin/Configurations/index.tsx:219
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:75
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:230
@@ -5293,10 +5195,6 @@ msgstr "nouveau mot de passe"
 #: src/components/routes/admin/Dashboard/index.tsx:225
 msgid "New Signups"
 msgstr "Nouvelles inscriptions"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:291
-msgid "Next"
-msgstr ""
 
 #: src/constants/eventCategories.ts:4
 msgid "Nightlife"
@@ -5420,11 +5318,11 @@ msgstr "Aucun travail échoué"
 msgid "No filters available"
 msgstr "Aucun filtre disponible"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:87
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:86
 msgid "No impact on your current or past transactions"
 msgstr "Aucun impact sur vos transactions actuelles ou passées"
 
-#: src/components/common/OrdersTable/index.tsx:326
+#: src/components/common/OrdersTable/index.tsx:306
 msgid "No invoice"
 msgstr "Pas de facture"
 
@@ -5449,7 +5347,7 @@ msgstr "Pas encore de questions de commande"
 msgid "No orders found"
 msgstr "Aucune commande trouvée"
 
-#: src/components/common/OrdersTable/index.tsx:473
+#: src/components/common/OrdersTable/index.tsx:466
 msgid "No orders to show"
 msgstr "Aucune commande à afficher"
 
@@ -5473,7 +5371,7 @@ msgstr "Aucune commande payée"
 msgid "No past events"
 msgstr "Aucun événement passé"
 
-#: src/components/routes/product-widget/Payment/index.tsx:91
+#: src/components/routes/product-widget/Payment/index.tsx:87
 msgid "No payment methods are currently available. Please contact the event organizer for assistance."
 msgstr "Aucune méthode de paiement n'est actuellement disponible. Veuillez contacter l'organisateur de l'événement pour obtenir de l'aide."
 
@@ -5634,11 +5532,11 @@ msgstr "Paramètres de notification"
 msgid "Notify organizer of new orders"
 msgstr "Informer l'organisateur des nouvelles commandes"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:269
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:217
 msgid "Number of days allowed for payment (leave blank to omit payment terms from invoices)"
 msgstr "Nombre de jours autorisés pour le paiement (laisser vide pour omettre les conditions de paiement sur les factures)"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:251
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:199
 msgid "Number Prefix"
 msgstr "Préfixe de numéro"
 
@@ -5681,12 +5579,12 @@ msgstr "Les offres expirent après {timeoutHours} heures."
 msgid "Office or venue name"
 msgstr "Nom du bureau ou du lieu"
 
-#: src/components/common/OrdersTable/index.tsx:214
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/common/OrdersTable/index.tsx:389
+#: src/components/routes/product-widget/Payment/index.tsx:131
 msgid "Offline"
 msgstr "Hors ligne"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:145
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "Les commandes hors ligne ne sont pas reflétées dans les statistiques de l'événement tant que la commande n'est pas marquée comme payée."
 
@@ -5695,26 +5593,25 @@ msgstr "Les commandes hors ligne ne sont pas reflétées dans les statistiques d
 msgid "Offline Payment"
 msgstr "Paiement hors ligne"
 
-#: src/components/routes/product-widget/Payment/index.tsx:81
+#: src/components/routes/product-widget/Payment/index.tsx:77
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Le paiement hors ligne a échoué. Veuillez réessayer ou contacter l'organisateur de l'événement."
 
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:49
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:82
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:203
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:151
 msgid "Offline Payment Instructions"
 msgstr "Instructions de Paiement Hors Ligne"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:97
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:90
 msgid "Offline Payments"
 msgstr "Paiements hors ligne"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:139
 msgid "Offline Payments Information"
 msgstr "Informations sur les paiements hors ligne"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:186
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:134
 msgid "Offline Payments Settings"
 msgstr "Paramètres des paiements hors ligne"
 
@@ -5728,7 +5625,7 @@ msgstr "En soldes"
 msgid "On sale {0}"
 msgstr "En vente {0}"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:554
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:553
 msgid "Once you complete the upgrade, your old account will only be used for refunds."
 msgstr "Une fois la mise à niveau terminée, votre ancien compte ne sera utilisé que pour les remboursements."
 
@@ -5750,6 +5647,7 @@ msgid "Ongoing"
 msgstr "En cours"
 
 #: src/components/common/EventCard/index.tsx:93
+#: src/components/routes/product-widget/Payment/index.tsx:123
 msgid "Online"
 msgstr "En ligne"
 
@@ -5761,10 +5659,6 @@ msgstr "Événement en ligne"
 #: src/components/common/OnlineEventDetails/index.tsx:9
 msgid "Online Event Details"
 msgstr "Détails de l'événement en ligne"
-
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:116
-msgid "Online Payments"
-msgstr ""
 
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:72
 msgid "Only account administrators can delete or archive events. Contact your account admin for assistance."
@@ -5791,9 +5685,9 @@ msgstr "Ouvrir la Page d'Enregistrement"
 msgid "Open sidebar"
 msgstr "Ouvrir la barre latérale"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:197
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:406
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:643
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:196
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:405
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:642
 msgid "Open Stripe Dashboard"
 msgstr "Ouvrir le tableau de bord Stripe"
 
@@ -5801,11 +5695,11 @@ msgstr "Ouvrir le tableau de bord Stripe"
 msgid "Option {i}"
 msgstr "Option {i}"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:305
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:253
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
 msgstr "Informations supplémentaires optionnelles à apparaître sur toutes les factures (par exemple, conditions de paiement, frais de retard, politique de retour)"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:252
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:200
 msgid "Optional prefix for invoice numbers (e.g., INV-)"
 msgstr "Préfixe optionnel pour les numéros de facture (par exemple, INV-)"
 
@@ -5885,7 +5779,7 @@ msgstr "Devise de la Commande"
 msgid "Order Date"
 msgstr "Date de commande"
 
-#: src/components/common/OrdersTable/index.tsx:297
+#: src/components/common/OrdersTable/index.tsx:277
 #: src/components/modals/ManageAttendeeModal/index.tsx:166
 #: src/components/modals/ManageOrderModal/index.tsx:86
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:591
@@ -5914,7 +5808,6 @@ msgid "Order Holders"
 msgstr "Titulaires de commandes"
 
 #: src/components/common/AdminOrdersTable/index.tsx:67
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:232
 msgid "Order ID"
 msgstr "ID de commande"
 
@@ -6068,16 +5961,16 @@ msgstr "Comptes organiques"
 msgid "Organization"
 msgstr "Organisation"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:287
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:235
 msgid "Organization Address"
 msgstr "Adresse de l'organisation"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:278
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:226
 msgid "Organization Details"
 msgstr "Détails de l'organisation"
 
 #: src/components/forms/OrganizerForm/index.tsx:28
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:280
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:228
 msgid "Organization Name"
 msgstr "Nom de l'organisation"
 
@@ -6165,7 +6058,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "Les organisateurs ne peuvent gérer que les événements et les produits. Ils ne peuvent pas gérer les utilisateurs, les paramètres du compte ou les informations de facturation."
 
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:98
-#: src/components/common/OrdersTable/index.tsx:220
+#: src/components/common/OrdersTable/index.tsx:394
 #: src/constants/eventCategories.ts:22
 msgid "Other"
 msgstr "Autre"
@@ -6226,11 +6119,6 @@ msgstr "Produit payant"
 msgid "Paid, free, tiered pricing, and donation-based tickets"
 msgstr "Billets payants, gratuits, tarification échelonnée et basée sur les dons"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:243
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:254
-msgid "PAN"
-msgstr ""
-
 #: src/components/modals/RefundOrderModal/index.tsx:109
 msgid "Partial refund"
 msgstr "Remboursement partiel"
@@ -6240,13 +6128,9 @@ msgstr "Remboursement partiel"
 msgid "Partially Refunded"
 msgstr "Partiellement remboursé"
 
-#: src/components/common/OrdersTable/index.tsx:384
+#: src/components/common/OrdersTable/index.tsx:364
 msgid "Partially refunded: {0}"
 msgstr "Partiellement remboursé : {0}"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:220
-msgid "Partnership"
-msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:191
 msgid "Pass fee to buyer"
@@ -6310,7 +6194,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "En pause"
 
-#: src/components/routes/product-widget/Payment/index.tsx:168
+#: src/components/routes/product-widget/Payment/index.tsx:146
 msgid "Pay"
 msgstr "Payer"
 
@@ -6323,10 +6207,9 @@ msgstr "Payer pour déverrouiller"
 msgid "Payload"
 msgstr "Charge utile"
 
-#: src/components/common/OrdersTable/index.tsx:395
+#: src/components/common/OrdersTable/index.tsx:375
 #: src/components/common/ProgressStepper/index.tsx:19
 #: src/components/forms/StripeCheckoutForm/index.tsx:127
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:191
 msgid "Payment"
 msgstr "Paiement"
 
@@ -6334,7 +6217,7 @@ msgstr "Paiement"
 msgid "Payment & Invoicing"
 msgstr "Paiement et facturation"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:98
 msgid "Payment & Invoicing Settings"
 msgstr "Paramètres de paiement et de facturation"
 
@@ -6346,13 +6229,9 @@ msgstr "Paiement et abonnement"
 msgid "Payment Date"
 msgstr "Date de paiement"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:268
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:216
 msgid "Payment Due Period"
 msgstr "Délai de paiement"
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:131
-msgid "Payment Error"
-msgstr ""
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:57
 msgid "Payment Failed"
@@ -6363,16 +6242,17 @@ msgstr "Paiement échoué"
 msgid "Payment Instructions"
 msgstr "Instructions de paiement"
 
-#: src/components/routes/product-widget/Payment/index.tsx:124
+#: src/components/routes/product-widget/Payment/index.tsx:114
 msgid "Payment method"
 msgstr "Mode de paiement"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:112
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
 msgid "Payment Methods"
 msgstr "Méthodes de paiement"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:475
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:487
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:474
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:486
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:620
 msgid "Payment Processing"
 msgstr "Traitement des paiements"
 
@@ -6388,7 +6268,7 @@ msgstr "Paiement reçu"
 msgid "Payment Received"
 msgstr "Paiement reçu"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:817
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:816
 msgid "Payment Settings"
 msgstr "Paramètres de paiement"
 
@@ -6400,28 +6280,15 @@ msgstr "Statut du paiement"
 msgid "Payment succeeded!"
 msgstr "Paiement réussi !"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:266
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:214
 msgid "Payment Terms"
 msgstr "Conditions de paiement"
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:100
-msgid "Payment Verification Failed"
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:101
-msgid "Payment verification failed. Please contact support with order ID {0}."
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:254
-msgid "Payments are processed securely by Razorpay using industry-standard encryption."
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:159
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "Paiements non disponibles"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:88
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:87
 msgid "Payments will continue to flow without interruption"
 msgstr "Les paiements continueront de fonctionner sans interruption"
 
@@ -6491,7 +6358,6 @@ msgstr "Supprimez définitivement cet organisateur et tous ses événements."
 msgid "Personal Information"
 msgstr "Informations personnelles"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:209
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:97
 msgid "Phone"
 msgstr "Téléphone"
@@ -6517,7 +6383,7 @@ msgstr "Frais de plateforme"
 msgid "Platform fee of {0} deducted from your payout"
 msgstr "Frais de plateforme de {0} déduits de votre paiement"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:249
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:248
 #: src/components/routes/event/Settings/index.tsx:98
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:46
 #: src/components/routes/organizer/Reports/index.tsx:41
@@ -6554,10 +6420,6 @@ msgstr "Veuillez vérifier que votre email est valide"
 #: src/components/routes/profile/ManageProfile/index.tsx:170
 msgid "Please check your email to confirm your email address"
 msgstr "Veuillez vérifier votre courrier électronique pour confirmer votre adresse e-mail"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:278
-msgid "Please confirm all your details are correct before submitting."
-msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:354
 msgid "Please continue in the new tab"
@@ -6600,7 +6462,6 @@ msgstr "Veuillez noter"
 msgid "Please provide an image."
 msgstr "Veuillez fournir une image."
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:176
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:65
 msgid "Please restart the checkout process."
 msgstr "Veuillez recommencer le processus de commande."
@@ -6672,11 +6533,6 @@ msgstr "Message après le paiement"
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:83
 msgid "Post Checkout Message"
 msgstr "Message Post-Commande"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:240
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:261
-msgid "Postal Code"
-msgstr ""
 
 #: src/components/common/PoweredByFooter/index.tsx:60
 msgid "Powered by"
@@ -6763,10 +6619,6 @@ msgstr "Imprimer en PDF"
 #: src/components/layouts/OrganizerHomepage/index.tsx:328
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:222
-msgid "Private Limited"
-msgstr ""
 
 #: src/components/modals/RefundOrderModal/index.tsx:150
 msgid "Process Refund"
@@ -6907,18 +6759,10 @@ msgstr "Promo seulement"
 msgid "Promotional emails may result in account suspension"
 msgstr "Les e-mails promotionnels peuvent entraîner la suspension du compte"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:221
-msgid "Proprietorship"
-msgstr ""
-
 #: src/components/forms/QuestionForm/index.tsx:189
 msgid ""
 "Provide additional context or instructions for this question. Use this field to add terms\n"
 "and conditions, guidelines, or any important information that attendees need to know before answering."
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:223
-msgid "Public Limited"
 msgstr ""
 
 #: src/components/common/StatusToggle/index.tsx:97
@@ -6998,33 +6842,11 @@ msgstr "Taux"
 msgid "Rate limit exceeded. Please try again later."
 msgstr "Limite de débit dépassée. Veuillez réessayer plus tard."
 
-#: src/components/common/OrdersTable/index.tsx:210
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
-#: src/components/routes/product-widget/Payment/index.tsx:144
-msgid "Razorpay"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ConnectedState.tsx:7
-msgid "Razorpay account connected"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:194
-msgid "Razorpay Onboarding"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingPanel.tsx:69
-msgid "Razorpay Payment Processing"
-msgstr ""
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:160
-msgid "Razorpay payments are not enabled for this event."
-msgstr ""
-
 #: src/components/common/WaitlistTable/index.tsx:69
 msgid "Re-offer Spot"
 msgstr "Réoffrir une place"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:225
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:224
 msgid "Ready to upgrade? This takes only a few minutes."
 msgstr "Prêt à mettre à niveau ? Cela ne prend que quelques minutes."
 
@@ -7079,10 +6901,10 @@ msgstr "Reddit"
 
 #: src/components/common/StripeConnectButton/index.tsx:59
 #: src/components/common/StripeConnectButton/index.tsx:74
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:327
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:340
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:580
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:598
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:326
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:339
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:579
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:597
 msgid "Redirecting to Stripe..."
 msgstr "Redirection vers Stripe..."
 
@@ -7098,7 +6920,7 @@ msgstr "Actualiser l'aperçu"
 msgid "Refund amount"
 msgstr "Montant du remboursement"
 
-#: src/components/common/OrdersTable/index.tsx:386
+#: src/components/common/OrdersTable/index.tsx:366
 msgid "Refund failed"
 msgstr "Remboursement échoué"
 
@@ -7114,7 +6936,7 @@ msgstr "Commande de remboursement"
 msgid "Refund Order {0}"
 msgstr "Rembourser la commande {0}"
 
-#: src/components/common/OrdersTable/index.tsx:385
+#: src/components/common/OrdersTable/index.tsx:365
 msgid "Refund pending"
 msgstr "Remboursement en attente"
 
@@ -7134,7 +6956,7 @@ msgstr "Statut du remboursement"
 msgid "Refunded"
 msgstr "Remboursé"
 
-#: src/components/common/OrdersTable/index.tsx:383
+#: src/components/common/OrdersTable/index.tsx:363
 msgid "Refunded: {0}"
 msgstr "Remboursé : {0}"
 
@@ -7150,10 +6972,6 @@ msgstr "Paramètres régionaux"
 #: src/components/routes/auth/Register/index.tsx:137
 msgid "Register"
 msgstr "Registre"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:233
-msgid "Registered Address"
-msgstr ""
 
 #: src/components/common/QuestionsTable/index.tsx:412
 #: src/components/layouts/Event/index.tsx:107
@@ -7190,21 +7008,11 @@ msgstr "Rapports"
 msgid "Request a new link"
 msgstr "Demander un nouveau lien"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:221
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:169
 msgid "Require Billing Address"
 msgstr "Adresse de facturation requise"
 
 #: src/components/common/QuestionsTable/index.tsx:118
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:85
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:87
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:88
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:89
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:96
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:98
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:99
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:100
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:107
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:110
 msgid "Required"
 msgstr "Requis"
 
@@ -7252,11 +7060,11 @@ msgstr "Renvoyer l'e-mail du billet"
 msgid "Resending..."
 msgstr "Renvoi..."
 
-#: src/components/common/OrdersTable/index.tsx:425
+#: src/components/common/OrdersTable/index.tsx:418
 msgid "Reserved"
 msgstr "Réservé"
 
-#: src/components/common/OrdersTable/index.tsx:332
+#: src/components/common/OrdersTable/index.tsx:312
 msgid "Reserved until"
 msgstr "Réservé jusqu'au"
 
@@ -7272,10 +7080,6 @@ msgstr "Réinitialiser le mot de passe"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "Réinitialisation..."
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:256
-msgid "Residential Address"
-msgstr ""
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -7312,7 +7116,6 @@ msgstr "Restaurez cet événement pour le rendre à nouveau visible."
 msgid "Restore this organizer and make it active again."
 msgstr "Restaurez cet organisateur et rendez-le à nouveau actif."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:11
 #: src/components/routes/admin/FailedJobs/index.tsx:199
 msgid "Retry"
 msgstr "Réessayer"
@@ -7325,8 +7128,6 @@ msgstr "Tout réessayer"
 msgid "Retry Job"
 msgstr "Réessayer le travail"
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:162
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:178
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:52
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
 msgid "Return to Event"
@@ -7347,14 +7148,6 @@ msgstr "Revenu"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:67
 msgid "Revenue Summary"
 msgstr "Résumé des revenus"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:294
-#~ msgid "Review"
-#~ msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:277
-msgid "Review & Submit"
-msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:130
 msgid "Revoke invitation"
@@ -7452,7 +7245,7 @@ msgstr "San Francisco"
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:132
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:166
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:102
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:317
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:265
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:76
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:116
@@ -7463,10 +7256,6 @@ msgstr "San Francisco"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:88
 msgid "Save"
 msgstr "Sauvegarder"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:297
-msgid "Save & Review"
-msgstr ""
 
 #: src/components/modals/ManageAttendeeModal/index.tsx:231
 #: src/components/modals/ManageOrderModal/index.tsx:175
@@ -7608,10 +7397,6 @@ msgstr "Couleur secondaire"
 #: src/components/common/WidgetEditor/index.tsx:205
 msgid "Secondary Text Color"
 msgstr "Couleur du texte secondaire"
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:221
-msgid "Secure"
-msgstr ""
 
 #: src/components/common/InlineOrderSummary/index.tsx:215
 msgid "Secure Checkout"
@@ -7888,7 +7673,7 @@ msgstr "Définissez les paramètres de frais de plateforme par défaut pour les 
 msgid "Set default settings for new events created under this organizer."
 msgstr "Définir les paramètres par défaut pour les nouveaux événements créés sous cet organisateur."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:259
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:207
 msgid "Set the starting number for invoice numbering. This cannot be changed once invoices have been generated."
 msgstr "Définir le numéro de départ pour la numérotation des factures. Cela ne peut pas être modifié une fois que les factures ont été générées."
 
@@ -7904,17 +7689,9 @@ msgstr "Organisez votre événement"
 msgid "Set up your organization"
 msgstr "Configurer votre organisation"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:9
-msgid "Set up your Razorpay account to start receiving payments."
-msgstr ""
-
 #: src/components/routes/event/GettingStarted/index.tsx:188
 msgid "Set your event live"
 msgstr "Mettez votre événement en direct"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ProcessingState.tsx:8
-msgid "Setting up your account..."
-msgstr ""
 
 #: src/components/common/QuestionsTable/index.tsx:373
 msgid "Setting updated"
@@ -7930,10 +7707,6 @@ msgstr "Paramètre mis à jour"
 #: src/components/modals/DuplicateEventModal/index.tsx:26
 msgid "Settings"
 msgstr "Paramètres"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:267
-msgid "Settlement"
-msgstr ""
 
 #: src/components/layouts/Event/index.tsx:103
 msgid "Setup & Design"
@@ -8072,11 +7845,8 @@ msgid "Sold Out"
 msgstr "Épuisé"
 
 #: src/components/common/ErrorDisplay/index.tsx:15
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:185
 #: src/components/routes/auth/AcceptInvitation/index.tsx:48
 #: src/components/routes/product-widget/CollectInformation/index.tsx:386
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:169
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:175
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:64
 msgid "Something went wrong"
 msgstr "Une erreur s'est produite"
@@ -8131,10 +7901,6 @@ msgstr "Espagnol"
 msgid "Sports"
 msgstr "Sports"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:250
-msgid "Stakeholder"
-msgstr ""
-
 #: src/components/forms/ProductForm/index.tsx:156
 msgid "Standard product with a fixed price"
 msgstr "Produit standard avec un prix fixe"
@@ -8162,11 +7928,6 @@ msgstr "La date de début est obligatoire"
 msgid "Start time of the event"
 msgstr "Heure de début de l'événement"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:239
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:260
-msgid "State"
-msgstr ""
-
 #: src/components/common/CheckoutQuestion/index.tsx:165
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:139
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:97
@@ -8188,7 +7949,7 @@ msgstr "Les statistiques sont basées sur la date de création du compte"
 #: src/components/common/AffiliateTable/index.tsx:83
 #: src/components/common/AttendeeTable/index.tsx:274
 #: src/components/common/OrderDetails/index.tsx:51
-#: src/components/common/OrdersTable/index.tsx:410
+#: src/components/common/OrdersTable/index.tsx:403
 #: src/components/common/OrganizerWebhookTable/index.tsx:238
 #: src/components/common/WaitlistTable/index.tsx:181
 #: src/components/common/WebhookTable/index.tsx:238
@@ -8206,7 +7967,7 @@ msgstr "Les statistiques sont basées sur la date de création du compte"
 msgid "Status"
 msgstr "Statut"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:184
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:183
 msgid "Still handling refunds for your older transactions."
 msgstr "Gère toujours les remboursements pour vos anciennes transactions."
 
@@ -8214,26 +7975,13 @@ msgstr "Gère toujours les remboursements pour vos anciennes transactions."
 msgid "Stop Impersonating"
 msgstr "Arrêter l'usurpation"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:258
-msgid "Street"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:235
-msgid "Street 1"
-msgstr ""
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:236
-msgid "Street 2"
-msgstr ""
-
-#: src/components/common/OrdersTable/index.tsx:206
+#: src/components/common/OrdersTable/index.tsx:384
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:85
-#: src/components/routes/product-widget/Payment/index.tsx:134
 msgid "Stripe"
 msgstr "Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:163
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:162
 msgid "Stripe Connect"
 msgstr "Stripe Connect"
 
@@ -8248,10 +7996,6 @@ msgstr "Stripe non connecté"
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:104
 msgid "Stripe Payment ID"
 msgstr "ID de paiement Stripe"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:621
-msgid "Stripe Payment Processing"
-msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:50
 msgid "Stripe payments are not enabled for this event."
@@ -8279,10 +8023,6 @@ msgstr "Le sujet apparaîtra ici"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:255
 msgid "Subject:"
 msgstr "Sujet :"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:275
-#~ msgid "Submit Onboarding"
-#~ msgstr ""
 
 #: src/components/common/InlineOrderSummary/index.tsx:132
 #: src/components/common/OrderSummary/index.tsx:41
@@ -8486,12 +8226,12 @@ msgstr "Par défaut du système"
 msgid "T-shirt"
 msgstr "T-shirt"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:86
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:85
 msgid "Takes just a few minutes"
 msgstr "Prend juste quelques minutes"
 
 #: src/components/common/AdminOrdersTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:378
+#: src/components/common/OrdersTable/index.tsx:358
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
@@ -8511,11 +8251,11 @@ msgstr "Taxes et frais"
 msgid "Tax collected grouped by tax type and event"
 msgstr "Taxes collectées groupées par type de taxe et événement"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:295
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
 msgid "Tax Details"
 msgstr "Détails fiscaux"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:296
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:244
 msgid "Tax information to appear at the bottom of all invoices (e.g., VAT number, tax registration)"
 msgstr "Informations fiscales à apparaître en bas de toutes les factures (par exemple, numéro de TVA, enregistrement fiscal)"
 
@@ -8608,7 +8348,7 @@ msgstr "Le texte peut être difficile à lire"
 msgid "Thank you for attending!"
 msgstr "Merci pour votre présence !"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:92
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:91
 msgid "Thanks for your support as we continue to grow and improve Hi.Events!"
 msgstr "Merci pour votre soutien alors que nous continuons à développer et améliorer Hi.Events !"
 
@@ -8834,7 +8574,7 @@ msgstr "Cet événement est terminé"
 msgid "This event is not published yet"
 msgstr "Cet événement n'est pas encore publié"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:204
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
 msgid "This information will be shown on the payment page, order summary page, and order confirmation email."
 msgstr "Ces informations seront affichées sur la page de paiement, la page de résumé de commande et l'e-mail de confirmation de commande."
 
@@ -9152,7 +8892,7 @@ msgstr "Pour modifier les configurations, accédez à la section Configurations 
 msgid "To increase your limits, contact us at"
 msgstr "Pour augmenter vos limites, contactez-nous à"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:663
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:662
 msgid "To receive credit card payments, you need to connect your Stripe account. Stripe is our payment processing partner that ensures secure transactions and timely payouts."
 msgstr "Pour recevoir des paiements par carte bancaire, vous devez connecter votre compte Stripe. Stripe est notre partenaire de traitement des paiements qui garantit des transactions sécurisées et des paiements rapides."
 
@@ -9254,7 +8994,7 @@ msgstr "Suivez la croissance et les performances des comptes par source d'attrib
 msgid "Track sales, revenue, and attendance with detailed reports"
 msgstr "Suivez les ventes, les revenus et la fréquentation avec des rapports détaillés"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:265
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:264
 msgid "Transaction Fee:"
 msgstr "Frais de transaction :"
 
@@ -9342,10 +9082,6 @@ msgstr "Impossible de récupérer le participant"
 #: src/components/modals/JoinWaitlistModal/index.tsx:124
 msgid "Unable to join waitlist"
 msgstr "Impossible de rejoindre la liste d'attente"
-
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:132
-msgid "Unable to start Razorpay payment. Please try again or use another method."
-msgstr ""
 
 #: src/components/modals/EditQuestionModal/index.tsx:84
 msgid "Unable to update question. Please check the your details"
@@ -9439,7 +9175,7 @@ msgstr "Mettre à jour le nom, la description et les dates de l'événement"
 msgid "Update profile"
 msgstr "Mettre à jour le profil"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:171
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:170
 msgid "Upgrade Available"
 msgstr "Mise à niveau disponible"
 
@@ -9675,10 +9411,6 @@ msgstr "nom de la place"
 msgid "Verification code"
 msgstr "Code de vérification"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/PendingState.tsx:8
-msgid "Verification in progress"
-msgstr ""
-
 #: src/components/routes/admin/Attribution/index.tsx:136
 #: src/components/routes/admin/Dashboard/index.tsx:421
 msgid "Verified"
@@ -9878,10 +9610,6 @@ msgstr "Nous n'avons pas pu charger les données. Veuillez réessayer."
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Nous n'avons pas pu réorganiser les catégories. Veuillez réessayer."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:9
-msgid "We found an existing account but couldn't complete setup automatically."
-msgstr ""
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:387
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Un problème est survenu lors du chargement de cette page. Veuillez réessayer."
@@ -9923,7 +9651,7 @@ msgstr "Nous validerons votre numéro de TVA en arrière-plan. S'il y a des prob
 msgid "We're processing your order. Please wait..."
 msgstr "Nous traitons votre commande. S'il vous plaît, attendez..."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:75
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:74
 msgid "We've officially moved our headquarters to Ireland 🇮🇪. As part of this transition, we're now using Stripe Ireland instead of Stripe Canada. To keep your payouts running smoothly, you'll need to reconnect your Stripe account."
 msgstr "Nous avons officiellement déménagé notre siège social en Irlande 🇮🇪. Dans le cadre de cette transition, nous utilisons maintenant Stripe Irlande au lieu de Stripe Canada. Pour que vos paiements continuent de fonctionner correctement, vous devrez reconnecter votre compte Stripe."
 
@@ -10123,7 +9851,7 @@ msgstr "Quand l'enregistrement ouvre"
 msgid "When customers purchase tickets, their orders will appear here."
 msgstr "Lorsque les clients achètent des billets, leurs commandes apparaîtront ici."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:234
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:182
 msgid "When enabled, invoices will be generated for ticket orders. Invoices will sent along with the order confirmation email. Attendees can also download their invoices from the order confirmation page."
 msgstr "Lorsque activé, des factures seront générées pour les commandes de billets. Les factures seront envoyées avec l'e-mail de confirmation de commande. Les participants peuvent également télécharger leurs factures depuis la page de confirmation de commande."
 
@@ -10139,7 +9867,7 @@ msgstr "Lorsqu'elle est activée, les nouveaux événements afficheront une case
 msgid "When enabled, no application fees will be charged on Stripe Connect transactions. Use this for countries where application fees are not supported."
 msgstr "Lorsqu'activé, aucun frais d'application ne sera facturé sur les transactions Stripe Connect. Utilisez ceci pour les pays où les frais d'application ne sont pas pris en charge."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:193
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:141
 msgid "When offline payments are enabled, users will be able to complete their orders and receive their tickets. Their tickets will clearly indicate the order is not paid, and the check-in tool will notify the check-in staff if an order requires payment."
 msgstr "Lorsque les paiements hors ligne sont activés, les utilisateurs pourront finaliser leurs commandes et recevoir leurs billets. Leurs billets indiqueront clairement que la commande n'est pas payée, et l'outil d'enregistrement informera le personnel si une commande nécessite un paiement."
 
@@ -10348,11 +10076,7 @@ msgstr "Vous possédez 100 % des données de vos participants, toujours"
 msgid "You receive"
 msgstr "Vous recevez"
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:193
-msgid "You will be redirected to Razorpay to securely complete your payment."
-msgstr ""
-
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:195
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:143
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Vous devrez marquer une commande comme payée manuellement. Cela peut être fait sur la page de gestion des commandes."
 
@@ -10368,7 +10092,7 @@ msgstr "Vous aurez besoin d'un produit avant de pouvoir créer une affectation d
 msgid "You'll need at least one product to get started. Free, paid or let the user decide what to pay."
 msgstr "Vous aurez besoin d'au moins un produit pour commencer. Gratuit, payant ou laissez l'utilisateur décider du montant à payer."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:183
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:182
 msgid "You're all set! Your payments are being processed smoothly."
 msgstr "Tout est prêt ! Vos paiements sont traités en douceur."
 
@@ -10387,10 +10111,6 @@ msgstr "Une place vous a été proposée !"
 #: src/components/modals/SendMessageModal/index.tsx:273
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "Votre compte a des limites de messagerie. Pour augmenter vos limites, contactez-nous à"
-
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ConnectedState.tsx:9
-msgid "Your account is ready to receive payments."
-msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:64
 msgid "Your account name is used on event pages and in emails."
@@ -10488,7 +10208,7 @@ msgstr "Votre commande est en attente de paiement"
 msgid "Your orders have been exported successfully."
 msgstr "Vos commandes ont été exportées avec succès."
 
-#: src/components/common/OrdersTable/index.tsx:476
+#: src/components/common/OrdersTable/index.tsx:469
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Vos commandes apparaîtront ici une fois qu’elles commenceront à arriver."
 
@@ -10525,12 +10245,12 @@ msgstr "Votre forfait"
 msgid "Your refund is processing."
 msgstr "Votre remboursement est en cours de traitement."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:180
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:179
 msgid "Your Stripe account is connected and processing payments."
 msgstr "Votre compte Stripe est connecté et traite les paiements."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:397
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:634
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:396
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:633
 msgid "Your Stripe account is connected and ready to process payments."
 msgstr "Votre compte Stripe est connecté et prêt à traiter les paiements."
 
