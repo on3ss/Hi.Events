@@ -10,6 +10,7 @@ use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayOrderPaidHan
 use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayRefundHandler;
 use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayPaymentFailedHandler;
 use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayPaymentAuthorizedHandler;
+use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayAccountStatusHandler;
 use Illuminate\Cache\Repository;
 use Illuminate\Log\Logger;
 use JsonException;
@@ -24,6 +25,10 @@ class RazorpayWebhookHandler
         'refund.processed',
         'payment.failed',
         'payment.authorized',
+        'account.instantiated',
+        'account.under_review',
+        'account.funds_on_hold',
+        'account.status_updated',
     ];
 
     public function __construct(
@@ -32,6 +37,7 @@ class RazorpayWebhookHandler
         private readonly RazorpayRefundHandler $refundHandler,
         private readonly RazorpayPaymentFailedHandler $paymentFailedHandler,
         private readonly RazorpayPaymentAuthorizedHandler $paymentAuthorizedHandler,
+        private readonly RazorpayAccountStatusHandler $accountStatusHandler,
         private readonly RazorpayPaymentVerificationService $razorpayPaymentService,
         private readonly Logger $logger,
         private readonly Repository $cache,
@@ -76,6 +82,7 @@ class RazorpayWebhookHandler
                 'payment.captured', 'payment.failed', 'payment.authorized' => $envelope->payload->payment->id,
                 'order.paid' => $envelope->payload->order->id,
                 'refund.processed' => $envelope->payload->refund->id,
+                'account.instantiated', 'account.under_review', 'account.funds_on_hold', 'account.status_updated' => $data['account_id'] . '_' . $event . '_' . $data['created_at'],
                 default => null,
             };
 
@@ -105,6 +112,7 @@ class RazorpayWebhookHandler
                 'refund.processed' => $this->refundHandler->handleEvent($envelope->payload),
                 'payment.failed' => $this->paymentFailedHandler->handleEvent($envelope->payload),
                 'payment.authorized' => $this->paymentAuthorizedHandler->handleEvent($envelope->payload),
+                'account.instantiated', 'account.under_review', 'account.funds_on_hold', 'account.status_updated' => $this->accountStatusHandler->handleEvent($event, $envelope->payload),
                 default => $this->logger->debug('No handler for event', ['event' => $event]),
             };
 

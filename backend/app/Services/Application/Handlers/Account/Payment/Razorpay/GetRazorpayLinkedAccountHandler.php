@@ -36,6 +36,11 @@ class GetRazorpayLinkedAccountHandler
         }
 
         $razorpayAccounts = $platforms->map(function (AccountRazorpayPlatformDomainObject $platform) use ($account){
+            $onboardingData = $platform->getOnboardingData();
+            if (is_string($onboardingData)) {
+                $onboardingData = json_decode($onboardingData, true) ?: null;
+            }
+
             return new RazorpayLinkedAccountDTO(
                 id: $platform->getId(),
                 status: $platform->getStatus(),
@@ -43,6 +48,7 @@ class GetRazorpayLinkedAccountHandler
                 email: $account->getEmail(),
                 legalBusinessName: $account->getName(),
                 country: 'IN',
+                onboardingData: $onboardingData,
             );
         });
 

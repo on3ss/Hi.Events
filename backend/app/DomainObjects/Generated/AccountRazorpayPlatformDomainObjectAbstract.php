@@ -15,6 +15,7 @@ abstract class AccountRazorpayPlatformDomainObjectAbstract extends \HiEvents\Dom
     final public const RAZORPAY_ACCOUNT_ID = 'razorpay_account_id';
     final public const STATUS = 'status';
     final public const RAZORPAY_ACCOUNT_DETAILS = 'razorpay_account_details';
+    final public const ONBOARDING_DATA = 'onboarding_data';
     final public const ACTIVATED_AT = 'activated_at';
     final public const CREATED_AT = 'created_at';
     final public const UPDATED_AT = 'updated_at';
@@ -25,6 +26,7 @@ abstract class AccountRazorpayPlatformDomainObjectAbstract extends \HiEvents\Dom
     protected ?string $razorpay_account_id = null;
     protected string $status = 'created';
     protected array|string|null $razorpay_account_details = null;
+    protected array|string|null $onboarding_data = null;
     protected ?string $activated_at = null;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
@@ -38,6 +40,7 @@ abstract class AccountRazorpayPlatformDomainObjectAbstract extends \HiEvents\Dom
                     'razorpay_account_id' => $this->razorpay_account_id ?? null,
                     'status' => $this->status ?? null,
                     'razorpay_account_details' => $this->razorpay_account_details ?? null,
+                    'onboarding_data' => $this->onboarding_data ?? null,
                     'activated_at' => $this->activated_at ?? null,
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
@@ -98,6 +101,17 @@ abstract class AccountRazorpayPlatformDomainObjectAbstract extends \HiEvents\Dom
     public function getRazorpayAccountDetails(): array|string|null
     {
         return $this->razorpay_account_details;
+    }
+
+    public function setOnboardingData(array|string|null $onboarding_data): self
+    {
+        $this->onboarding_data = $onboarding_data;
+        return $this;
+    }
+
+    public function getOnboardingData(): array|string|null
+    {
+        return $this->onboarding_data;
     }
 
     public function setActivatedAt(?string $activated_at): self

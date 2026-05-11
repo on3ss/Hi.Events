@@ -300,7 +300,7 @@ msgstr "每個產品一個問題。例如，您的T恤尺碼是多少？"
 msgid "A standard tax, like VAT or GST"
 msgstr "標準税，如增值税或消費税"
 
-#: src/components/common/OrdersTable/index.tsx:436
+#: src/components/common/OrdersTable/index.tsx:443
 msgid "Abandoned"
 msgstr "已放棄"
 
@@ -308,9 +308,9 @@ msgstr "已放棄"
 msgid "About"
 msgstr "關於"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:434
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:463
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:681
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:435
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:464
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:682
 msgid "About Stripe Connect"
 msgstr "關於 Stripe Connect"
 
@@ -327,9 +327,14 @@ msgstr "承擔費用"
 msgid "Accent Color"
 msgstr "強調色"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:98
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:159
 msgid "Accept bank transfers, checks, or other offline payment methods"
 msgstr "接受銀行轉賬、支票或其他線下支付方式"
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
+msgid "Accept credit card payments with Razorpay"
+msgstr ""
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
 msgid "Accept credit card payments with Stripe"
@@ -343,8 +348,16 @@ msgstr "接受邀請"
 msgid "Accept Invitation"
 msgstr "接受邀請"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:358
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:609
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:118
+msgid "Accept online payments via third-party payment providers"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:7
+msgid "Accept payments with Razorpay"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:359
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:610
 msgid "Access Denied"
 msgstr "訪問被拒絕"
 
@@ -358,7 +371,7 @@ msgstr "訪問被拒絕"
 msgid "Account"
 msgstr "賬户"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:343
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:344
 msgid "Account already connected!"
 msgstr "帳戶已連接！"
 
@@ -378,6 +391,10 @@ msgstr "賬户名稱"
 msgid "Account not found"
 msgstr "找不到帳戶"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:269
+msgid "Account Number"
+msgstr ""
+
 #: src/components/common/GlobalMenu/index.tsx:45
 #: src/components/routes/account/ManageAccount/index.tsx:19
 msgid "Account Settings"
@@ -394,7 +411,11 @@ msgstr "賬户更新成功"
 msgid "Accounts"
 msgstr "賬戶"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:71
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:7
+msgid "Action required"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:72
 msgid "Action Required: Reconnect Your Stripe Account"
 msgstr "需要操作：重新連接您的 Stripe 帳戶"
 
@@ -405,7 +426,7 @@ msgstr "需要操作：需提供增值稅資料"
 #: src/components/common/AdminEventsTable/index.tsx:112
 #: src/components/common/AffiliateTable/index.tsx:167
 #: src/components/common/AttendeeTable/index.tsx:346
-#: src/components/common/OrdersTable/index.tsx:445
+#: src/components/common/OrdersTable/index.tsx:452
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:467
 #: src/components/common/WaitlistTable/index.tsx:55
 #: src/components/common/WaitlistTable/index.tsx:210
@@ -468,7 +489,7 @@ msgstr "添加描述"
 msgid "Add event details and manage event settings."
 msgstr "新增活動詳情並管理活動設定。"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:153
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:205
 msgid "Add instructions for offline payments (e.g., bank transfer details, where to send checks, payment deadlines)"
 msgstr "添加線下支付的説明（例如，銀行轉賬詳情、支票寄送地址、付款截止日期）"
 
@@ -648,7 +669,7 @@ msgstr "本次活動的所有與會者"
 msgid "All Currencies"
 msgstr "所有貨幣"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:185
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:186
 msgid "All done! You're now using our upgraded payment system."
 msgstr "全部完成！您現在正在使用我們升級的付款系統。"
 
@@ -680,7 +701,7 @@ msgstr "所有狀態"
 msgid "All Upcoming Events"
 msgstr "所有即將舉行的活動"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:209
 msgid "Allow attendees associated with unpaid orders to check in"
 msgstr "允許與未支付訂單關聯的參與者簽到"
 
@@ -702,8 +723,8 @@ msgstr "允許搜索引擎索引"
 msgid "Allow search engines to index this event"
 msgstr "允許搜索引擎索引此事件"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:205
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:417
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:206
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:418
 msgid "Almost there! Finish connecting your Stripe account to start accepting payments."
 msgstr "快完成了！完成連接您的 Stripe 帳戶以開始接受付款。"
 
@@ -736,8 +757,9 @@ msgstr "總是可用"
 msgid "Amazing, Event, Keywords..."
 msgstr "令人驚歎, 活動, 關鍵詞..."
 
-#: src/components/common/OrdersTable/index.tsx:348
+#: src/components/common/OrdersTable/index.tsx:368
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:241
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:36
 msgid "Amount"
 msgstr "金額"
@@ -1205,7 +1227,7 @@ msgid "Awaiting payment"
 msgstr "等待付款"
 
 #: src/components/common/AttendeeTable/index.tsx:289
-#: src/components/common/OrdersTable/index.tsx:424
+#: src/components/common/OrdersTable/index.tsx:431
 #: src/components/routes/event/attendees.tsx:28
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:356
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:56
@@ -1219,6 +1241,10 @@ msgstr "Awesome Events 有限公司"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:74
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:286
+msgid "Back"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:114
 msgid "Back to Accounts"
@@ -1259,6 +1285,10 @@ msgstr "背景顏色"
 msgid "Background Type"
 msgstr "背景類型"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:267
+msgid "Bank details"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/index.tsx:29
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
@@ -1272,12 +1302,16 @@ msgstr "在任何裝置上都有美觀的結帳體驗"
 msgid "Before your event can go live, there are a few things you need to do. Complete all the steps below to get started."
 msgstr "在活動上線之前，您需要完成以下幾項步驟。請完成以下所有步驟以開始。"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:271
+msgid "Beneficiary Name"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:513
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:287
 msgid "Billing Address"
 msgstr "賬單地址"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:167
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:219
 msgid "Billing Settings"
 msgstr "賬單設置"
 
@@ -1297,6 +1331,7 @@ msgstr "使用自訂標誌、顏色和頁腳訊息打造您的門票品牌。"
 msgid "Brazilian Portuguese"
 msgstr "巴西葡萄牙語"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:201
 #: src/constants/eventCategories.ts:17
 msgid "Business"
 msgstr "商務"
@@ -1313,6 +1348,10 @@ msgstr "用於增值稅目的的營業地址"
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:294
 msgid "Business Name"
 msgstr "商業名稱"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:218
+msgid "Business Type"
+msgstr ""
 
 #: src/components/common/EmailTemplateEditor/CTAConfiguration.tsx:27
 msgid "Button Label"
@@ -1331,7 +1370,7 @@ msgid "Buyers see a clean price. The platform fee is deducted from your payout."
 msgstr "買家看到的是淨價。平台費用將從您的付款中扣除。"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/Payment/index.tsx:152
+#: src/components/routes/product-widget/Payment/index.tsx:174
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "繼續即表示您同意 <0>{0} 服務條款</0>"
 
@@ -1412,7 +1451,7 @@ msgstr "取消將取消與此訂單關聯的所有參與者，並將門票釋放
 
 #: src/components/common/AttendeeTable/index.tsx:295
 #: src/components/common/AttendeeTicket/index.tsx:149
-#: src/components/common/OrdersTable/index.tsx:430
+#: src/components/common/OrdersTable/index.tsx:437
 #: src/components/common/OrderStatusBadge/index.tsx:12
 #: src/components/common/WaitlistTable/index.tsx:27
 #: src/components/routes/admin/Messages/index.tsx:126
@@ -1644,6 +1683,8 @@ msgid "Choose who pays the platform fee. This does not affect additional fees yo
 msgstr "選擇誰支付平台費用。這不會影響您在帳戶設置中配置的額外費用。"
 
 #: src/components/common/CheckoutQuestion/index.tsx:162
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:238
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:259
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:134
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:92
 #: src/components/routes/product-widget/CollectInformation/index.tsx:533
@@ -1771,12 +1812,16 @@ msgstr "以逗號分隔的描述活動的關鍵字。搜索引擎將使用這些
 msgid "Communication Preferences"
 msgstr "通訊偏好"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:201
+msgid "Company details"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:712
 msgid "Complete Order"
 msgstr "完整訂單"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:340
-#: src/components/routes/product-widget/Payment/index.tsx:148
+#: src/components/routes/product-widget/Payment/index.tsx:170
 msgid "Complete Payment"
 msgstr "完成付款"
 
@@ -1785,7 +1830,7 @@ msgstr "完成付款"
 msgid "Complete Stripe Setup"
 msgstr "完成 Stripe 設置"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:115
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:116
 msgid "Complete the setup below to continue"
 msgstr "完成下面的設置以繼續"
 
@@ -1805,7 +1850,7 @@ msgstr "完成付款以確保您的門票。"
 msgid "Complete your profile to join the team."
 msgstr "完成您的個人資料以加入團隊。"
 
-#: src/components/common/OrdersTable/index.tsx:412
+#: src/components/common/OrdersTable/index.tsx:419
 #: src/components/modals/SendMessageModal/index.tsx:333
 #: src/components/routes/event/GettingStarted/index.tsx:75
 #: src/components/routes/event/orders.tsx:23
@@ -1935,11 +1980,11 @@ msgstr "恭喜你成功建立活動！"
 msgid "Congratulations! Your event is now visible to the public."
 msgstr "恭喜！您的活動現已對公眾可見。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:235
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:236
 msgid "Connect & Upgrade"
 msgstr "連接並升級"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:653
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:654
 msgid "Connect Documentation"
 msgstr "連接文檔"
 
@@ -1964,10 +2009,14 @@ msgstr "連接 Stripe 以啟用消息功能"
 msgid "Connect to Stripe"
 msgstr "連接到 Stripe"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:11
+msgid "Connect with Razorpay"
+msgstr ""
+
 #: src/components/common/StripeConnectButton/index.tsx:85
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:235
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:454
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:671
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:236
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:455
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:672
 #: src/components/routes/event/GettingStarted/index.tsx:159
 msgid "Connect with Stripe"
 msgstr "與 Stripe 連接"
@@ -1976,15 +2025,15 @@ msgstr "與 Stripe 連接"
 msgid "Connect your Stripe account to accept payments for tickets and products."
 msgstr "連接您的 Stripe 帳戶以接受門票和商品的付款。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:223
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:224
 msgid "Connect your Stripe account to accept payments."
 msgstr "連接您的 Stripe 帳戶以接受付款。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:446
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:447
 msgid "Connect your Stripe account to start accepting payments for your events."
 msgstr "連接您的 Stripe 帳戶以開始接受您活動的付款。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:221
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:222
 msgid "Connect your Stripe account to start accepting payments."
 msgstr "連接您的 Stripe 帳戶以開始接受付款。"
 
@@ -1992,8 +2041,8 @@ msgstr "連接您的 Stripe 帳戶以開始接受付款。"
 msgid "Connect your Stripe account to start receiving payments."
 msgstr "連接 Stripe 賬户，開始接收付款。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:392
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:629
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:393
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:630
 msgid "Connected to Stripe"
 msgstr "已連接到 Stripe"
 
@@ -2019,6 +2068,10 @@ msgstr "聯絡電郵"
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:81
 msgid "Contact email for support"
 msgstr "支援聯絡電郵"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:230
+msgid "Contact Name"
+msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
@@ -2114,7 +2167,7 @@ msgid "Copy details to first attendee"
 msgstr "將詳情複製到第一位參與者"
 
 #: src/components/common/AttendeeTable/index.tsx:197
-#: src/components/common/OrdersTable/index.tsx:263
+#: src/components/common/OrdersTable/index.tsx:283
 msgid "Copy Email"
 msgstr "複製郵箱"
 
@@ -2145,6 +2198,8 @@ msgid "Copy URL"
 msgstr "複製 URL"
 
 #: src/components/common/CheckoutQuestion/index.tsx:174
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:241
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:262
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:152
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:110
 #: src/components/routes/product-widget/CollectInformation/index.tsx:554
@@ -2385,7 +2440,7 @@ msgstr "貨幣"
 msgid "Current Password"
 msgstr "當前密碼"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:164
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:165
 msgid "Current payment processor"
 msgstr "當前付款處理器"
 
@@ -2432,7 +2487,7 @@ msgid "Custom template"
 msgstr "自定義範本"
 
 #: src/components/common/AdminOrdersTable/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:207
+#: src/components/common/OrdersTable/index.tsx:227
 msgid "Customer"
 msgstr "客户"
 
@@ -2723,11 +2778,11 @@ msgstr "關閉此訊息"
 msgid "Display a checkbox allowing customers to opt-in to receive marketing communications from this event organizer."
 msgstr "顯示一個複選框，允許客戶選擇接收此活動組織者的營銷通訊。"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:190
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:242
 msgid "Document Label"
 msgstr "文檔標籤"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:692
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:693
 msgid "Documentation"
 msgstr "文檔"
 
@@ -3005,6 +3060,8 @@ msgstr "符合條件的簽到列表"
 #: src/components/modals/EditUserModal/index.tsx:80
 #: src/components/modals/InviteUserModal/index.tsx:61
 #: src/components/modals/JoinWaitlistModal/index.tsx:171
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:205
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:253
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:128
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -3124,7 +3181,7 @@ msgstr "啟用參與者自助服務"
 msgid "Enable attendee self-service by default"
 msgstr "預設啟用參與者自助服務"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:181
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:233
 msgid "Enable Invoicing"
 msgstr "啟用發票功能"
 
@@ -3231,6 +3288,10 @@ msgstr "輸入包含國家代碼的增值稅號碼"
 #: src/components/forms/AffiliateForm/index.tsx:39
 msgid "Enter unique affiliate code"
 msgstr "輸入獨特推廣碼"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:84
+msgid "Enter valid 10-digit mobile"
+msgstr ""
 
 #: src/components/common/ContactOrganizerModal/index.tsx:80
 #: src/components/routes/auth/Login/index.tsx:150
@@ -3847,13 +3908,13 @@ msgid "Fee Handling"
 msgstr "費用處理"
 
 #: src/components/common/InlineOrderSummary/index.tsx:140
-#: src/components/common/OrdersTable/index.tsx:359
+#: src/components/common/OrdersTable/index.tsx:379
 #: src/components/forms/ProductForm/index.tsx:409
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 msgid "Fees"
 msgstr "費用"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:291
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:292
 msgid "Fees are subject to change. You will be notified of any changes to your fee structure."
 msgstr "費用可能會變更。如有變更，您將收到通知。"
 
@@ -3895,12 +3956,16 @@ msgstr "篩選器"
 msgid "Filters ({activeFilterCount})"
 msgstr "篩選器 ({activeFilterCount})"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:214
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:303
+msgid "Finish"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:215
 msgid "Finish Setup"
 msgstr "完成設置"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:425
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:672
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:426
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:673
 msgid "Finish Stripe Setup"
 msgstr "完成 Stripe 設置"
 
@@ -3908,7 +3973,7 @@ msgstr "完成 Stripe 設置"
 msgid "First attendee"
 msgstr "第一位參與者"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:206
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:258
 msgid "First Invoice Number"
 msgstr "第一張發票號碼"
 
@@ -3976,7 +4041,7 @@ msgstr "每筆交易收取的固定費用"
 msgid "Fixed fee must be 0 or greater"
 msgstr "固定費用必須為 0 或更高"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:276
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:277
 msgid "Fixed Fee:"
 msgstr "固定費用："
 
@@ -4124,6 +4189,10 @@ msgstr "銷售總額"
 msgid "Gross Sales"
 msgstr "總銷售額"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:244
+msgid "GST"
+msgstr ""
+
 #: src/components/layouts/Event/index.tsx:117
 msgid "Guest Management"
 msgstr "賓客管理"
@@ -4161,7 +4230,7 @@ msgstr "這是您可以用來在應用程式中嵌入小工具的 React 組件�
 msgid "Here is your affiliate link"
 msgstr "呢個係你嘅推廣連結"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:84
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:85
 msgid "Here's what to expect:"
 msgstr "預期結果："
 
@@ -4346,7 +4415,7 @@ msgstr "如果未自動開啟新分頁，請點擊下方按鈕繼續結帳。"
 msgid "If blank, the address will be used to generate a Google Maps link"
 msgstr "如果留空，地址將用於生成 Google 地圖連結"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:158
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:210
 msgid "If enabled, check-in staff can either mark attendees as checked in or mark the order as paid and check in the attendees. If disabled, attendees associated with unpaid orders cannot be checked in."
 msgstr "如果啟用，登記工作人員可以將與會者標記為已登記或將訂單標記為已支付並登記與會者。如果禁用，關聯未支付訂單的與會者無法登記。"
 
@@ -4365,6 +4434,10 @@ msgstr "如果您沒有要求更改密碼，請立即更改密碼。"
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "如果您在我們這裡有帳戶，您將收到一封電子郵件，其中包含如何重置密碼的說明。"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:270
+msgid "IFSC Code"
+msgstr ""
 
 #: src/components/common/ImageUploadDropzone/index.tsx:124
 msgid "Image deleted successfully"
@@ -4494,6 +4567,8 @@ msgid "Invalid"
 msgstr "無效"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:35
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:83
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:97
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:33
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:33
 msgid "Invalid email"
@@ -4508,10 +4583,24 @@ msgstr "電郵格式無效"
 msgid "Invalid file type. Please upload an image."
 msgstr "無效的檔案類型。請上傳圖片。"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:109
+msgid "Invalid IFSC"
+msgstr ""
+
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:144
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:175
 msgid "Invalid Liquid syntax. Please correct it and try again."
 msgstr "無效的Liquid語法。請更正後再試。"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:94
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:105
+msgid "Invalid PAN"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:91
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:102
+msgid "Invalid postal code"
+msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/PaymentSettings/VatSettings/VatSettingsForm.tsx:157
 msgid "Invalid VAT number format"
@@ -4549,7 +4638,7 @@ msgstr "邀請用户"
 msgid "Invite Your Team"
 msgstr "邀請您的團隊"
 
-#: src/components/common/OrdersTable/index.tsx:301
+#: src/components/common/OrdersTable/index.tsx:321
 msgid "Invoice"
 msgstr "發票"
 
@@ -4558,15 +4647,15 @@ msgstr "發票"
 msgid "Invoice downloaded successfully"
 msgstr "發票下載成功"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:252
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:304
 msgid "Invoice Notes"
 msgstr "發票備註"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:249
 msgid "Invoice Numbering"
 msgstr "發票編號"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:229
 msgid "Invoice Settings"
 msgstr "發票設置"
 
@@ -4586,11 +4675,11 @@ msgstr "意大利語"
 msgid "Item"
 msgstr "項目"
 
-#: src/components/common/OrdersTable/index.tsx:340
+#: src/components/common/OrdersTable/index.tsx:360
 msgid "item(s)"
 msgstr "項目"
 
-#: src/components/common/OrdersTable/index.tsx:322
+#: src/components/common/OrdersTable/index.tsx:342
 msgid "Items"
 msgstr "項目"
 
@@ -4641,7 +4730,7 @@ msgstr ""
 msgid "Joined"
 msgstr "已加入"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:120
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:121
 msgid "Just click the button below to reconnect your Stripe account."
 msgstr "只需點擊下面的按鈕重新連接您的 Stripe 帳戶。"
 
@@ -4652,6 +4741,10 @@ msgstr "只是在找您的票？"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:567
 msgid "Keep me updated on news and events from {0}"
 msgstr "讓我隨時了解來自 {0} 的新聞和活動"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:250
+msgid "Key person"
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:85
 msgid "Label"
@@ -4752,9 +4845,13 @@ msgstr "最近觸發"
 msgid "Last Used"
 msgstr "最近一次使用"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "留空以使用默認詞“發票”"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:213
+msgid "Legal Business Name"
+msgstr ""
 
 #: src/components/modals/EditAccountVatSettingsModal/index.tsx:141
 msgid "Legal business name for VAT purposes"
@@ -4880,7 +4977,7 @@ msgstr "查找我的門票"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:170
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:222
 msgid "Make billing address mandatory during checkout"
 msgstr "在結賬時強制要求填寫賬單地址"
 
@@ -4914,7 +5011,7 @@ msgstr "管理活動"
 msgid "Manage order"
 msgstr "管理訂單"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:99
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
 msgid "Manage payment and invoicing settings for this event."
 msgstr "管理此活動的支付和發票設置。"
 
@@ -4938,7 +5035,7 @@ msgstr "管理賬户詳情和默認設置"
 msgid "Manage your event's waitlist, view stats, and offer tickets to attendees."
 msgstr ""
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:817
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:818
 msgid "Manage your payment processing and view platform fees"
 msgstr "管理您的支付處理並查看平台費用"
 
@@ -4985,7 +5082,7 @@ msgstr "媒介"
 
 #: src/components/common/AttendeeTable/index.tsx:188
 #: src/components/common/ContactOrganizerModal/index.tsx:88
-#: src/components/common/OrdersTable/index.tsx:254
+#: src/components/common/OrdersTable/index.tsx:274
 #: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Message"
 msgstr "訊息"
@@ -5148,6 +5245,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
 #: src/components/modals/DuplicateEventModal/index.tsx:109
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:252
 #: src/components/routes/admin/Configurations/index.tsx:219
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:75
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:230
@@ -5195,6 +5293,10 @@ msgstr "新密碼"
 #: src/components/routes/admin/Dashboard/index.tsx:225
 msgid "New Signups"
 msgstr "新註冊"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:291
+msgid "Next"
+msgstr ""
 
 #: src/constants/eventCategories.ts:4
 msgid "Nightlife"
@@ -5318,11 +5420,11 @@ msgstr "沒有失敗的任務"
 msgid "No filters available"
 msgstr "沒有可用篩選器"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:86
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:87
 msgid "No impact on your current or past transactions"
 msgstr "不影響您當前或過去的交易"
 
-#: src/components/common/OrdersTable/index.tsx:306
+#: src/components/common/OrdersTable/index.tsx:326
 msgid "No invoice"
 msgstr "無發票"
 
@@ -5347,7 +5449,7 @@ msgstr "暫無訂單問題"
 msgid "No orders found"
 msgstr "找不到訂單"
 
-#: src/components/common/OrdersTable/index.tsx:466
+#: src/components/common/OrdersTable/index.tsx:473
 msgid "No orders to show"
 msgstr "無訂單顯示"
 
@@ -5371,7 +5473,7 @@ msgstr "無付費訂單"
 msgid "No past events"
 msgstr "沒有過往活動"
 
-#: src/components/routes/product-widget/Payment/index.tsx:87
+#: src/components/routes/product-widget/Payment/index.tsx:91
 msgid "No payment methods are currently available. Please contact the event organizer for assistance."
 msgstr "當前沒有可用的支付方式。請聯繫活動組織者以獲取幫助。"
 
@@ -5532,11 +5634,11 @@ msgstr "通知設置"
 msgid "Notify organizer of new orders"
 msgstr "將新訂單通知組織者"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:217
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:269
 msgid "Number of days allowed for payment (leave blank to omit payment terms from invoices)"
 msgstr "允許支付的天數（留空以從發票中省略付款條款）"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:199
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:251
 msgid "Number Prefix"
 msgstr "號碼前綴"
 
@@ -5579,12 +5681,12 @@ msgstr "報價將在 {timeoutHours} 小時後過期。"
 msgid "Office or venue name"
 msgstr "辦公室或場地名稱"
 
-#: src/components/common/OrdersTable/index.tsx:389
-#: src/components/routes/product-widget/Payment/index.tsx:131
+#: src/components/common/OrdersTable/index.tsx:214
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Offline"
 msgstr "離線"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:145
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "線下訂單在標記為已支付之前不會反映在活動統計中。"
 
@@ -5593,25 +5695,26 @@ msgstr "線下訂單在標記為已支付之前不會反映在活動統計中。
 msgid "Offline Payment"
 msgstr "離線付款"
 
-#: src/components/routes/product-widget/Payment/index.tsx:77
+#: src/components/routes/product-widget/Payment/index.tsx:81
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "線下支付失敗。請重試或聯繫活動組織者。"
 
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:49
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:82
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:151
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:203
 msgid "Offline Payment Instructions"
 msgstr "離線付款說明"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:90
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:97
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
 msgid "Offline Payments"
 msgstr "線下支付"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:139
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
 msgid "Offline Payments Information"
 msgstr "線下支付信息"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:134
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:186
 msgid "Offline Payments Settings"
 msgstr "線下支付設置"
 
@@ -5625,7 +5728,7 @@ msgstr "銷售中"
 msgid "On sale {0}"
 msgstr "正在銷售 {0}"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:553
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:554
 msgid "Once you complete the upgrade, your old account will only be used for refunds."
 msgstr "升級完成後，您的舊帳戶將僅用於退款。"
 
@@ -5647,7 +5750,6 @@ msgid "Ongoing"
 msgstr "持續進行"
 
 #: src/components/common/EventCard/index.tsx:93
-#: src/components/routes/product-widget/Payment/index.tsx:123
 msgid "Online"
 msgstr "線上"
 
@@ -5659,6 +5761,10 @@ msgstr "線上活動"
 #: src/components/common/OnlineEventDetails/index.tsx:9
 msgid "Online Event Details"
 msgstr "在線活動詳情"
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:116
+msgid "Online Payments"
+msgstr ""
 
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:72
 msgid "Only account administrators can delete or archive events. Contact your account admin for assistance."
@@ -5685,9 +5791,9 @@ msgstr "開啟簽到頁面"
 msgid "Open sidebar"
 msgstr "打開側邊欄"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:196
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:405
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:642
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:197
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:406
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:643
 msgid "Open Stripe Dashboard"
 msgstr "打開 Stripe 儀表板"
 
@@ -5695,11 +5801,11 @@ msgstr "打開 Stripe 儀表板"
 msgid "Option {i}"
 msgstr "方案 {i}"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:253
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:305
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
 msgstr "所有發票上顯示的可選附加信息（例如，付款條款、逾期付款費用、退貨政策）"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:200
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:252
 msgid "Optional prefix for invoice numbers (e.g., INV-)"
 msgstr "發票編號的可選前綴（例如，INV-）"
 
@@ -5779,7 +5885,7 @@ msgstr "訂單貨幣"
 msgid "Order Date"
 msgstr "訂購日期"
 
-#: src/components/common/OrdersTable/index.tsx:277
+#: src/components/common/OrdersTable/index.tsx:297
 #: src/components/modals/ManageAttendeeModal/index.tsx:166
 #: src/components/modals/ManageOrderModal/index.tsx:86
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:591
@@ -5808,6 +5914,7 @@ msgid "Order Holders"
 msgstr "訂單持有人"
 
 #: src/components/common/AdminOrdersTable/index.tsx:67
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:232
 msgid "Order ID"
 msgstr "訂單編號"
 
@@ -5961,16 +6068,16 @@ msgstr "自然帳戶"
 msgid "Organization"
 msgstr "組織"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:235
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:287
 msgid "Organization Address"
 msgstr "組織地址"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:226
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:278
 msgid "Organization Details"
 msgstr "組織詳細信息"
 
 #: src/components/forms/OrganizerForm/index.tsx:28
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:228
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:280
 msgid "Organization Name"
 msgstr "組織名稱"
 
@@ -6058,7 +6165,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "組織者只能管理活動和產品。他們無法管理用户、賬户設置或賬單信息。"
 
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:98
-#: src/components/common/OrdersTable/index.tsx:394
+#: src/components/common/OrdersTable/index.tsx:220
 #: src/constants/eventCategories.ts:22
 msgid "Other"
 msgstr "其他"
@@ -6119,6 +6226,11 @@ msgstr "付費產品"
 msgid "Paid, free, tiered pricing, and donation-based tickets"
 msgstr "付費、免費、分級定價和捐贈型門票"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:243
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:254
+msgid "PAN"
+msgstr ""
+
 #: src/components/modals/RefundOrderModal/index.tsx:109
 msgid "Partial refund"
 msgstr "部分退款"
@@ -6128,9 +6240,13 @@ msgstr "部分退款"
 msgid "Partially Refunded"
 msgstr "部分退款"
 
-#: src/components/common/OrdersTable/index.tsx:364
+#: src/components/common/OrdersTable/index.tsx:384
 msgid "Partially refunded: {0}"
 msgstr "部分退款：{0}"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:220
+msgid "Partnership"
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:191
 msgid "Pass fee to buyer"
@@ -6194,7 +6310,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "已暫停"
 
-#: src/components/routes/product-widget/Payment/index.tsx:146
+#: src/components/routes/product-widget/Payment/index.tsx:168
 msgid "Pay"
 msgstr "付款"
 
@@ -6207,9 +6323,10 @@ msgstr "付款解鎖"
 msgid "Payload"
 msgstr "負載數據"
 
-#: src/components/common/OrdersTable/index.tsx:375
+#: src/components/common/OrdersTable/index.tsx:395
 #: src/components/common/ProgressStepper/index.tsx:19
 #: src/components/forms/StripeCheckoutForm/index.tsx:127
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:191
 msgid "Payment"
 msgstr "付款方式"
 
@@ -6217,7 +6334,7 @@ msgstr "付款方式"
 msgid "Payment & Invoicing"
 msgstr "支付和發票"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:98
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
 msgid "Payment & Invoicing Settings"
 msgstr "支付和發票設置"
 
@@ -6229,9 +6346,13 @@ msgstr "付款與計劃"
 msgid "Payment Date"
 msgstr "付款日期"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:216
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:268
 msgid "Payment Due Period"
 msgstr "付款期限"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:131
+msgid "Payment Error"
+msgstr ""
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:57
 msgid "Payment Failed"
@@ -6242,17 +6363,16 @@ msgstr "付款失敗"
 msgid "Payment Instructions"
 msgstr "支付説明"
 
-#: src/components/routes/product-widget/Payment/index.tsx:114
+#: src/components/routes/product-widget/Payment/index.tsx:124
 msgid "Payment method"
 msgstr "付款方式"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:112
 msgid "Payment Methods"
 msgstr "支付方式"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:474
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:486
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:620
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:475
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:487
 msgid "Payment Processing"
 msgstr "支付處理"
 
@@ -6268,7 +6388,7 @@ msgstr "已收到付款"
 msgid "Payment Received"
 msgstr "已收到付款"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:816
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:817
 msgid "Payment Settings"
 msgstr "支付設置"
 
@@ -6280,15 +6400,28 @@ msgstr "支付狀態"
 msgid "Payment succeeded!"
 msgstr "付款成功！"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:214
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:266
 msgid "Payment Terms"
 msgstr "付款條款"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:100
+msgid "Payment Verification Failed"
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:101
+msgid "Payment verification failed. Please contact support with order ID {0}."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:254
+msgid "Payments are processed securely by Razorpay using industry-standard encryption."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:159
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "付款不可用"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:87
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:88
 msgid "Payments will continue to flow without interruption"
 msgstr "付款將繼續無中斷流轉"
 
@@ -6358,6 +6491,7 @@ msgstr "永久刪除此主辦方及其所有活動。"
 msgid "Personal Information"
 msgstr "個人資料"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:209
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:97
 msgid "Phone"
 msgstr "電話"
@@ -6383,7 +6517,7 @@ msgstr "平台費用"
 msgid "Platform fee of {0} deducted from your payout"
 msgstr "從您的付款中扣除 {0} 的平台費用"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:248
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:249
 #: src/components/routes/event/Settings/index.tsx:98
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:46
 #: src/components/routes/organizer/Reports/index.tsx:41
@@ -6420,6 +6554,10 @@ msgstr "請檢查您的電子郵件是否有效"
 #: src/components/routes/profile/ManageProfile/index.tsx:170
 msgid "Please check your email to confirm your email address"
 msgstr "請檢查您的電子郵件以確認您的電子郵件地址"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:278
+msgid "Please confirm all your details are correct before submitting."
+msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:354
 msgid "Please continue in the new tab"
@@ -6462,6 +6600,7 @@ msgstr "請注意"
 msgid "Please provide an image."
 msgstr "請提供圖片。"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:176
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:65
 msgid "Please restart the checkout process."
 msgstr "請重新開始結賬流程。"
@@ -6533,6 +6672,11 @@ msgstr "結賬後信息"
 #: src/components/common/Editor/Controls/InsertLiquidVariableControl.tsx:83
 msgid "Post Checkout Message"
 msgstr "結帳後訊息"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:240
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:261
+msgid "Postal Code"
+msgstr ""
 
 #: src/components/common/PoweredByFooter/index.tsx:60
 msgid "Powered by"
@@ -6619,6 +6763,10 @@ msgstr "列印為PDF"
 #: src/components/layouts/OrganizerHomepage/index.tsx:328
 msgid "Privacy Policy"
 msgstr "私隱政策"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:222
+msgid "Private Limited"
+msgstr ""
 
 #: src/components/modals/RefundOrderModal/index.tsx:150
 msgid "Process Refund"
@@ -6759,10 +6907,18 @@ msgstr "僅限促銷"
 msgid "Promotional emails may result in account suspension"
 msgstr "促銷電子郵件可能導致帳戶被暫停"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:221
+msgid "Proprietorship"
+msgstr ""
+
 #: src/components/forms/QuestionForm/index.tsx:189
 msgid ""
 "Provide additional context or instructions for this question. Use this field to add terms\n"
 "and conditions, guidelines, or any important information that attendees need to know before answering."
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:223
+msgid "Public Limited"
 msgstr ""
 
 #: src/components/common/StatusToggle/index.tsx:97
@@ -6842,11 +6998,33 @@ msgstr "費率"
 msgid "Rate limit exceeded. Please try again later."
 msgstr "超出速率限制。請稍後再試。"
 
+#: src/components/common/OrdersTable/index.tsx:210
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
+#: src/components/routes/product-widget/Payment/index.tsx:144
+msgid "Razorpay"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ConnectedState.tsx:7
+msgid "Razorpay account connected"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:194
+msgid "Razorpay Onboarding"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingPanel.tsx:69
+msgid "Razorpay Payment Processing"
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:160
+msgid "Razorpay payments are not enabled for this event."
+msgstr ""
+
 #: src/components/common/WaitlistTable/index.tsx:69
 msgid "Re-offer Spot"
 msgstr "重新提供名額"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:224
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:225
 msgid "Ready to upgrade? This takes only a few minutes."
 msgstr "準備升級？這只需要幾分鐘。"
 
@@ -6901,10 +7079,10 @@ msgstr "Reddit"
 
 #: src/components/common/StripeConnectButton/index.tsx:59
 #: src/components/common/StripeConnectButton/index.tsx:74
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:326
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:339
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:579
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:597
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:327
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:340
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:580
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:598
 msgid "Redirecting to Stripe..."
 msgstr "正在重定向到 Stripe..."
 
@@ -6920,7 +7098,7 @@ msgstr "刷新預覽"
 msgid "Refund amount"
 msgstr "退款金額"
 
-#: src/components/common/OrdersTable/index.tsx:366
+#: src/components/common/OrdersTable/index.tsx:386
 msgid "Refund failed"
 msgstr "退款失敗"
 
@@ -6936,7 +7114,7 @@ msgstr "退款訂單"
 msgid "Refund Order {0}"
 msgstr "退款訂單 {0}"
 
-#: src/components/common/OrdersTable/index.tsx:365
+#: src/components/common/OrdersTable/index.tsx:385
 msgid "Refund pending"
 msgstr "退款待處理"
 
@@ -6956,7 +7134,7 @@ msgstr "退款狀態"
 msgid "Refunded"
 msgstr "退款"
 
-#: src/components/common/OrdersTable/index.tsx:363
+#: src/components/common/OrdersTable/index.tsx:383
 msgid "Refunded: {0}"
 msgstr "已退款：{0}"
 
@@ -6972,6 +7150,10 @@ msgstr "地區設定"
 #: src/components/routes/auth/Register/index.tsx:137
 msgid "Register"
 msgstr "註冊"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:233
+msgid "Registered Address"
+msgstr ""
 
 #: src/components/common/QuestionsTable/index.tsx:412
 #: src/components/layouts/Event/index.tsx:107
@@ -7008,11 +7190,21 @@ msgstr "報告"
 msgid "Request a new link"
 msgstr "請求新連結"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:169
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:221
 msgid "Require Billing Address"
 msgstr "要求賬單地址"
 
 #: src/components/common/QuestionsTable/index.tsx:118
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:85
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:87
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:88
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:89
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:96
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:98
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:99
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:100
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:107
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:110
 msgid "Required"
 msgstr "必填"
 
@@ -7060,11 +7252,11 @@ msgstr "重新發送門票電郵"
 msgid "Resending..."
 msgstr "重新發送..."
 
-#: src/components/common/OrdersTable/index.tsx:418
+#: src/components/common/OrdersTable/index.tsx:425
 msgid "Reserved"
 msgstr "已預留"
 
-#: src/components/common/OrdersTable/index.tsx:312
+#: src/components/common/OrdersTable/index.tsx:332
 msgid "Reserved until"
 msgstr "保留至"
 
@@ -7080,6 +7272,10 @@ msgstr "重置密碼"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "重置中..."
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:256
+msgid "Residential Address"
+msgstr ""
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -7116,6 +7312,7 @@ msgstr "還原此活動以使其再次可見。"
 msgid "Restore this organizer and make it active again."
 msgstr "還原此主辦方並使其重新活躍。"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:11
 #: src/components/routes/admin/FailedJobs/index.tsx:199
 msgid "Retry"
 msgstr "重試"
@@ -7128,6 +7325,8 @@ msgstr "全部重試"
 msgid "Retry Job"
 msgstr "重試任務"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:162
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:178
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:52
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
 msgid "Return to Event"
@@ -7148,6 +7347,14 @@ msgstr "收入"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:67
 msgid "Revenue Summary"
 msgstr "收入摘要"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:294
+#~ msgid "Review"
+#~ msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:277
+msgid "Review & Submit"
+msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:130
 msgid "Revoke invitation"
@@ -7245,7 +7452,7 @@ msgstr "舊金山"
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:132
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:166
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:102
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:265
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:317
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:76
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:116
@@ -7256,6 +7463,10 @@ msgstr "舊金山"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:88
 msgid "Save"
 msgstr "保存"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:297
+msgid "Save & Review"
+msgstr ""
 
 #: src/components/modals/ManageAttendeeModal/index.tsx:231
 #: src/components/modals/ManageOrderModal/index.tsx:175
@@ -7397,6 +7608,10 @@ msgstr "次要顏色"
 #: src/components/common/WidgetEditor/index.tsx:205
 msgid "Secondary Text Color"
 msgstr "次要文字顏色"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:221
+msgid "Secure"
+msgstr ""
 
 #: src/components/common/InlineOrderSummary/index.tsx:215
 msgid "Secure Checkout"
@@ -7673,7 +7888,7 @@ msgstr "為此主辦方創建的新活動設置預設平台費用設置。"
 msgid "Set default settings for new events created under this organizer."
 msgstr "為此主辦單位下創建的新活動設定預設設定。"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:207
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:259
 msgid "Set the starting number for invoice numbering. This cannot be changed once invoices have been generated."
 msgstr "設置發票編號的起始編號。一旦發票生成，就無法更改。"
 
@@ -7689,9 +7904,17 @@ msgstr "準備活動"
 msgid "Set up your organization"
 msgstr "設定你嘅機構"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/NotStartedState.tsx:9
+msgid "Set up your Razorpay account to start receiving payments."
+msgstr ""
+
 #: src/components/routes/event/GettingStarted/index.tsx:188
 msgid "Set your event live"
 msgstr "實時設置您的活動"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ProcessingState.tsx:8
+msgid "Setting up your account..."
+msgstr ""
 
 #: src/components/common/QuestionsTable/index.tsx:373
 msgid "Setting updated"
@@ -7707,6 +7930,10 @@ msgstr "設定已更新"
 #: src/components/modals/DuplicateEventModal/index.tsx:26
 msgid "Settings"
 msgstr "設置"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:267
+msgid "Settlement"
+msgstr ""
 
 #: src/components/layouts/Event/index.tsx:103
 msgid "Setup & Design"
@@ -7845,8 +8072,11 @@ msgid "Sold Out"
 msgstr "售罄"
 
 #: src/components/common/ErrorDisplay/index.tsx:15
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:185
 #: src/components/routes/auth/AcceptInvitation/index.tsx:48
 #: src/components/routes/product-widget/CollectInformation/index.tsx:386
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:169
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:175
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:64
 msgid "Something went wrong"
 msgstr "出了點問題"
@@ -7901,6 +8131,10 @@ msgstr "西班牙語"
 msgid "Sports"
 msgstr "體育"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:250
+msgid "Stakeholder"
+msgstr ""
+
 #: src/components/forms/ProductForm/index.tsx:156
 msgid "Standard product with a fixed price"
 msgstr "固定價格的標準產品"
@@ -7928,6 +8162,11 @@ msgstr "必須填寫開始日期"
 msgid "Start time of the event"
 msgstr "活動開始時間"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:239
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:260
+msgid "State"
+msgstr ""
+
 #: src/components/common/CheckoutQuestion/index.tsx:165
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:139
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:97
@@ -7949,7 +8188,7 @@ msgstr "統計數據基於帳戶創建日期"
 #: src/components/common/AffiliateTable/index.tsx:83
 #: src/components/common/AttendeeTable/index.tsx:274
 #: src/components/common/OrderDetails/index.tsx:51
-#: src/components/common/OrdersTable/index.tsx:403
+#: src/components/common/OrdersTable/index.tsx:410
 #: src/components/common/OrganizerWebhookTable/index.tsx:238
 #: src/components/common/WaitlistTable/index.tsx:181
 #: src/components/common/WebhookTable/index.tsx:238
@@ -7967,7 +8206,7 @@ msgstr "統計數據基於帳戶創建日期"
 msgid "Status"
 msgstr "狀態"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:183
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:184
 msgid "Still handling refunds for your older transactions."
 msgstr "仍在處理您舊交易的退款。"
 
@@ -7975,13 +8214,26 @@ msgstr "仍在處理您舊交易的退款。"
 msgid "Stop Impersonating"
 msgstr "停止模擬"
 
-#: src/components/common/OrdersTable/index.tsx:384
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:258
+msgid "Street"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:235
+msgid "Street 1"
+msgstr ""
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:236
+msgid "Street 2"
+msgstr ""
+
+#: src/components/common/OrdersTable/index.tsx:206
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:85
+#: src/components/routes/product-widget/Payment/index.tsx:134
 msgid "Stripe"
 msgstr "Stripe"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:162
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:163
 msgid "Stripe Connect"
 msgstr "Stripe Connect"
 
@@ -7996,6 +8248,10 @@ msgstr "Stripe未連接"
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:104
 msgid "Stripe Payment ID"
 msgstr "Stripe 付款 ID"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:621
+msgid "Stripe Payment Processing"
+msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:50
 msgid "Stripe payments are not enabled for this event."
@@ -8023,6 +8279,10 @@ msgstr "主題將顯示在這裏"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:255
 msgid "Subject:"
 msgstr "主題："
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/OnboardingModal.tsx:275
+#~ msgid "Submit Onboarding"
+#~ msgstr ""
 
 #: src/components/common/InlineOrderSummary/index.tsx:132
 #: src/components/common/OrderSummary/index.tsx:41
@@ -8226,12 +8486,12 @@ msgstr "系統預設"
 msgid "T-shirt"
 msgstr "T恤衫"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:85
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:86
 msgid "Takes just a few minutes"
 msgstr "只需幾分鐘"
 
 #: src/components/common/AdminOrdersTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:358
+#: src/components/common/OrdersTable/index.tsx:378
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
@@ -8251,11 +8511,11 @@ msgstr "税費"
 msgid "Tax collected grouped by tax type and event"
 msgstr "按稅種和活動分組的已收稅款"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:295
 msgid "Tax Details"
 msgstr "税務詳情"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:244
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:296
 msgid "Tax information to appear at the bottom of all invoices (e.g., VAT number, tax registration)"
 msgstr "所有發票底部顯示的税務信息（例如，增值税號、税務註冊號）"
 
@@ -8348,7 +8608,7 @@ msgstr "文字可能難以閱讀"
 msgid "Thank you for attending!"
 msgstr "感謝您的參與！"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:91
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:92
 msgid "Thanks for your support as we continue to grow and improve Hi.Events!"
 msgstr "感謝您的支持，我們將繼續發展和改進 Hi.Events！"
 
@@ -8574,7 +8834,7 @@ msgstr "此活動已結束"
 msgid "This event is not published yet"
 msgstr "呢個活動未發佈"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:204
 msgid "This information will be shown on the payment page, order summary page, and order confirmation email."
 msgstr "這些信息將顯示在支付頁面、訂單摘要頁面和訂單確認電子郵件中。"
 
@@ -8892,7 +9152,7 @@ msgstr "要編輯配置，請前往管理選單中的配置部分。"
 msgid "To increase your limits, contact us at"
 msgstr "要提高您的限制，請聯繫我們"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:662
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:663
 msgid "To receive credit card payments, you need to connect your Stripe account. Stripe is our payment processing partner that ensures secure transactions and timely payouts."
 msgstr "要接受信用卡付款，您需要連接您的 Stripe 賬户。Stripe 是我們的支付處理合作夥伴，確保安全交易和及時付款。"
 
@@ -8994,7 +9254,7 @@ msgstr "按歸因來源追蹤帳戶增長和表現"
 msgid "Track sales, revenue, and attendance with detailed reports"
 msgstr "透過詳細報告追蹤銷售、收入和參加人數"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:264
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:265
 msgid "Transaction Fee:"
 msgstr "交易手續費："
 
@@ -9082,6 +9342,10 @@ msgstr "無法擷取參與者資料"
 #: src/components/modals/JoinWaitlistModal/index.tsx:124
 msgid "Unable to join waitlist"
 msgstr "無法加入候補名單"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:132
+msgid "Unable to start Razorpay payment. Please try again or use another method."
+msgstr ""
 
 #: src/components/modals/EditQuestionModal/index.tsx:84
 msgid "Unable to update question. Please check the your details"
@@ -9175,7 +9439,7 @@ msgstr "更新活動名稱、説明和日期"
 msgid "Update profile"
 msgstr "更新個人資料"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:170
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:171
 msgid "Upgrade Available"
 msgstr "可升級"
 
@@ -9411,6 +9675,10 @@ msgstr "地點名稱"
 msgid "Verification code"
 msgstr "驗證碼"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/PendingState.tsx:8
+msgid "Verification in progress"
+msgstr ""
+
 #: src/components/routes/admin/Attribution/index.tsx:136
 #: src/components/routes/admin/Dashboard/index.tsx:421
 msgid "Verified"
@@ -9610,6 +9878,10 @@ msgstr "我們無法加載數據。請重試。"
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "我們無法重新排序類別。請再試一次。"
 
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/SupportRequiredState.tsx:9
+msgid "We found an existing account but couldn't complete setup automatically."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:387
 msgid "We hit a snag loading this page. Please try again."
 msgstr "載入此頁面時遇到問題。請重試。"
@@ -9651,7 +9923,7 @@ msgstr "我們將在後台驗證您的增值稅號碼。如果有任何問題，
 msgid "We're processing your order. Please wait..."
 msgstr "我們正在處理您的訂單。請稍候..."
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:74
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:75
 msgid "We've officially moved our headquarters to Ireland 🇮🇪. As part of this transition, we're now using Stripe Ireland instead of Stripe Canada. To keep your payouts running smoothly, you'll need to reconnect your Stripe account."
 msgstr "我們已正式將總部遷至愛爾蘭 🇮🇪。作為此次過渡的一部分，我們現在使用 Stripe 愛爾蘭而不是 Stripe 加拿大。為了保持您的付款順利進行，您需要重新連接您的 Stripe 帳戶。"
 
@@ -9851,7 +10123,7 @@ msgstr "簽到何時開放"
 msgid "When customers purchase tickets, their orders will appear here."
 msgstr "當顧客購買門票時，他們的訂單將會顯示在這裡。"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:182
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:234
 msgid "When enabled, invoices will be generated for ticket orders. Invoices will sent along with the order confirmation email. Attendees can also download their invoices from the order confirmation page."
 msgstr "啟用後，將為票務訂單生成發票。發票將隨訂單確認郵件一起發送。參與"
 
@@ -9867,7 +10139,7 @@ msgstr "啟用後，新活動將在結帳時顯示營銷訂閱複選框。此設
 msgid "When enabled, no application fees will be charged on Stripe Connect transactions. Use this for countries where application fees are not supported."
 msgstr "啟用後，Stripe Connect交易將不收取應用費用。用於不支持應用費用的國家。"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:141
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:193
 msgid "When offline payments are enabled, users will be able to complete their orders and receive their tickets. Their tickets will clearly indicate the order is not paid, and the check-in tool will notify the check-in staff if an order requires payment."
 msgstr "啟用線下支付後，用户可以完成訂單並收到門票。他們的門票將清楚地顯示訂單未支付，簽到工具會通知簽到工作人員訂單是否需要支付。"
 
@@ -10076,7 +10348,11 @@ msgstr "您永遠擁有 100% 的參加者資料"
 msgid "You receive"
 msgstr "您收到"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:143
+#: src/components/routes/product-widget/Payment/PaymentMethods/Razorpay/index.tsx:193
+msgid "You will be redirected to Razorpay to securely complete your payment."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:195
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "您必須手動將訂單標記為已支付。這可以在訂單管理頁面上完成。"
 
@@ -10092,7 +10368,7 @@ msgstr "在您創建容量分配之前，您需要一個產品。"
 msgid "You'll need at least one product to get started. Free, paid or let the user decide what to pay."
 msgstr "您需要至少一個產品才能開始。免費、付費或讓用户決定支付金額。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:182
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:183
 msgid "You're all set! Your payments are being processed smoothly."
 msgstr "一切就緒！您的付款正在順利處理。"
 
@@ -10111,6 +10387,10 @@ msgstr "您已獲得一個名額！"
 #: src/components/modals/SendMessageModal/index.tsx:273
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "您的帳戶有訊息限制。要提高您的限制，請聯繫我們"
+
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/RazorpayOnboarding/states/ConnectedState.tsx:9
+msgid "Your account is ready to receive payments."
+msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:64
 msgid "Your account name is used on event pages and in emails."
@@ -10208,7 +10488,7 @@ msgstr "您的訂單正在等待付款"
 msgid "Your orders have been exported successfully."
 msgstr "您的訂單已成功導出。"
 
-#: src/components/common/OrdersTable/index.tsx:469
+#: src/components/common/OrdersTable/index.tsx:476
 msgid "Your orders will appear here once they start rolling in."
 msgstr "您的訂單一旦開始滾動，就會出現在這裏。"
 
@@ -10245,12 +10525,12 @@ msgstr "您的計劃"
 msgid "Your refund is processing."
 msgstr "您的退款正在處理中。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:179
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:180
 msgid "Your Stripe account is connected and processing payments."
 msgstr "您的 Stripe 帳戶已連接並正在處理付款。"
 
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:396
-#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:633
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:397
+#: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:634
 msgid "Your Stripe account is connected and ready to process payments."
 msgstr "您的 Stripe 賬户已連接並準備好處理支付。"
 

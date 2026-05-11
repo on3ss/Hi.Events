@@ -13,5 +13,6 @@ class RazorpayLinkedAccountDTO extends BaseDTO
         public readonly ?string $email,
         public readonly ?string $legalBusinessName,
         public readonly string $country = 'IN',
+        public readonly ?array $onboardingData = null,
     ) {}
 }

@@ -1098,6 +1098,11 @@ export interface RazorpayAccount {
     razorpay_account_id?: string | null;
     email?: string;
     legal_business_name?: string;
+    onboarding_data?: {
+        business?: Partial<UpdateRazorpayBusinessStageDTO>;
+        stakeholder?: Partial<UpdateRazorpayStakeholderStageDTO['stakeholder']>;
+        settlement?: Partial<UpdateRazorpaySettlementStageDTO['settlement']>;
+    } | null;
 }
 
 export interface RazorpayViewProps {
@@ -1146,6 +1151,52 @@ export interface CreateRazorpayLinkedAccountDTO {
         };
     };
     settlement?: {
+        accountNumber: string;
+        ifscCode: string;
+        beneficiaryName: string;
+    };
+}
+
+export interface UpdateRazorpayBusinessStageDTO {
+    accountId: number;
+    email: string;
+    phone: string;
+    legalBusinessName: string;
+    businessType: string;
+    contactName: string;
+    profileCategory?: string;
+    profileSubcategory?: string;
+    registeredAddress: {
+        street1: string;
+        street2?: string;
+        city: string;
+        state: string;
+        postalCode: string;
+        country: string;
+    };
+    pan: string;
+    gst?: string;
+}
+
+export interface UpdateRazorpayStakeholderStageDTO {
+    accountId: number;
+    stakeholder: {
+        name: string;
+        email: string;
+        pan?: string;
+        residentialAddress: {
+            street: string;
+            city: string;
+            state: string;
+            postalCode: string;
+            country: string;
+        };
+    };
+}
+
+export interface UpdateRazorpaySettlementStageDTO {
+    accountId: number;
+    settlement: {
         accountNumber: string;
         ifscCode: string;
         beneficiaryName: string;

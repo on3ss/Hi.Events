@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Title, LoadingOverlay } from '@mantine/core';
 import { t } from '@lingui/macro';
 import { useGetRazorpayAccounts } from '../../../../../../../queries/useGetRazorpayAccounts';
-import { useCreateRazorpayLinkedAccount } from '../../../../../../../mutations/useCreateRazorpayLinkedAccount';
 import { Account, RazorpayStatus } from '../../../../../../../types';
 import { RazorpayOnboardingView } from './RazorpayOnboardingView';
 import { RazorpayOnboardingModal } from './OnboardingModal';
@@ -25,7 +24,6 @@ const isValidStatus = (s: any): s is RazorpayStatus =>
 
 export const RazorpayPanel: React.FC<Props> = ({ account }) => {
   const { data, isLoading, refetch } = useGetRazorpayAccounts(account.id);
-  const createMutation = useCreateRazorpayLinkedAccount();
 
   const [showModal, setShowModal] = useState(false);
   const hasTracked = useRef(false);
@@ -59,19 +57,11 @@ export const RazorpayPanel: React.FC<Props> = ({ account }) => {
         email: apiAccount.email ?? account.email,
         legal_business_name:
           apiAccount.legal_business_name ?? account.name,
+        onboarding_data: apiAccount.onboarding_data,
       }
     : undefined;
 
   const handleStart = () => setShowModal(true);
-
-  const handleSubmit = (dto: any) => {
-    createMutation.mutate(dto, {
-      onSuccess: () => {
-        setShowModal(false);
-        refetch();
-      },
-    });
-  };
 
   return (
     <>
@@ -91,10 +81,13 @@ export const RazorpayPanel: React.FC<Props> = ({ account }) => {
         accountId={Number(account.id)}
         opened={showModal}
         onClose={() => setShowModal(false)}
-        onSubmit={handleSubmit}
-        isSubmitting={createMutation.isPending}
+        onSuccess={() => {
+            setShowModal(false);
+            refetch();
+        }}
         initialEmail={account.email}
         initialLegalBusinessName={account.name}
+        accountData={initialData}
       />
     </>
   );

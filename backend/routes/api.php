@@ -4,6 +4,9 @@ use HiEvents\Http\Actions\Accounts\CreateAccountAction;
 use HiEvents\Http\Actions\Accounts\GetAccountAction;
 use HiEvents\Http\Actions\Accounts\Razorpay\CreateRazorpayLinkedAccountAction;
 use HiEvents\Http\Actions\Accounts\Razorpay\GetRazorpayLinkedAccountsAction;
+use HiEvents\Http\Actions\Accounts\Razorpay\UpdateRazorpayBusinessStageAction;
+use HiEvents\Http\Actions\Accounts\Razorpay\UpdateRazorpayStakeholderStageAction;
+use HiEvents\Http\Actions\Accounts\Razorpay\UpdateRazorpaySettlementStageAction;
 use HiEvents\Http\Actions\Accounts\Stripe\CreateStripeConnectAccountAction;
 use HiEvents\Http\Actions\Accounts\Stripe\GetStripeConnectAccountsAction;
 use HiEvents\Http\Actions\Accounts\UpdateAccountAction;
@@ -276,6 +279,9 @@ $router->middleware(['auth:api'])->group(
         $router->prefix('accounts/{accountId}/razorpay')->group(function (Router $router) {
             $router->get('/accounts', GetRazorpayLinkedAccountsAction::class);
             $router->post('/linked-account', CreateRazorpayLinkedAccountAction::class);
+            $router->put('/onboarding/business', UpdateRazorpayBusinessStageAction::class);
+            $router->put('/onboarding/stakeholder', UpdateRazorpayStakeholderStageAction::class);
+            $router->put('/onboarding/settlement', UpdateRazorpaySettlementStageAction::class);
         });
 
         // VAT Settings

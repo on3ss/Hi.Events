@@ -1,5 +1,5 @@
 import {api} from "./client.ts";
-import {Account, GenericDataResponse, IdParam, User, StripeConnectAccountsResponse, RazorpayAccountsResponse, CreateRazorpayLinkedAccountDTO, CreateRazorpayLinkedAccountResponse} from "../types.ts";
+import {Account, GenericDataResponse, IdParam, User, StripeConnectAccountsResponse, RazorpayAccountsResponse, CreateRazorpayLinkedAccountDTO, CreateRazorpayLinkedAccountResponse, UpdateRazorpayBusinessStageDTO, UpdateRazorpayStakeholderStageDTO, UpdateRazorpaySettlementStageDTO} from "../types.ts";
 
 interface CreateAccountRequest {
     first_name: string;
@@ -40,6 +40,27 @@ export const accountClient = {
     createRazorpayLinkedAccount: async (accountId: IdParam, payload: CreateRazorpayLinkedAccountDTO) => {
         const response = await api.post<GenericDataResponse<CreateRazorpayLinkedAccountResponse>>(
             `accounts/${accountId}/razorpay/linked-account`,
+            payload
+        );
+        return response.data;
+    },
+    updateRazorpayBusiness: async (accountId: IdParam, payload: UpdateRazorpayBusinessStageDTO) => {
+        const response = await api.put<GenericDataResponse<CreateRazorpayLinkedAccountResponse>>(
+            `accounts/${accountId}/razorpay/onboarding/business`,
+            payload
+        );
+        return response.data;
+    },
+    updateRazorpayStakeholder: async (accountId: IdParam, payload: UpdateRazorpayStakeholderStageDTO) => {
+        const response = await api.put<GenericDataResponse<CreateRazorpayLinkedAccountResponse>>(
+            `accounts/${accountId}/razorpay/onboarding/stakeholder`,
+            payload
+        );
+        return response.data;
+    },
+    updateRazorpaySettlement: async (accountId: IdParam, payload: UpdateRazorpaySettlementStageDTO) => {
+        const response = await api.put<GenericDataResponse<CreateRazorpayLinkedAccountResponse>>(
+            `accounts/${accountId}/razorpay/onboarding/settlement`,
             payload
         );
         return response.data;

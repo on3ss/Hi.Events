@@ -24,6 +24,12 @@ class AccountRazorpayPlatformRepository extends BaseRepository implements Accoun
         return $results->first() ?: null;
     }
 
+    public function findByRazorpayAccountId(string $razorpayAccountId): ?AccountRazorpayPlatformDomainObject
+    {
+        $results = $this->findWhere(['razorpay_account_id' => $razorpayAccountId]);
+        return $results->first() ?: null;
+    }
+
     public function updateById(int $id, array $data): bool
     {
         return (bool) $this->model
