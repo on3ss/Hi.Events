@@ -1,63 +1,82 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Modal, Stepper, Button, Group, TextInput, Select, Grid, Text
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { t } from '@lingui/macro';
-import { CreateRazorpayLinkedAccountDTO } from '../../../../../../../types';
+import { UpdateRazorpayBusinessStageDTO, UpdateRazorpayStakeholderStageDTO, UpdateRazorpaySettlementStageDTO, RazorpayAccount } from '../../../../../../../types';
+import { useUpdateRazorpayBusiness } from '../../../../../../../mutations/useUpdateRazorpayBusiness';
+import { useUpdateRazorpayStakeholder } from '../../../../../../../mutations/useUpdateRazorpayStakeholder';
+import { useUpdateRazorpaySettlement } from '../../../../../../../mutations/useUpdateRazorpaySettlement';
 
 interface RazorpayOnboardingModalProps {
     accountId: number;
     opened: boolean;
     onClose: () => void;
-    onSubmit: (dto: CreateRazorpayLinkedAccountDTO) => void;
-    isSubmitting: boolean;
+    onSuccess: () => void;
     initialEmail?: string;
     initialLegalBusinessName?: string;
+    accountData?: RazorpayAccount;
 }
 
 export const RazorpayOnboardingModal = ({
   accountId,
   opened,
   onClose,
-  onSubmit,
-  isSubmitting,
+  onSuccess,
   initialEmail = '',
   initialLegalBusinessName = '',
+  accountData,
 }: RazorpayOnboardingModalProps) => {
   const [activeStep, setActiveStep] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
+  const businessMutation = useUpdateRazorpayBusiness();
+  const stakeholderMutation = useUpdateRazorpayStakeholder();
+  const settlementMutation = useUpdateRazorpaySettlement();
+
+  useEffect(() => {
+    if (accountData?.onboarding_data && opened) {
+      if (accountData.onboarding_data.settlement) {
+        setActiveStep(3);
+      } else if (accountData.onboarding_data.stakeholder) {
+        setActiveStep(2);
+      } else if (accountData.onboarding_data.business) {
+        setActiveStep(1);
+      }
+    }
+  }, [opened]); // Only set the active step when the modal is opened
+
   const form = useForm({
     initialValues: {
-      email: initialEmail,
-      phone: '',
-      legalBusinessName: initialLegalBusinessName,
-      businessType: 'partnership',
-      contactName: '',
+      email: accountData?.onboarding_data?.business?.email || initialEmail,
+      phone: accountData?.onboarding_data?.business?.phone || '',
+      legalBusinessName: accountData?.onboarding_data?.business?.legalBusinessName || initialLegalBusinessName,
+      businessType: accountData?.onboarding_data?.business?.businessType || 'partnership',
+      contactName: accountData?.onboarding_data?.business?.contactName || '',
 
-      regStreet1: '',
-      regStreet2: '',
-      regCity: '',
-      regState: '',
-      regPostalCode: '',
-      regCountry: 'IN',
+      regStreet1: accountData?.onboarding_data?.business?.registeredAddress?.street1 || '',
+      regStreet2: accountData?.onboarding_data?.business?.registeredAddress?.street2 || '',
+      regCity: accountData?.onboarding_data?.business?.registeredAddress?.city || '',
+      regState: accountData?.onboarding_data?.business?.registeredAddress?.state || '',
+      regPostalCode: accountData?.onboarding_data?.business?.registeredAddress?.postalCode || '',
+      regCountry: accountData?.onboarding_data?.business?.registeredAddress?.country || 'IN',
 
-      pan: '',
-      gst: '',
+      pan: accountData?.onboarding_data?.business?.pan || '',
+      gst: accountData?.onboarding_data?.business?.gst || '',
 
-      stakeName: '',
-      stakeEmail: '',
-      stakePan: '',
-      stakeStreet: '',
-      stakeCity: '',
-      stakeState: '',
-      stakePostalCode: '',
-      stakeCountry: 'IN',
+      stakeName: accountData?.onboarding_data?.stakeholder?.name || '',
+      stakeEmail: accountData?.onboarding_data?.stakeholder?.email || '',
+      stakePan: accountData?.onboarding_data?.stakeholder?.pan || '',
+      stakeStreet: accountData?.onboarding_data?.stakeholder?.residentialAddress?.street || '',
+      stakeCity: accountData?.onboarding_data?.stakeholder?.residentialAddress?.city || '',
+      stakeState: accountData?.onboarding_data?.stakeholder?.residentialAddress?.state || '',
+      stakePostalCode: accountData?.onboarding_data?.stakeholder?.residentialAddress?.postalCode || '',
+      stakeCountry: accountData?.onboarding_data?.stakeholder?.residentialAddress?.country || 'IN',
 
-      accountNumber: '',
-      ifscCode: '',
-      beneficiaryName: '',
+      accountNumber: accountData?.onboarding_data?.settlement?.accountNumber || '',
+      ifscCode: accountData?.onboarding_data?.settlement?.ifscCode || '',
+      beneficiaryName: accountData?.onboarding_data?.settlement?.beneficiaryName || '',
     },
 
     validate: {
@@ -93,8 +112,8 @@ export const RazorpayOnboardingModal = ({
   });
 
   const stepFields = [
-    ['legalBusinessName', 'email', 'phone', 'regStreet1', 'regCity', 'regState', 'regPostalCode'],
-    ['stakeName', 'stakeEmail', 'stakeStreet', 'stakeCity', 'stakeState', 'stakePostalCode'],
+    ['legalBusinessName', 'email', 'phone', 'regStreet1', 'regCity', 'regState', 'regPostalCode', 'pan'],
+    ['stakeName', 'stakeEmail', 'stakeStreet', 'stakeCity', 'stakeState', 'stakePostalCode', 'stakePan'],
     ['accountNumber', 'ifscCode', 'beneficiaryName'],
   ];
 
@@ -103,61 +122,73 @@ export const RazorpayOnboardingModal = ({
     return stepFields[activeStep].some((f) => errors[f]);
   };
 
-  const handleNext = () => {
-    if (!validateStep()) {
-      setActiveStep((s) => Math.min(s + 1, 3));
+  const handleNext = async () => {
+    if (validateStep()) return;
+
+    setError(null);
+
+    try {
+        if (activeStep === 0) {
+            const dto: UpdateRazorpayBusinessStageDTO = {
+                accountId,
+                email: form.values.email,
+                phone: form.values.phone,
+                legalBusinessName: form.values.legalBusinessName,
+                businessType: form.values.businessType,
+                contactName: form.values.contactName,
+                registeredAddress: {
+                    street1: form.values.regStreet1,
+                    street2: form.values.regStreet2,
+                    city: form.values.regCity,
+                    state: form.values.regState,
+                    postalCode: form.values.regPostalCode,
+                    country: form.values.regCountry,
+                },
+                pan: form.values.pan,
+                gst: form.values.gst,
+            };
+            await businessMutation.mutateAsync(dto);
+            setActiveStep(1);
+        } else if (activeStep === 1) {
+            const dto: UpdateRazorpayStakeholderStageDTO = {
+                accountId,
+                stakeholder: {
+                    name: form.values.stakeName,
+                    email: form.values.stakeEmail,
+                    pan: form.values.stakePan,
+                    residentialAddress: {
+                        street: form.values.stakeStreet,
+                        city: form.values.stakeCity,
+                        state: form.values.stakeState,
+                        postalCode: form.values.stakePostalCode,
+                        country: form.values.stakeCountry,
+                    },
+                },
+            };
+            await stakeholderMutation.mutateAsync(dto);
+            setActiveStep(2);
+        } else if (activeStep === 2) {
+            const dto: UpdateRazorpaySettlementStageDTO = {
+                accountId,
+                settlement: {
+                    accountNumber: form.values.accountNumber,
+                    ifscCode: form.values.ifscCode,
+                    beneficiaryName: form.values.beneficiaryName,
+                },
+            };
+            await settlementMutation.mutateAsync(dto);
+            setActiveStep(3);
+        } else if (activeStep === 3) {
+            onSuccess();
+        }
+    } catch (e: any) {
+        setError(e?.response?.data?.message || e?.message || t`Something went wrong`);
     }
   };
 
   const handleBack = () => setActiveStep((s) => Math.max(s - 1, 0));
 
-  const buildDto = (): CreateRazorpayLinkedAccountDTO => ({
-    accountId,
-    email: form.values.email,
-    phone: form.values.phone,
-    legalBusinessName: form.values.legalBusinessName,
-    businessType: form.values.businessType,
-    contactName: form.values.contactName,
-    registeredAddress: {
-      street1: form.values.regStreet1,
-      street2: form.values.regStreet2,
-      city: form.values.regCity,
-      state: form.values.regState,
-      postalCode: form.values.regPostalCode,
-      country: form.values.regCountry,
-    },
-    pan: form.values.pan,
-    gst: form.values.gst,
-    stakeholder: {
-      name: form.values.stakeName,
-      email: form.values.stakeEmail,
-      pan: form.values.stakePan,
-      residentialAddress: {
-        street: form.values.stakeStreet,
-        city: form.values.stakeCity,
-        state: form.values.stakeState,
-        postalCode: form.values.stakePostalCode,
-        country: form.values.stakeCountry,
-      },
-    },
-    settlement: {
-      accountNumber: form.values.accountNumber,
-      ifscCode: form.values.ifscCode,
-      beneficiaryName: form.values.beneficiaryName,
-    },
-  });
-
-  const handleSubmit = async () => {
-    setError(null);
-
-    if (form.validate().hasErrors) return;
-
-    try {
-      await onSubmit(buildDto());
-    } catch (e: any) {
-      setError(e?.message || t`Something went wrong`);
-    }
-  };
+  const isSubmitting = businessMutation.isPending || stakeholderMutation.isPending || settlementMutation.isPending;
 
   return (
     <Modal opened={opened} onClose={onClose} title={t`Razorpay Onboarding`} size="70%" closeOnClickOutside={false}>
@@ -209,7 +240,7 @@ export const RazorpayOnboardingModal = ({
             <Grid.Col span={6}><TextInput label={t`Postal Code`} required {...form.getInputProps('regPostalCode')} /></Grid.Col>
             <Grid.Col span={6}><TextInput label={t`Country`} readOnly {...form.getInputProps('regCountry')} /></Grid.Col>
 
-            <Grid.Col span={6}><TextInput label={t`PAN`} {...form.getInputProps('pan')} /></Grid.Col>
+            <Grid.Col span={6}><TextInput label={t`PAN`} required {...form.getInputProps('pan')} /></Grid.Col>
             <Grid.Col span={6}><TextInput label={t`GST`} {...form.getInputProps('gst')} /></Grid.Col>
 
           </Grid>
@@ -220,7 +251,7 @@ export const RazorpayOnboardingModal = ({
           <Grid>
             <Grid.Col span={6}><TextInput label={t`Name`} required {...form.getInputProps('stakeName')} /></Grid.Col>
             <Grid.Col span={6}><TextInput label={t`Email`} required {...form.getInputProps('stakeEmail')} /></Grid.Col>
-            <Grid.Col span={6}><TextInput label={t`PAN`} {...form.getInputProps('stakePan')} /></Grid.Col>
+            <Grid.Col span={6}><TextInput label={t`PAN`} required {...form.getInputProps('stakePan')} /></Grid.Col>
 
             <Grid.Col span={12}><Text fw={500}>{t`Residential Address`}</Text></Grid.Col>
 
@@ -242,9 +273,10 @@ export const RazorpayOnboardingModal = ({
         </Stepper.Step>
 
         <Stepper.Completed>
-          <Button fullWidth onClick={handleSubmit} loading={isSubmitting}>
-            {t`Submit Onboarding`}
-          </Button>
+            <Stack>
+                <Text ta="center" size="lg" fw={500}>{t`Review & Submit`}</Text>
+                <Text ta="center" c="dimmed">{t`Please confirm all your details are correct before submitting.`}</Text>
+            </Stack>
         </Stepper.Completed>
 
       </Stepper>
@@ -262,7 +294,13 @@ export const RazorpayOnboardingModal = ({
 
         {activeStep === 2 && (
           <Button onClick={handleNext} disabled={isSubmitting}>
-            {t`Review`}
+            {t`Save & Review`}
+          </Button>
+        )}
+
+        {activeStep === 3 && (
+          <Button onClick={handleNext} disabled={isSubmitting}>
+            {t`Finish`}
           </Button>
         )}
       </Group>

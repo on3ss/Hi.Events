@@ -13,10 +13,10 @@ export const RetryFormState = ({
       accountId={accountId}
       opened={true}
       onClose={() => {}}
-      onSubmit={() => {}}
-      isSubmitting={false}
-      initialEmail={initialData?.email}
-      initialLegalBusinessName={initialData?.legal_business_name}
+      onSuccess={() => {}}
+      initialEmail={initialData?.email || ''}
+      initialLegalBusinessName={initialData?.legal_business_name || ''}
+      accountData={initialData}
     />
   );
 };

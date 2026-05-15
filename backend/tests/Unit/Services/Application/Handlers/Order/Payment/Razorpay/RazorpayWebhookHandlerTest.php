@@ -46,6 +46,7 @@ class RazorpayWebhookHandlerTest extends TestCase
             $this->refundHandlerMock,
             $this->paymentFailedHandlerMock,
             $this->paymentAuthorizedHandlerMock,
+            $this->createMock(\HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayAccountStatusHandler::class),
             $this->verificationServiceMock,
             $this->loggerMock,
             $this->cacheMock
