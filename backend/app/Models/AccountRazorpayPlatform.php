@@ -2,9 +2,15 @@
 
 namespace HiEvents\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class AccountRazorpayPlatform extends Model
+class AccountRazorpayPlatform extends BaseModel
 {
-    //
+    protected $fillable = [
+        'account_id',
+        'razorpay_account_id',
+    ];
+
+    public function account()
+    {
+        return $this->belongsTo(Account::class);
+    }
 }
