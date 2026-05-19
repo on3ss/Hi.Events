@@ -35,13 +35,6 @@ class RazorpayOrderCreationService
 
             $razorpayClient = $this->razorpayClientFactory->create();
 
-            // Calculate application fee for Razorpay
-            // $applicationFee = $this->orderApplicationFeeCalculationService->calculateApplicationFee(
-            //     accountConfiguration: $orderDTO->account->getConfiguration(),
-            //     order: $orderDTO->order,
-            //     vatSettings: $orderDTO->account->getAccountVatSetting(),
-            // );
-
             $amountInSmallestUnit = $orderDTO->amount->toMinorUnit();
 
             $orderData = [
@@ -57,22 +50,36 @@ class RazorpayOrderCreationService
                 ],
             ];
 
-            // TODO: Fix for saas mode
-            // if ($applicationFee && $this->config->get('services.razorpay.application_fee_enabled')) {
-            //     $feeMinorUnit = $applicationFee->grossApplicationFee->toMinorUnit();
+            $applicationFee = $this->orderApplicationFeeCalculationService->calculateApplicationFee(
+                accountConfiguration: $orderDTO->account->getConfiguration(),
+                order: $orderDTO->order,
+                vatSettings: $orderDTO->account->getAccountVatSetting()
+            );
 
-            //     $orderData['transfers'] = [
-            //         [
-            //             'account' => $this->config->get('services.razorpay.platform_account_id'),
-            //             'amount'  => $feeMinorUnit,
-            //             'currency' => $orderDTO->currencyCode,
-            //             'notes'   => [
-            //                 'order_id' => $orderDTO->order->getId(),
-            //                 'type'     => 'application_fee'
-            //             ],
-            //         ]
-            //     ];
-            // }
+            $connectedAccountId = $orderDTO->account->getRazorpayPlatform()?->getRazorpayAccountId();
+
+            if ($connectedAccountId && $applicationFee && $this->config->get('services.razorpay.application_fee_enabled')) {
+                $grossAmountMinor = $amountInSmallestUnit;
+                $applicationFeeMinor = $applicationFee->grossApplicationFee->toMinorUnit();
+
+                $destinationAmountMinor = $grossAmountMinor - $applicationFeeMinor;
+
+                if ($destinationAmountMinor < 0) {
+                    $destinationAmountMinor = 0;
+                }
+
+                $orderData['transfers'] = [
+                    [
+                        'account' => $connectedAccountId,
+                        'amount' => $destinationAmountMinor,
+                        'currency' => $orderDTO->currencyCode,
+                        'notes' => [
+                            'type' => 'event_organizer_payout',
+                            'order_id' => $orderDTO->order->getId(),
+                        ],
+                    ],
+                ];
+            }
 
             $razorpayOrder = $razorpayClient->createOrder($orderData);
 
