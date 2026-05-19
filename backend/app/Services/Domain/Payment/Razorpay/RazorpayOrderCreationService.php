@@ -58,6 +58,12 @@ class RazorpayOrderCreationService
 
             $connectedAccountId = $orderDTO->account->getRazorpayPlatform()?->getRazorpayAccountId();
 
+            if (!$connectedAccountId) {
+                throw new CreateOrderFailedException(
+                    __('Razorpay linked account is not configured.')
+                );
+            }
+
             if ($connectedAccountId && $applicationFee && $this->config->get('services.razorpay.application_fee_enabled')) {
                 $grossAmountMinor = $amountInSmallestUnit;
                 $applicationFeeMinor = $applicationFee->grossApplicationFee->toMinorUnit();
