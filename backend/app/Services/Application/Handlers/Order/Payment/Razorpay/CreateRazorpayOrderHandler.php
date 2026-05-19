@@ -7,6 +7,7 @@ use Brick\Math\Exception\NumberFormatException;
 use Brick\Math\Exception\RoundingNecessaryException;
 use Brick\Money\Exception\UnknownCurrencyException;
 use HiEvents\DomainObjects\AccountConfigurationDomainObject;
+use HiEvents\DomainObjects\AccountRazorpayPlatformDomainObject;
 use HiEvents\DomainObjects\OrderItemDomainObject;
 use HiEvents\DomainObjects\Status\OrderStatus;
 use HiEvents\DomainObjects\RazorpayOrderDomainObject;
@@ -64,6 +65,10 @@ readonly class CreateRazorpayOrderHandler
             ->loadRelation(new Relationship(
                 domainObject: AccountConfigurationDomainObject::class,
                 name: 'configuration',
+            ))
+            ->loadRelation(new Relationship(
+                domainObject: AccountRazorpayPlatformDomainObject::class,
+                name: 'account_razorpay_platform',
             ))
             ->findByEventId($order->getEventId());
 
