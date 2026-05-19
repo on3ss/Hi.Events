@@ -13,6 +13,9 @@ class AccountDomainObject extends Generated\AccountDomainObjectAbstract
     /** @var Collection<int, AccountStripePlatformDomainObject>|null */
     private ?Collection $stripePlatforms = null;
 
+    /** @var Collection<int, AccountRazorpayPlatformDomainObject>|null */
+    protected ?AccountRazorpayPlatformDomainObject $razorpay_platform = null;
+
     private ?AccountVatSettingDomainObject $accountVatSetting = null;
 
     private ?AccountMessagingTierDomainObject $messagingTier = null;
@@ -46,6 +49,18 @@ class AccountDomainObject extends Generated\AccountDomainObjectAbstract
     public function setAccountStripePlatforms(Collection $stripePlatforms): void
     {
         $this->stripePlatforms = $stripePlatforms;
+    }
+
+    public function setRazorpayPlatform(?AccountRazorpayPlatformDomainObject $platform): self
+    {
+        $this->razorpay_platform = $platform;
+
+        return $this;
+    }
+
+    public function getRazorpayPlatform(): ?AccountRazorpayPlatformDomainObject
+    {
+        return $this->razorpay_platform;
     }
 
     public function getAccountVatSetting(): ?AccountVatSettingDomainObject
