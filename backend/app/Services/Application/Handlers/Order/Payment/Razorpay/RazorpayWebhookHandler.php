@@ -24,6 +24,10 @@ class RazorpayWebhookHandler
         'refund.processed',
         'payment.failed',
         'payment.authorized',
+        'transfer.created',
+        'transfer.processed',
+        'transfer.failed',
+        'transfer.reversed',
     ];
 
     public function __construct(
@@ -33,6 +37,10 @@ class RazorpayWebhookHandler
         private readonly RazorpayPaymentFailedHandler $paymentFailedHandler,
         private readonly RazorpayPaymentAuthorizedHandler $paymentAuthorizedHandler,
         private readonly RazorpayPaymentVerificationService $razorpayPaymentService,
+        private readonly RazorpayTransferCreatedHandler $transferCreatedHandler,
+        private readonly RazorpayTransferProcessedHandler $transferProcessedHandler,
+        private readonly RazorpayTransferFailedHandler $transferFailedHandler,
+        private readonly RazorpayTransferReversedHandler $transferReversedHandler,
         private readonly Logger $logger,
         private readonly Repository $cache,
     ) {
@@ -76,6 +84,11 @@ class RazorpayWebhookHandler
                 'payment.captured', 'payment.failed', 'payment.authorized' => $envelope->payload->payment->id,
                 'order.paid' => $envelope->payload->order->id,
                 'refund.processed' => $envelope->payload->refund->id,
+                'transfer.created',
+                'transfer.processed',
+                'transfer.failed',
+                'transfer.reversed'
+                    => $envelope->payload->transfer->id,
                 default => null,
             };
 
@@ -103,8 +116,14 @@ class RazorpayWebhookHandler
                 'payment.captured' => $this->paymentCapturedHandler->handleEvent($envelope->payload),
                 'order.paid' => $this->orderPaidHandler->handleEvent($envelope->payload),
                 'refund.processed' => $this->refundHandler->handleEvent($envelope->payload),
+                
                 'payment.failed' => $this->paymentFailedHandler->handleEvent($envelope->payload),
                 'payment.authorized' => $this->paymentAuthorizedHandler->handleEvent($envelope->payload),
+
+                'transfer.created' => $this->transferCreatedHandler->handleEvent($envelope->payload),
+                'transfer.processed' => $this->transferProcessedHandler->handleEvent($envelope->payload),
+                'transfer.failed' => $this->transferFailedHandler->handleEvent($envelope->payload),
+                'transfer.reversed' => $this->transferReversedHandler->handleEvent($envelope->payload),
                 default => $this->logger->debug('No handler for event', ['event' => $event]),
             };
 
