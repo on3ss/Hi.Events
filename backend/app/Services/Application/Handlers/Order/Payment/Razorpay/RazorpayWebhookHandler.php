@@ -4,6 +4,7 @@ namespace HiEvents\Services\Application\Handlers\Order\Payment\Razorpay;
 
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\RazorpayWebhookEnvelope;
 use HiEvents\Exceptions\Razorpay\InvalidSignatureException;
+use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayTransferCreatedHandler;
 use HiEvents\Services\Domain\Payment\Razorpay\RazorpayPaymentVerificationService;
 use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayPaymentCapturedHandler;
 use HiEvents\Services\Domain\Payment\Razorpay\EventHandlers\RazorpayOrderPaidHandler;
