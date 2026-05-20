@@ -43,6 +43,7 @@ use HiEvents\Repository\Eloquent\QuestionAndAnswerViewRepository;
 use HiEvents\Repository\Eloquent\QuestionAnswerRepository;
 use HiEvents\Repository\Eloquent\QuestionRepository;
 use HiEvents\Repository\Eloquent\RazorpayOrdersRepository;
+use HiEvents\Repository\Eloquent\RazorpayTransferRepository;
 use HiEvents\Repository\Eloquent\RefundAttemptRepository;
 use HiEvents\Repository\Eloquent\StripeCustomerRepository;
 use HiEvents\Repository\Eloquent\StripePaymentsRepository;
@@ -92,6 +93,7 @@ use HiEvents\Repository\Interfaces\QuestionAndAnswerViewRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuestionAnswerRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuestionRepositoryInterface;
 use HiEvents\Repository\Interfaces\RazorpayOrdersRepositoryInterface;
+use HiEvents\Repository\Interfaces\RazorpayTransferRepositoryInterface;
 use HiEvents\Repository\Interfaces\RefundAttemptRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripeCustomerRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePaymentsRepositoryInterface;
@@ -159,6 +161,7 @@ class RepositoryServiceProvider extends ServiceProvider
         AccountMessagingTierRepositoryInterface::class => AccountMessagingTierRepository::class,
         WaitlistEntryRepositoryInterface::class => WaitlistEntryRepository::class,
         RefundAttemptRepositoryInterface::class => RefundAttemptRepository::class,
+        RazorpayTransferRepositoryInterface::class => RazorpayTransferRepository::class,
     ];
 
     public function register(): void

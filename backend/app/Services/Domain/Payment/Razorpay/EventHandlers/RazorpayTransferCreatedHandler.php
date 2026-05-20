@@ -2,6 +2,7 @@
 
 namespace HiEvents\Services\Domain\Payment\Razorpay\EventHandlers;
 
+use HiEvents\Repository\Interfaces\RazorpayTransferRepositoryInterface;
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\RazorpayTransferPayload;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Log\Logger;
