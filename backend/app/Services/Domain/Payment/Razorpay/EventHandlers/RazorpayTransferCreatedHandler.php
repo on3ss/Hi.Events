@@ -3,11 +3,15 @@
 namespace HiEvents\Services\Domain\Payment\Razorpay\EventHandlers;
 
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\RazorpayTransferPayload;
+use Illuminate\Database\ConnectionInterface;
+use Illuminate\Log\Logger;
 
 class RazorpayTransferCreatedHandler
 {
     public function __construct(
-        // Inject any required services or repositories here
+        private readonly RazorpayTransferRepositoryInterface $transferRepository,
+        private readonly ConnectionInterface $databaseConnection,
+        private readonly Logger $logger,
     ) {
     }
 
