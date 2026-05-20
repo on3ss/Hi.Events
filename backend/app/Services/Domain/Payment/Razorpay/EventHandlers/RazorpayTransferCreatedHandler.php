@@ -11,19 +11,49 @@ class RazorpayTransferCreatedHandler
 {
     public function __construct(
         private readonly RazorpayTransferRepositoryInterface $transferRepository,
-        private readonly ConnectionInterface $databaseConnection,
+        private readonly ConnectionInterface $dbConnection,
         private readonly Logger $logger,
     ) {
     }
 
     public function handleEvent(RazorpayTransferPayload $payload): void
     {
-        // Implement the logic to handle the transfer.created event
-        // You can access the event data from the $payload variable
-        // For example:
-        // $transferId = $payload->transfer->id;
-        // $amount = $payload->transfer->amount;
-        // $status = $payload->transfer->status;
-        // Perform necessary actions based on the transfer details
+        $transferEntity = $payload->transfer;
+
+        $existingTransfer = $this->transferRepository
+            ->findByRazorpayTransferId($transferEntity->id);
+
+        if ($existingTransfer) {
+            $this->logger->info('Razorpay transfer already handled', [
+                'razorpay_transfer_id' => $transferEntity->id,
+            ]);
+
+            return;
+        }
+
+        $this->dbConnection->transaction(function () use ($transferEntity, $payload) {
+
+            $this->transferRepository->create([
+                'razorpay_transfer_id' => $transferEntity->id,
+                'razorpay_payment_id' => $transferEntity->source,
+                'linked_account_id' => $transferEntity->recipient,
+                'amount' => $transferEntity->amount,
+                'currency' => strtoupper($transferEntity->currency),
+                'status' => $transferEntity->status,
+                'processed_at' => $transferEntity->status === 'processed'
+                    ? now()
+                    : null,
+                'raw_payload' => $payload->toArray(),
+            ]);
+
+            $this->logger->info('Razorpay transfer created successfully', [
+                'razorpay_transfer_id' => $transferEntity->id,
+                'razorpay_payment_id' => $transferEntity->source,
+                'linked_account_id' => $transferEntity->recipient,
+                'amount' => $transferEntity->amount,
+                'currency' => $transferEntity->currency,
+                'status' => $transferEntity->status,
+            ]);
+        });
     }
 }
