@@ -3,6 +3,7 @@
 namespace HiEvents\Services\Domain\Payment\Razorpay;
 
 use HiEvents\Exceptions\Razorpay\CreateOrderFailedException;
+use HiEvents\Repository\Interfaces\RazorpayTransferRepositoryInterface;
 use HiEvents\Services\Domain\Order\OrderApplicationFeeCalculationService;
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\CreateRazorpayOrderRequestDTO;
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\CreateRazorpayOrderResponseDTO;
@@ -20,6 +21,7 @@ class RazorpayOrderCreationService
         private readonly Repository $config,
         private readonly ConnectionInterface $dbConnection,
         private readonly OrderApplicationFeeCalculationService $orderApplicationFeeCalculationService,
+        private readonly RazorpayTransferRepositoryInterface $razorpayTransferRepository,
         private readonly RazorpayClientFactory $razorpayClientFactory,
     ) {
     }
@@ -88,6 +90,19 @@ class RazorpayOrderCreationService
             }
 
             $razorpayOrder = $razorpayClient->createOrder($orderData);
+
+            foreach ($razorpayOrder->transfers ?? [] as $transfer) {
+                $this->razorpayTransferRepository->create([
+                    'order_id' => $orderDTO->order->getId(),
+                    'razorpay_transfer_id' => $transfer['id'],
+                    'razorpay_payment_id' => null,
+                    'razorpay_order_id' => $razorpayOrder->id,
+                    'linked_account_id' => $transfer['recipient'],
+                    'amount' => $transfer['amount'],
+                    'currency' => $transfer['currency'],
+                    'status' => $transfer['status'],
+                ]);
+            }
 
             $this->logger->debug('Razorpay order created', [
                 'razorpayOrderId' => $razorpayOrder->id,
