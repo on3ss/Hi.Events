@@ -2,6 +2,8 @@
 
 namespace HiEvents\Services\Domain\Payment\Razorpay\EventHandlers;
 
+use HiEvents\Services\Domain\Payment\Razorpay\DTOs\RazorpayTransferPayload;
+
 class RazorpayTransferCreatedHandler
 {
     public function __construct(
@@ -9,7 +11,7 @@ class RazorpayTransferCreatedHandler
     ) {
     }
 
-    public function handleEvent($payload): void
+    public function handleEvent(RazorpayTransferPayload $payload): void
     {
         // Implement the logic to handle the transfer.created event
         // You can access the event data from the $payload variable

@@ -11,7 +11,7 @@ class RazorpayWebhookEnvelope extends Data
         public readonly string $entity,
         public readonly string $account_id,
         public readonly string $event,
-        public readonly RazorpayOrderPaidPayload|RazorpayPaymentPayload|RazorpayRefundPayload $payload,
+        public readonly RazorpayOrderPaidPayload|RazorpayPaymentPayload|RazorpayRefundPayload|RazorpayTransferPayload $payload,
         public readonly int $created_at,
     ) {
     }
@@ -31,6 +31,9 @@ class RazorpayWebhookEnvelope extends Data
             ]),
             'refund.processed' => RazorpayRefundPayload::from([
                 'refund' => $payloadData['refund']['entity'],
+            ]),
+            'transfer.created', 'transfer.processed', 'transfer.failed', 'transfer.reversed' => RazorpayTransferPayload::from([
+                'transfer' => $payloadData['transfer']['entity'],
             ]),
             default => throw new InvalidArgumentException("Unknown event: {$event}"),
         };

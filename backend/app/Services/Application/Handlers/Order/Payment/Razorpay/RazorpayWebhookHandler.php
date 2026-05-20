@@ -85,11 +85,7 @@ class RazorpayWebhookHandler
                 'payment.captured', 'payment.failed', 'payment.authorized' => $envelope->payload->payment->id,
                 'order.paid' => $envelope->payload->order->id,
                 'refund.processed' => $envelope->payload->refund->id,
-                'transfer.created',
-                'transfer.processed',
-                'transfer.failed',
-                'transfer.reversed'
-                    => $envelope->payload->transfer->id,
+                'transfer.created', 'transfer.processed', 'transfer.failed', 'transfer.reversed' => $envelope->payload->transfer->id,
                 default => null,
             };
 
