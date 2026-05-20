@@ -38,9 +38,9 @@ class RazorpayWebhookHandler
         private readonly RazorpayPaymentAuthorizedHandler $paymentAuthorizedHandler,
         private readonly RazorpayPaymentVerificationService $razorpayPaymentService,
         private readonly RazorpayTransferCreatedHandler $transferCreatedHandler,
-        private readonly RazorpayTransferProcessedHandler $transferProcessedHandler,
-        private readonly RazorpayTransferFailedHandler $transferFailedHandler,
-        private readonly RazorpayTransferReversedHandler $transferReversedHandler,
+        // private readonly RazorpayTransferProcessedHandler $transferProcessedHandler,
+        // private readonly RazorpayTransferFailedHandler $transferFailedHandler,
+        // private readonly RazorpayTransferReversedHandler $transferReversedHandler,
         private readonly Logger $logger,
         private readonly Repository $cache,
     ) {
@@ -121,9 +121,9 @@ class RazorpayWebhookHandler
                 'payment.authorized' => $this->paymentAuthorizedHandler->handleEvent($envelope->payload),
 
                 'transfer.created' => $this->transferCreatedHandler->handleEvent($envelope->payload),
-                'transfer.processed' => $this->transferProcessedHandler->handleEvent($envelope->payload),
-                'transfer.failed' => $this->transferFailedHandler->handleEvent($envelope->payload),
-                'transfer.reversed' => $this->transferReversedHandler->handleEvent($envelope->payload),
+                // 'transfer.processed' => $this->transferProcessedHandler->handleEvent($envelope->payload),
+                // 'transfer.failed' => $this->transferFailedHandler->handleEvent($envelope->payload),
+                // 'transfer.reversed' => $this->transferReversedHandler->handleEvent($envelope->payload),
                 default => $this->logger->debug('No handler for event', ['event' => $event]),
             };
 
