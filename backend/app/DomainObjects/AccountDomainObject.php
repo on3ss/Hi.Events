@@ -58,7 +58,7 @@ class AccountDomainObject extends Generated\AccountDomainObjectAbstract
         return $this;
     }
 
-    public function getRazorpayPlatform(): ?AccountRazorpayPlatformDomainObject
+    public function getAccountRazorpayPlatform(): ?AccountRazorpayPlatformDomainObject
     {
         return $this->razorpay_platform;
     }

@@ -58,7 +58,7 @@ class RazorpayOrderCreationService
                 vatSettings: $orderDTO->account->getAccountVatSetting()
             );
 
-            $connectedAccountId = $orderDTO->account->getRazorpayPlatform()?->getRazorpayAccountId();
+            $connectedAccountId = $orderDTO->account->getAccountRazorpayPlatform()?->getRazorpayAccountId();
 
             if (!$connectedAccountId) {
                 throw new CreateOrderFailedException(
