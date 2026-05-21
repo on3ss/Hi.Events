@@ -51,7 +51,7 @@ class AccountDomainObject extends Generated\AccountDomainObjectAbstract
         $this->stripePlatforms = $stripePlatforms;
     }
 
-    public function setRazorpayPlatform(?AccountRazorpayPlatformDomainObject $platform): self
+    public function setAccountRazorpayPlatform(?AccountRazorpayPlatformDomainObject $platform): self
     {
         $this->razorpay_platform = $platform;
 
