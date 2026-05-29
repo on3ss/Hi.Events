@@ -12,10 +12,21 @@ class RazorpayIncomingWebhookAction extends BaseAction
     public function __invoke(Request $request): Response
     {
         $payload = $request->getContent();
-        $signature = $request->header('X-Razorpay-Signature');
-        
-        dispatch(static function (RazorpayWebhookHandler $handler) use ($payload, $signature) {
-            $handler->handle($payload, $signature);
+        $signature = $request->header('X-Razorpay-Signature') ?? '';
+        $headers = $request->headers->all();
+
+        dispatch(static function (
+            RazorpayWebhookHandler $handler
+        ) use (
+            $payload,
+            $signature,
+            $headers
+        ) {
+            $handler->handle(
+                payload: $payload,
+                signature: $signature,
+                headers: $headers,
+            );
         })->catch(function (\Throwable $exception) use ($payload) {
             logger()->error(__('Failed to handle incoming Razorpay webhook'), [
                 'exception' => $exception,
