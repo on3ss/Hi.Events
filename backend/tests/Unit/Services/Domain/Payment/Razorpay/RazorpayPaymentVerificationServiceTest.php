@@ -70,7 +70,7 @@ class RazorpayPaymentVerificationServiceTest extends TestCase
 
         $this->loggerMock->expects($this->once())
             ->method('error')
-            ->with('Razorpay signature verification failed', $this->isType('array'));
+            ->with('Razorpay signature verification failed', $this->isArray());
 
         $this->expectException(InvalidSignatureException::class);
 
@@ -145,7 +145,7 @@ class RazorpayPaymentVerificationServiceTest extends TestCase
 
         $this->loggerMock->expects($this->once())
             ->method('error')
-            ->with('Failed to fetch Razorpay payment details', $this->isType('array'));
+            ->with('Failed to fetch Razorpay payment details', $this->isArray());
 
         $this->expectException(Exception::class);
 

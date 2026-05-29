@@ -111,7 +111,7 @@ class RazorpayPaymentAuthorizedHandlerTest extends TestCase
 
         $this->razorpayOrdersRepoMock->expects($this->once())
             ->method('updateByOrderId')
-            ->with(10, $this->isType('array'));
+            ->with(10, $this->isArray());
 
         $this->handler->handleEvent($payload);
     }

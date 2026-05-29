@@ -11,7 +11,6 @@ use HiEvents\DomainObjects\Status\OrderApplicationFeeStatus;
 use HiEvents\DomainObjects\Status\OrderPaymentStatus;
 use HiEvents\DomainObjects\Status\OrderStatus;
 use HiEvents\Events\OrderStatusChangedEvent;
-use HiEvents\Models\Order;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\AffiliateRepositoryInterface;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
@@ -52,14 +51,9 @@ class FinalizePaidOrderService
             $provider,
         ) {
 
-            Order::query()
-                ->where('id', $orderId)
-                ->lockForUpdate()
-                ->firstOrFail();
-
             $order = $this->orderRepository
                 ->loadRelation(new Relationship(OrderItemDomainObject::class))
-                ->findById($orderId);
+                ->findByIdForUpdate($orderId);
 
             if (!$order) {
                 throw new \RuntimeException(

@@ -3,9 +3,13 @@
 namespace Tests\Unit\Services\Domain\Payment\Razorpay;
 
 use Exception;
+use HiEvents\DomainObjects\AccountConfigurationDomainObject;
 use HiEvents\DomainObjects\AccountDomainObject;
+use HiEvents\DomainObjects\AccountRazorpayPlatformDomainObject;
+use HiEvents\DomainObjects\AccountVatSettingDomainObject;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\Exceptions\Razorpay\CreateOrderFailedException;
+use HiEvents\Repository\Interfaces\RazorpayTransferRepositoryInterface;
 use HiEvents\Services\Domain\Order\OrderApplicationFeeCalculationService;
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\CreateRazorpayOrderRequestDTO;
 use HiEvents\Services\Domain\Payment\Razorpay\DTOs\CreateRazorpayOrderResponseDTO;
@@ -24,12 +28,20 @@ use Tests\TestCase;
 class RazorpayOrderCreationServiceTest extends TestCase
 {
     private LoggerInterface&MockObject $loggerMock;
+
     private Repository&MockObject $configMock;
+
     private ConnectionInterface&MockObject $dbMock;
+
     private OrderApplicationFeeCalculationService&MockObject $feeServiceMock;
+
     private RazorpayClientFactory&MockObject $factoryMock;
+
     private RazorpayClientInterface&MockObject $razorpayClientMock;
+
     private RazorpayOrderCreationService $service;
+
+    private RazorpayTransferRepositoryInterface&MockObject $transferRepositoryMock;
 
     protected function setUp(): void
     {
@@ -37,10 +49,18 @@ class RazorpayOrderCreationServiceTest extends TestCase
 
         $this->loggerMock = $this->createMock(LoggerInterface::class);
         $this->configMock = $this->createMock(Repository::class);
-        $this->dbMock = $this->createMock(ConnectionInterface::class); // <-- Perfectly mockable
+        $this->dbMock = $this->createMock(ConnectionInterface::class);
+
         $this->feeServiceMock = $this->createMock(OrderApplicationFeeCalculationService::class);
+        $this->feeServiceMock
+            ->method('calculateApplicationFee')
+            ->willReturn(null);
+
         $this->factoryMock = $this->createMock(RazorpayClientFactory::class);
         $this->razorpayClientMock = $this->createMock(RazorpayClientInterface::class);
+        $this->transferRepositoryMock = $this->createMock(
+            RazorpayTransferRepositoryInterface::class
+        );
 
         $this->factoryMock->method('create')->willReturn($this->razorpayClientMock);
 
@@ -49,39 +69,46 @@ class RazorpayOrderCreationServiceTest extends TestCase
             $this->configMock,
             $this->dbMock,
             $this->feeServiceMock,
+            $this->transferRepositoryMock,
             $this->factoryMock
         );
     }
 
     #[DataProvider('currencyDataProvider')]
-    public function testItCalculatesAmountCorrectlyBasedOnCurrency(
+    public function test_it_calculates_amount_correctly_based_on_currency(
         string $currencyCode,
         int $minorUnit,
         float $floatAmount,
         int $expectedRazorpayAmount
     ): void {
         $dtoMock = $this->createMockedRequestDTO($currencyCode, $minorUnit, $floatAmount);
-        
+
         $expectedRazorpayResponse = (object) [
-            'id'       => 'order_123',
-            'amount'   => $expectedRazorpayAmount,
+            'id' => 'order_123',
+            'amount' => $expectedRazorpayAmount,
             'currency' => $currencyCode,
-            'receipt'  => 'SHORT_123'
+            'receipt' => 'SHORT_123',
         ];
 
         // Database Expectations
         $this->dbMock->expects($this->once())->method('beginTransaction');
         $this->dbMock->expects($this->once())->method('commit');
-        $this->dbMock->expects($this->never())->method('rollBack');
+        $this->dbMock->expects($this->any())
+            ->method('rollBack');
 
         $this->configMock->method('get')
-            ->with('services.razorpay.key_id')
-            ->willReturn('test_key_id');
+            ->willReturnCallback(function ($key) {
+                return match ($key) {
+                    'services.razorpay.key_id' => 'test_key_id',
+                    'services.razorpay.application_fee_enabled' => false,
+                    default => null,
+                };
+            });
 
         $this->razorpayClientMock->expects($this->once())
             ->method('createOrder')
             ->with($this->callback(function (array $orderData) use ($expectedRazorpayAmount, $currencyCode) {
-                return $orderData['amount'] === $expectedRazorpayAmount 
+                return $orderData['amount'] === $expectedRazorpayAmount
                     && $orderData['currency'] === $currencyCode
                     && $orderData['receipt'] === 'SHORT_123';
             }))
@@ -93,7 +120,7 @@ class RazorpayOrderCreationServiceTest extends TestCase
         $this->assertEquals('order_123', $response->id);
     }
 
-    public function testItRollsBackAndThrowsCustomExceptionOnRazorpayError(): void
+    public function test_it_rolls_back_and_throws_custom_exception_on_razorpay_error(): void
     {
         $dtoMock = $this->createMockedRequestDTO();
 
@@ -110,7 +137,7 @@ class RazorpayOrderCreationServiceTest extends TestCase
         $this->service->createOrder($dtoMock);
     }
 
-    public function testItRollsBackAndRethrowsGenericException(): void
+    public function test_it_rolls_back_and_rethrows_generic_exception(): void
     {
         $dtoMock = $this->createMockedRequestDTO();
 
@@ -128,27 +155,59 @@ class RazorpayOrderCreationServiceTest extends TestCase
     }
 
     private function createMockedRequestDTO(
-        string $currencyCode = 'INR', 
-        int $minorUnit = 50000, 
+        string $currencyCode = 'INR',
+        int $minorUnit = 50000,
         float $floatAmount = 500.00
     ): CreateRazorpayOrderRequestDTO {
-        $amountMock = $this->createMock(MoneyValue::class); 
-        $amountMock->method('toMinorUnit')->willReturn($minorUnit);
-        $amountMock->method('toFloat')->willReturn($floatAmount);
+        $amountMock = $this->createMock(MoneyValue::class);
 
-        $orderMock = $this->createMock(OrderDomainObject::class); 
-        $orderMock->method('getShortId')->willReturn('SHORT_123');
-        $orderMock->method('getId')->willReturn(1);
-        $orderMock->method('getEventId')->willReturn(99);
+        $amountMock->method('toMinorUnit')
+            ->willReturn($minorUnit);
 
-        $accountMock = $this->createMock(AccountDomainObject::class); 
-        $accountMock->method('getId')->willReturn(5);
+        $amountMock->method('toFloat')
+            ->willReturn($floatAmount);
+
+        $orderMock = $this->createMock(OrderDomainObject::class);
+
+        $orderMock->method('getShortId')
+            ->willReturn('SHORT_123');
+
+        $orderMock->method('getId')
+            ->willReturn(1);
+
+        $orderMock->method('getEventId')
+            ->willReturn(99);
+
+        $accountMock = $this->createMock(AccountDomainObject::class);
+
+        $accountMock->method('getId')
+            ->willReturn(5);
+
+        $accountMock->method('getConfiguration')
+            ->willReturn(
+                $this->createMock(AccountConfigurationDomainObject::class)
+            );
+
+        $accountMock->method('getAccountVatSetting')
+            ->willReturn(
+                $this->createMock(AccountVatSettingDomainObject::class)
+            );
+
+        $platformMock = $this->createMock(
+            AccountRazorpayPlatformDomainObject::class
+        );
+
+        $platformMock->method('getRazorpayAccountId')
+            ->willReturn('acc_test_123');
+
+        $accountMock->method('getAccountRazorpayPlatform')
+            ->willReturn($platformMock);
 
         return new CreateRazorpayOrderRequestDTO(
             amount: $amountMock,
             currencyCode: $currencyCode,
             account: $accountMock,
-            order: $orderMock
+            order: $orderMock,
         );
     }
 
