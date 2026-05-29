@@ -50,6 +50,7 @@ class RazorpayTransferProcessedHandler
                 [
                     'status' => $transferEntity->status,
                     'processed_at' => now(),
+                    'last_webhook_received_at' => now(),
                     'raw_payload' => $payload->toArray(),
                 ]
             );

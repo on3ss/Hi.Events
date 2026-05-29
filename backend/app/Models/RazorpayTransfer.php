@@ -17,6 +17,7 @@ class RazorpayTransfer extends BaseModel
         'processed_at',
         'failed_at',
         'reversed_at',
+        'last_webhook_received_at',
     ];
 
     protected $casts = [
@@ -24,6 +25,7 @@ class RazorpayTransfer extends BaseModel
         'processed_at' => 'datetime',
         'failed_at' => 'datetime',
         'reversed_at' => 'datetime',
+        'last_webhook_received_at' => 'datetime',
     ];
 
     public function order()
